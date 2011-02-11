@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<util:list id="testList">
+		<util:list>
+			<ref local="jaiVersion" />
+			<value>javax.media.jai</value>
+			<value>1.1.2</value>
+			<value>Sun Microsystems, Inc.</value>
+			<null />
+		</util:list>
+
+		<util:list>
+			<ref local="springContextVersion" />
+			<value>org.springframework.context</value>
+			<value>3.0.2.RELEASE</value>
+			<null />
+			<value>Configuration Version 001</value>
+		</util:list>
+
+		<util:list>
+			<ref local="commonsLoggingVersion" />
+			<value>Jakarta Commons Logging</value>
+			<value>1.1.1</value>
+			<value>Apache Software Foundation</value>
+			<value>Not configured</value>
+		</util:list>
+	</util:list>
+
+	<bean id="versionBase" class="com.redblackit.version.VersionInfoFromPackage"
+		abstract="true" />
+
+	<bean id="jaiVersion" parent="versionBase">
+
+		<property name="manifestClass" value="javax.media.jai.ImageJAI" />
+
+	</bean>
+
+	<bean id="springContextVersion" parent="versionBase">
+
+		<property name="manifestClass"
+			value="org.springframework.context.ApplicationContext" />
+		<property name="configurationVersion" value="Configuration Version 001" />
+
+	</bean>
+
+	<bean id="commonsLoggingVersion" parent="versionBase">
+
+		<property name="manifestClass"
+			value="org.apache.commons.logging.Log" />
+		<property name="configurationVersion" value="Not configured" />
+
+	</bean>
+
+</beans>
