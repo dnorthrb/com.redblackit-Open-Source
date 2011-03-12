@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+              http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+              http://www.springframework.org/schema/security
+              http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+
+	<http auto-config="true" access-denied-page="/accessDenied"
+		use-expressions="true">
+
+		<x509 subject-principal-regex="CN=(.*?)," />
+
+		<form-login login-page="/login" authentication-failure-url="/loginError" />
+
+		<intercept-url pattern="/rest/**" access="hasRole('ROLE_RESTWS')"  requires-channel="https" />
+
+		<intercept-url pattern="/login*" access="isAnonymous()" requires-channel="https" />
+		<intercept-url pattern="/accessDenied" filters="none" />
+		<intercept-url pattern="/images/**" filters="none" />
+		<intercept-url pattern="/styles/**" filters="none" />
+		<intercept-url pattern="/resources/**" filters="none" />
+
+		<intercept-url pattern="/**" access="isAuthenticated()"  requires-channel="https" />
+
+		<logout />
+
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<user-service properties="/WEB-INF/users.properties" />
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>

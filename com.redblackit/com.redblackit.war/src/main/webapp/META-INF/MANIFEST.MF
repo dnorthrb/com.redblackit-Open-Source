@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Class-Path: 
+Implementation-Version: 0.0.1
+Implementation-Vendor: redblackit.com
+Implementation-Title: Red-Black IT Demo Web Application
+

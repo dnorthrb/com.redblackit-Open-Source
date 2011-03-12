@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:oxm="http://www.springframework.org/schema/oxm"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<context:annotation-config />
+	
+	<util:properties id="testProperties" location="classpath:/com/redblackit/war/test.properties" />
+	<util:properties id="versionProperties" location="classpath:/com/redblackit/web/Version.properties" />
+		
+	<bean id="httpClient" class="com.redblackit.web.client.X509HttpClientFactoryBean" >
+		<property name="keyStore" value="/Users/djnorth/client-keystore.jks" />
+		<property name="keyStorePassword" value="clientpwd" />
+	</bean>
+	
+	<bean id="requestFactory" class="com.redblackit.web.client.HttpComponents4ClientHttpRequestFactory">
+		<property name="httpClient" ref="httpClient" />
+	</bean>
+	
+	<oxm:jaxb2-marshaller id="marshaller">
+		<oxm:class-to-be-bound name="com.redblackit.version.VersionInfoFromProperties"/>
+	</oxm:jaxb2-marshaller>
+	
+	<bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+		<property name="requestFactory" ref="requestFactory" />
+		<property name="messageConverters">
+			<list>
+				<bean class="org.springframework.http.converter.StringHttpMessageConverter" />
+				<bean class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter" >
+					<property name="marshaller" ref="marshaller"/>
+					<property name="unmarshaller" ref="marshaller"/>
+				</bean>
+				<bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" />
+			</list>
+		</property>
+	</bean>
+
+</beans>

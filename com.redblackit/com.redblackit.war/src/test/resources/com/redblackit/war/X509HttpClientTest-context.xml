@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<util:properties id="testProperties" location="classpath:/com/redblackit/war/test.properties" />
+
+	<util:properties id="messages"
+		location="file:/Users/djnorth/Documents/RedBlackSoftware/gitrep/open-source/com.redblackit/com.redblackit.war/src/main/webapp/WEB-INF/messages/global.properties" />
+		
+	<bean id="httpClientGoodCert" class="com.redblackit.web.client.X509HttpClientFactoryBean" >
+		<property name="keyStore" value="/Users/djnorth/client-keystore.jks" />
+		<property name="keyStorePassword" value="clientpwd" />
+	</bean>
+	
+	<bean id="httpClientBadCert" class="com.redblackit.web.client.X509HttpClientFactoryBean" >
+		<property name="keyStore" value="/Users/djnorth/untrusted-client-keystore.jks" />
+		<property name="keyStorePassword" value="clientpwd" />
+	</bean>
+	
+</beans>

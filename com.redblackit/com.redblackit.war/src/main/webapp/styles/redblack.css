@@ -1,0 +1,86 @@
+@IMPORT url("entity.css");
+@IMPORT url("forms.css");
+@IMPORT url("tables.css");
+
+
+div#header {
+    background: none repeat scroll 0 0;
+    background-color: transparent;
+    color: white;
+    margin: 0 0 1.5em;
+    padding: 5px 0;
+    text-align: left;
+}
+
+div#branding {
+    float: left;
+    margin: 0;
+    padding: 10px 0 10px 0;
+    text-align: left;
+    width: 40%;
+}
+
+div#footer {
+  background-color: transparent;
+  color: black;
+
+  width: 920px;
+	margin: 0 0 20px 0;
+	padding: 0.5em 0 30px 0;
+	clear: both;
+	border-top: 1px dotted #999999;
+	text-align: right;
+}
+
+
+div#footer ul {
+	display: inline;
+}
+
+div#footer ul li {
+	display: inline;
+	margin: 0 0 0 1.0em;
+	padding: 0 0 0 1.0em;
+	list-style-type: none;
+	list-style-image: none;
+	list-style-position: inside;
+	border-left: 1px solid #ff4040;
+}
+
+div#footer ul li.first {
+	border-width: 0;
+}
+
+h1 {
+  color: #8B008B;
+}
+
+div#nav a, div#nav a:link, div#nav a:active, div#nav a:visited {
+  background-color: silver;
+}
+
+div#nav strong a, div#nav strong a:link, div#nav strong a:active, div#nav strong a:visited, div#nav strong a:hover {
+  background-color: black;
+}
+
+a { color:blue; text-decoration:underline; font-size:13px; background:transparent;}
+a:visited { color:maroon; background:transparent; }
+a:hover, a:active { color:navy; font-weight: bold; background:transparent; }
+a:visited { color:maroon; background:transparent; }
+
+/* a:link{color:blue; text-decoration:underline; font-size:13px; background:transparent;}
+a:hover{color:navy; text-decoration:underline,bold; font-size:13px; background:transparent;}
+a:active{color:blue; text-decoration:underline,bold; font-size:13px; background:transparent;}
+a:visited{color:maroon; text-decoration:underline; font-size:13px; background:transparent;} */
+
+form > fieldset {
+  border-color: #B2BF99;
+}
+
+.name {
+	color: #8B008B;
+}
+
+.value {
+	color: #8B0000;	
+}
