@@ -45,9 +45,9 @@ public class AppSecurityBadCertHttpTest {
 	/**
 	 * Commonly used attributes from testProperties and messages
 	 */
-	@Value("#{'http://' + testProperties.serverHost + ':' + testProperties.httpPort + '/' + testProperties.appPath}")
+	@Value("#{'http://' + testProperties.serverHost + ':' + ( systemProperties['httpPort.override'] ?: testProperties.httpPort ) + '/' + testProperties.appPath}")
 	private String baseHttpUrl;
-	@Value("#{'https://' + testProperties.serverHost + ':' + testProperties.httpsPort + '/' + testProperties.appPath}")
+	@Value("#{'https://' + testProperties.serverHost + ':' + ( systemProperties['httpsPort.override'] ?: testProperties.httpsPort ) + '/' + testProperties.appPath}")
 	private String baseHttpsUrl;
 	@Value("#{messages['login.title']}")
 	private String loginTitle;

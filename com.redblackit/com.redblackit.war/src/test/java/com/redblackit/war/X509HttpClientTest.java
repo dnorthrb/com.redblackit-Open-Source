@@ -63,7 +63,7 @@ public class X509HttpClientTest {
 	 * Commonly used attributes from testProperties and messages
 	 */
 
-	@Value("#{'https://' + testProperties.serverHost + ':' + testProperties.httpsPort + '/' + testProperties.appPath}")
+	@Value("#{'https://' + testProperties.serverHost + ':' + ( systemProperties['httpsPort.override'] ?: testProperties.httpsPort ) + '/' + testProperties.appPath}")
 	private String baseHttpsUrl;
 	@Value("#{messages['login.title']}")
 	private String loginTitle;

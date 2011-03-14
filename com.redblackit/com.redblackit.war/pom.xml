@@ -13,11 +13,21 @@
 	<name>Red-Black IT Sample Deployment</name>
 	<description>Sample deployment for web code</description>
 	<properties>
-		<tiles.version>2.1.3</tiles.version>
+		<tiles.version>2.1.4</tiles.version>
 		<spring.security.version>3.0.5.RELEASE</spring.security.version>
 		<httpunit.version>1.6.2</httpunit.version>
 		<htmlunit.version>2.8</htmlunit.version>
 		<jackson.version>1.4.2</jackson.version>
+		<test.httpPort>9080</test.httpPort>
+		<test.httpsPort>9443</test.httpsPort>
+		<test.client.keyStore>/Users/djnorth/client-keystore.jks</test.client.keyStore>
+		<test.client.keyStorePassword>clientpwd</test.client.keyStorePassword>
+		<test.client.trustStore>/System/Library/Java/Support/Deploy.bundle/Contents/Home/lib/security/cacerts</test.client.trustStore>
+		<test.client.trustStorePassword>changeit</test.client.trustStorePassword>
+		<test.server.keyStore>/Users/djnorth/tc-keystore.jks</test.server.keyStore>
+		<test.server.keyStorePassword>changeit</test.server.keyStorePassword>
+		<test.server.trustStore>/Users/djnorth/tc-keystore.jks</test.server.trustStore>
+		<test.server.trustStorePassword>changeit</test.server.trustStorePassword>
 	</properties>
 	<organization>
 		<name>Red-Black IT Ltd</name>
