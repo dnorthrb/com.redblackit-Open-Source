@@ -20,12 +20,20 @@
 		<level value="debug" />
 	</logger>
 
+	<logger name="web.server">
+		<level value="debug" />
+	</logger>
+
 	<logger name="web.client">
 		<level value="debug" />
 	</logger>
 	
 	<!-- 3rdparty Loggers -->
 	<logger name="org.springframework.beans">
+		<level value="debug" />
+	</logger>
+
+	<logger name="org.springframework.security">
 		<level value="debug" />
 	</logger>
 

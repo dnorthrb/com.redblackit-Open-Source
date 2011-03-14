@@ -71,16 +71,6 @@ public class AppSecurityBadCertHttpTest {
 	public void testGetHomePageHttpsBadClientCert() throws Exception {
 		testGetUrl(baseHttpsUrl, loginTitle);
 	}
-
-	/**
-	 * Test home page to https URL, with invalid certificate.
-	 * 
-	 * We expect the client to first be re-directed to the https URL, then the login form to be presented, as the fall-back.
-	 */
-	@Test
-	public void testGetHomePageHttpBadClientCert() throws Exception {
-		testGetUrl(baseHttpUrl, loginTitle);
-	}
 	
 
 	/**
@@ -101,7 +91,9 @@ public class AppSecurityBadCertHttpTest {
 		Assert.assertNotNull(response);
 		logger.info(response);
 		
-		Assert.assertTrue("URL should start with " + baseHttpsUrl + " ...", response.getURL().toString().startsWith(baseHttpsUrl));
+		String respUrl = response.getURL().toString();
+		
+		Assert.assertTrue("URL should start with '" + baseHttpsUrl + "' ... but was '" + respUrl + "'", respUrl.startsWith(baseHttpsUrl));
 		Assert.assertEquals("Title for response page", expectedTitle, response.getTitle().trim());
 		
 		conversation.clearContents();
