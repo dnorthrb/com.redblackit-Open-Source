@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-
 package com.redblackit.war;
+
+import java.net.SocketException;
 
 import junit.framework.Assert;
 
@@ -35,33 +36,37 @@ import com.meterware.httpunit.WebResponse;
  * 
  *         Test application security for at http level i.e. before involving
  *         RestTemplate
+ * 
+ *         The system property clientAuthMandatory can be used to allow
+ *         successful tests with servers such as GlassFish that do not allow
+ *         optional client authentication ("want").
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("AppSecurityHttpTest-context.xml")
 public class AppSecurityBadCertHttpTest {
 
 	private Logger logger = Logger.getLogger("security");
-	
+
 	/**
 	 * Commonly used attributes from testProperties and messages
 	 */
-	@Value("#{'http://' + testProperties.serverHost + ':' + ( systemProperties['httpPort.override'] ?: testProperties.httpPort ) + '/' + testProperties.appPath}")
-	private String baseHttpUrl;
 	@Value("#{'https://' + testProperties.serverHost + ':' + ( systemProperties['httpsPort.override'] ?: testProperties.httpsPort ) + '/' + testProperties.appPath}")
 	private String baseHttpsUrl;
 	@Value("#{messages['login.title']}")
 	private String loginTitle;
+	@Value("#{systemProperties['clientAuthMandatory'] ?: false}")
+	private boolean clientAuthMandatory = false;
 
 	/**
 	 * Setup invalid certificates
 	 */
 	@Before
-	public void setUp()
-	{
-		System.setProperty("javax.net.ssl.keyStore", "/Users/djnorth/untrusted-client-keystore.jks");
+	public void setUp() {
+		System.setProperty("javax.net.ssl.keyStore",
+				"/Users/djnorth/untrusted-client-keystore.jks");
 		System.setProperty("javax.net.ssl.keyStorePassword", "clientpwd");
 	}
-	
+
 	/**
 	 * Test home page to https URL, with valid certificate.
 	 * 
@@ -71,32 +76,54 @@ public class AppSecurityBadCertHttpTest {
 	public void testGetHomePageHttpsBadClientCert() throws Exception {
 		testGetUrl(baseHttpsUrl, loginTitle);
 	}
-	
 
 	/**
 	 * @param url
 	 * @throws Exception
 	 */
-	private void testGetUrl(final String url, final String expectedTitle) throws Exception {
+	private void testGetUrl(final String url, final String expectedTitle)
+			throws Exception {
 		logger.info(url + "  :expecting " + expectedTitle);
-		final String[] spropkeys = { "user.name", "javax.net.ssl.keyStore", "javax.net.ssl.keyStorePassword", "javax.net.ssl.trustStore", "javax.net.ssl.trustStorePassword" };
-		for ( String spropkey : spropkeys )
-		{
+		final String[] spropkeys = { "user.name", "javax.net.ssl.keyStore",
+				"javax.net.ssl.keyStorePassword", "javax.net.ssl.trustStore",
+				"javax.net.ssl.trustStorePassword" };
+		for (String spropkey : spropkeys) {
 			logger.info("  [" + spropkey + "]=" + System.getProperty(spropkey));
 		}
 
 		WebConversation conversation = new WebConversation();
-		WebResponse response = conversation.getResponse(url);
-		
-		Assert.assertNotNull(response);
-		logger.info(response);
-		
-		String respUrl = response.getURL().toString();
-		
-		Assert.assertTrue("URL should start with '" + baseHttpsUrl + "' ... but was '" + respUrl + "'", respUrl.startsWith(baseHttpsUrl));
-		Assert.assertEquals("Title for response page", expectedTitle, response.getTitle().trim());
-		
-		conversation.clearContents();
+		WebResponse response = null;
+		if (clientAuthMandatory) {
+			try {
+				response = conversation.getResponse(url);
+				logger.error("response=" + response);
+				Assert.fail("expected exception for bad certifiate:but got response");
+
+			} catch (SocketException se) {
+				logger.debug("expected exception", se);
+				Throwable t = se.getCause();
+				while (t instanceof SocketException) {
+					t = t.getCause();
+				}
+
+				if (t != null) {
+					logger.debug("root cause exception", t);
+				}
+
+			}
+		} else {
+			response = conversation.getResponse(url);
+			Assert.assertNotNull("response", response);
+			logger.info(response);
+
+			String respUrl = response.getURL().toString();
+
+			Assert.assertTrue("URL should start with '" + baseHttpsUrl
+					+ "' ... but was '" + respUrl + "'",
+					respUrl.startsWith(baseHttpsUrl));
+			Assert.assertEquals("Title for response page", expectedTitle,
+					response.getTitle().trim());
+		}
 	}
 
 }
