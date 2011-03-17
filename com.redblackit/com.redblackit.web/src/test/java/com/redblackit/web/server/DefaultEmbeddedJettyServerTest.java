@@ -81,7 +81,7 @@ public class DefaultEmbeddedJettyServerTest {
 
 		Object[][] parameters = {
 				{ 8180, 0, null, null, null, null, null, null, null, null },
-				{ 0, 8543, KeyAndTrustStoreInfo.SERVER0_KS,
+				{ 0, 8643, KeyAndTrustStoreInfo.SERVER0_KS,
 						KeyAndTrustStoreInfo.SERVER0_KS_PWD,
 						KeyAndTrustStoreInfo.SERVER0_TS,
 						KeyAndTrustStoreInfo.SERVER0_TS_PWD,
@@ -89,7 +89,7 @@ public class DefaultEmbeddedJettyServerTest {
 						KeyAndTrustStoreInfo.CLIENT0_KS_PWD,
 						KeyAndTrustStoreInfo.CLIENT0_TS,
 						KeyAndTrustStoreInfo.CLIENT0_TS_PWD },
-				{ 8280, 8643, KeyAndTrustStoreInfo.SERVER1_KS,
+				{ 8280, 8743, KeyAndTrustStoreInfo.SERVER1_KS,
 						KeyAndTrustStoreInfo.SERVER1_KS_PWD,
 						KeyAndTrustStoreInfo.SERVER1_TS,
 						KeyAndTrustStoreInfo.SERVER1_TS_PWD,

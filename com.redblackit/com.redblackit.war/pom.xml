@@ -18,7 +18,6 @@
 		<httpunit.version>1.6.2</httpunit.version>
 		<htmlunit.version>2.8</htmlunit.version>
 		<jackson.version>1.4.2</jackson.version>
-		<test.httpPort>9080</test.httpPort>
 		<test.httpsPort>9443</test.httpsPort>
 		<test.client.keyStore>/Users/djnorth/client-keystore.jks</test.client.keyStore>
 		<test.client.keyStorePassword>clientpwd</test.client.keyStorePassword>
@@ -28,6 +27,7 @@
 		<test.server.keyStorePassword>changeit</test.server.keyStorePassword>
 		<test.server.trustStore>/Users/djnorth/tc-keystore.jks</test.server.trustStore>
 		<test.server.trustStorePassword>changeit</test.server.trustStorePassword>
+		<glassfish.httpsPort>8543</glassfish.httpsPort>
 	</properties>
 	<organization>
 		<name>Red-Black IT Ltd</name>
@@ -40,10 +40,6 @@
 				<artifactId>jetty-maven-plugin</artifactId>
 				<configuration>
 					<connectors>
-						<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
-							<port>${test.httpPort}</port>
-							<maxIdleTime>60000</maxIdleTime>
-						</connector>
 						<connector
 							implementation="org.eclipse.jetty.server.ssl.SslSelectChannelConnector">
 							<port>${test.httpsPort}</port>
@@ -89,6 +85,35 @@
 				</executions>
 			</plugin>
 			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.6</version>
+				<executions>
+					<execution>
+						<id>start-glassfish</id>
+						<phase>pre-integration-test</phase>
+						<configuration>
+							<target>
+								<exec executable="/Applications/glassfishv2/glassfish/bin/asadmin">
+									<arg value="start-domain" />
+								</exec>
+							</target>
+							<target>
+								<exec executable="/Applications/glassfishv2/glassfish/bin/asadmin">
+									<arg value="deploy" />
+									<arg value="--upload" />
+									<arg value="--contextroot" />
+									<arg value="com.redblackit.war" />
+									<arg value="${project.build.directory}/${project.build.finalName}.war" />
+								</exec>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.7.2</version>
@@ -97,19 +122,37 @@
 				</configuration>
 				<executions>
 					<execution>
-						<id>surefire-it</id>
+						<id>surefire-it-jetty</id>
 						<phase>integration-test</phase>
 						<goals>
 							<goal>test</goal>
 						</goals>
 						<configuration>
 							<skip>false</skip>
+							<reportsDirectory>${project.build.directory}/surefire-reports/jetty</reportsDirectory>
 							<systemPropertyVariables>
-								<httpPort.override>${test.httpPort}</httpPort.override>
 								<httpsPort.override>${test.httpsPort}</httpsPort.override>
 								<javax.net.ssl.trustStore>/System/Library/Java/Support/Deploy.bundle/Contents/Home/lib/security/cacerts</javax.net.ssl.trustStore>
 								<javax.net.ssl.trustStorePassword>changeit</javax.net.ssl.trustStorePassword>
-<!--								<javax.net.debug>ssl</javax.net.debug>-->
+								<!-- <javax.net.debug>ssl</javax.net.debug> -->
+							</systemPropertyVariables>
+						</configuration>
+					</execution>
+					<execution>
+						<id>surefire-it-glassfish</id>
+						<phase>integration-test</phase>
+						<goals>
+							<goal>test</goal>
+						</goals>
+						<configuration>
+							<skip>false</skip>
+							<reportsDirectory>${project.build.directory}/surefire-reports/glassfish</reportsDirectory>
+							<systemPropertyVariables>
+								<httpsPort.override>${glassfish.httpsPort}</httpsPort.override>
+								<clientAuthMandatory>true</clientAuthMandatory>
+								<javax.net.ssl.trustStore>/System/Library/Java/Support/Deploy.bundle/Contents/Home/lib/security/cacerts</javax.net.ssl.trustStore>
+								<javax.net.ssl.trustStorePassword>changeit</javax.net.ssl.trustStorePassword>
+								<!-- <javax.net.debug>ssl</javax.net.debug> -->
 							</systemPropertyVariables>
 						</configuration>
 					</execution>

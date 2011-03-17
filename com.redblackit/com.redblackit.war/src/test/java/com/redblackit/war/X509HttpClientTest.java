@@ -63,6 +63,10 @@ public class X509HttpClientTest {
 	private HttpClient httpClientGoodCert;
 
 	@Autowired
+	@Qualifier("httpClientGoodCertNotUser")
+	private HttpClient httpClientGoodCertNotUser;
+
+	@Autowired
 	@Qualifier("httpClientBadCert")
 	private HttpClient httpClientBadCert;
 
@@ -87,6 +91,16 @@ public class X509HttpClientTest {
 	public void testX509ConnectHttpsGoodCertificate() throws Exception {
 		validateResponseToRequest(httpClientGoodCert, baseHttpsUrl,
 				welcomeTitle);
+	}
+
+	/**
+	 * Make connection with good certificate client which is not a user in Spring security and verify response is login
+	 * page
+	 */
+	@Test
+	public void testX509ConnectHttpsGoodCertificateNotUser() throws Exception {
+		validateResponseToRequest(httpClientGoodCertNotUser, baseHttpsUrl,
+				loginTitle);
 	}
 
 	/**

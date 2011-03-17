@@ -17,15 +17,15 @@
 	</logger>
 
 	<logger name="security">
-		<level value="debug" />
+		<level value="info" />
 	</logger>
 
 	<logger name="web.server">
-		<level value="debug" />
+		<level value="info" />
 	</logger>
 
 	<logger name="web.client">
-		<level value="debug" />
+		<level value="info" />
 	</logger>
 	
 	<!-- 3rdparty Loggers -->

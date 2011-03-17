@@ -72,7 +72,7 @@
 			</div>
 		</div>
 		<div id="footer" class="clearfix">
-			<ul><li class="first"><a href="http://www.redblack-it.com">http://www.redblack-it.com</a></li><li class="last"><fmt:message key="footer.message"/></li></ul>
+			<ul><li class="first"><a href="<fmt:message key="footer.url"/>"><fmt:message key="footer.url"/></a></li><li class="last"><fmt:message key="footer.message"/></li></ul>
 		</div>
 	</div>
 </body>

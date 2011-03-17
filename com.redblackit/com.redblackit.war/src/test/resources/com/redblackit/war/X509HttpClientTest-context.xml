@@ -13,6 +13,11 @@
 		<property name="keyStore" value="/Users/djnorth/client-keystore.jks" />
 		<property name="keyStorePassword" value="clientpwd" />
 	</bean>
+		
+	<bean id="httpClientGoodCertNotUser" class="com.redblackit.web.client.X509HttpClientFactoryBean" >
+		<property name="keyStore" value="/Users/djnorth/client2-keystore.jks" />
+		<property name="keyStorePassword" value="client2pwd" />
+	</bean>
 	
 	<bean id="httpClientBadCert" class="com.redblackit.web.client.X509HttpClientFactoryBean" >
 		<property name="keyStore" value="/Users/djnorth/untrusted-client-keystore.jks" />
