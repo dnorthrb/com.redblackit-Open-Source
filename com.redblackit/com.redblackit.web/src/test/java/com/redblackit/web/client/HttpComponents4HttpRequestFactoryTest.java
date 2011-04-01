@@ -17,6 +17,7 @@
 package com.redblackit.web.client;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Arrays;
@@ -197,23 +198,83 @@ public class HttpComponents4HttpRequestFactoryTest {
 	}
 
 	/**
-	 * Test sending and receiving body and headers.
+	 * Test GET sending and receiving headers. Also ensure it works when we set the content length.
 	 * 
 	 * @throws Exception
 	 */
 	@Test
-	public void echo() throws Exception {
+	public void echoGet() throws Exception {
+		echoMethod(HttpMethod.GET, false, false);
+	}
+
+	/**
+	 * Test PUT sending and receiving body and headers. Also ensure it works when we set the content length.
+	 * 
+	 * @throws Exception
+	 */
+	@Test
+	public void echoPut() throws Exception {
+		echoMethod(HttpMethod.PUT, true, true);
+	}
+
+	/**
+	 * Test POST sending and receiving body and headers. Also ensure it works when we set the content length.
+	 * 
+	 * @throws Exception
+	 */
+	@Test
+	public void echoPost() throws Exception {
+		echoMethod(HttpMethod.POST, true, true);
+	}
+
+	/**
+	 * Test DELETE sending and receiving headers. Also ensure it works when we set the content length.
+	 * 
+	 * @throws Exception
+	 */
+	@Test
+	public void echoDelete() throws Exception {
+		echoMethod(HttpMethod.DELETE, false, false);
+	}
+
+	/**
+	 * Test HEAD sending and receiving headers. Also ensure it works when we set the content length.
+	 * 
+	 * @throws Exception
+	 */
+	@Test
+	public void echoHead() throws Exception {
+		echoMethod(HttpMethod.HEAD, true, false);
+	}
+
+	/**
+	 * @throws IOException
+	 * @throws URISyntaxException
+	 * @throws UnsupportedEncodingException
+	 */
+	private void echoMethod(HttpMethod method, boolean sendBody, boolean recvBody) throws IOException, URISyntaxException,
+			UnsupportedEncodingException {
 		ClientHttpRequest request = factory.createRequest(new URI(baseUrl
-				+ "/echo"), HttpMethod.PUT);
-		Assert.assertEquals("Invalid HTTP method", HttpMethod.PUT,
+				+ "/echo"), method);
+		Assert.assertEquals("Invalid HTTP method", method,
 				request.getMethod());
 		String headerName = "MyHeader";
 		String headerValue1 = "value1";
 		request.getHeaders().add(headerName, headerValue1);
 		String headerValue2 = "value2";
 		request.getHeaders().add(headerName, headerValue2);
-		byte[] body = "Hello World".getBytes("UTF-8");
-		FileCopyUtils.copy(body, request.getBody());
+		byte[] body = null;
+		if (sendBody)
+		{
+			body = "Hello World".getBytes("UTF-8");
+			FileCopyUtils.copy(body, request.getBody());
+			request.getHeaders().setContentLength(body.length);
+		}
+		else
+		{
+			request.getHeaders().setContentLength(0);
+		}
+		
 		ClientHttpResponse response = request.execute();
 		assertStatusEquals(response, HttpStatus.OK);
 		Assert.assertTrue("Header not found", response.getHeaders()
@@ -222,7 +283,14 @@ public class HttpComponents4HttpRequestFactoryTest {
 				headerValue1, headerValue2),
 				response.getHeaders().get(headerName));
 		byte[] result = FileCopyUtils.copyToByteArray(response.getBody());
-		Assert.assertTrue("Invalid body", Arrays.equals(body, result));
+		if (recvBody)
+		{
+			Assert.assertTrue("Invalid body", Arrays.equals(body, result));
+		}
+		else
+		{
+			Assert.assertTrue("Invalid body (non-empty)", result.length == 0);
+		}
 	}
 
 	/**
@@ -363,6 +431,11 @@ public class HttpComponents4HttpRequestFactoryTest {
 	 * */
 	private static class StatusServlet extends GenericServlet {
 
+		/**
+		 * For serialization
+		 */
+		private static final long serialVersionUID = 1L;
+		
 		private final int sc;
 
 		private StatusServlet(int sc) {
@@ -385,6 +458,11 @@ public class HttpComponents4HttpRequestFactoryTest {
 	 */
 	private static class MethodServlet extends GenericServlet {
 
+		/**
+		 * For serialization
+		 */
+		private static final long serialVersionUID = 1L;
+		
 		private final String method;
 
 		private MethodServlet(String method) {
@@ -405,6 +483,11 @@ public class HttpComponents4HttpRequestFactoryTest {
 	 */
 	private static class RedirectServlet extends GenericServlet {
 
+		/**
+		 * For serialization
+		 */
+		private static final long serialVersionUID = 1L;
+		
 		private final String location;
 
 		private RedirectServlet(String location) {

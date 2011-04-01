@@ -16,9 +16,12 @@
 
 package com.redblackit.web;
 
+import java.util.Map;
 import java.util.Properties;
+import java.util.TreeMap;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,10 +34,9 @@ import com.redblackit.version.VersionInfo;
 import com.redblackit.web.controller.AdminController;
 import com.redblackit.web.controller.AdminRestController;
 
-
 /**
  * @author djnorth
- *
+ * 
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
@@ -45,39 +47,54 @@ public class AdminAppTest {
 
 	@Autowired
 	private AdminRestController adminRestController;
-	
+
 	@Autowired
 	@Qualifier("versionProperties")
 	private Properties versionProps;
-	
+
+	private Map<String, String> expectedVersionMap = null;
+
+	/**
+	 * Set up the versionMap
+	 */
+	@Before
+	public void setExpectedVersionMap() {
+		if (expectedVersionMap == null) {
+			expectedVersionMap = new TreeMap<String, String>();
+			for (Object pname : versionProps.keySet()) {
+				expectedVersionMap.put(pname.toString(),
+						versionProps.getProperty(pname.toString()));
+			}
+		}
+	}
+
 	/**
 	 * Test human about service
 	 */
 	@Test
-	public void testAbout()
-	{
+	public void testAbout() {
 		ExtendedModelMap model = new ExtendedModelMap();
-		
+
 		adminController.about(model);
 		Object versionInfoObj = model.get("versionInfo");
-		
+
 		Assert.assertNotNull("versionInfo model attribute", versionInfoObj);
-		Assert.assertTrue("versionInfo is of type VersionInfo:" + versionInfoObj.getClass(), versionInfoObj instanceof VersionInfo);
-		
+		Assert.assertTrue("versionInfo is of type VersionInfo:"
+				+ versionInfoObj.getClass(),
+				versionInfoObj instanceof VersionInfo);
+
 		VersionInfo versionInfo = (VersionInfo) versionInfoObj;
-		Assert.assertEquals(versionProps, versionInfo.getVersionProperties());
+		Assert.assertEquals(versionProps, versionInfo.getVersionMap());
 	}
-	
+
 	/**
 	 * Test RESTful about (getVersion) service
 	 */
 	@Test
-	public void testGetVersion()
-	{
+	public void testGetVersion() {
 		String versionString = adminRestController.getVersionSummary();
-		Assert.assertTrue("versionString="
-				+ versionString + ":versionProps="
+		Assert.assertTrue("versionString=" + versionString + ":versionProps="
 				+ versionProps,
-				versionString.endsWith("versionProperties=" + versionProps));
+				versionString.endsWith("versionMap=" + expectedVersionMap));
 	}
 }

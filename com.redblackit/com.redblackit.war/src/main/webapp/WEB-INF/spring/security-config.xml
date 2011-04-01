@@ -9,11 +9,11 @@
 	<http auto-config="true" access-denied-page="/accessDenied"
 		use-expressions="true">
 
-		<x509 subject-principal-regex="CN=(.*?)," />
+		<x509 subject-principal-regex="CN=(.*?),"/>
 
 		<form-login login-page="/login" authentication-failure-url="/loginError" />
 
-		<intercept-url pattern="/rest/**" access="hasRole('ROLE_RESTWS')"  requires-channel="https" />
+		<intercept-url pattern="/rest/**" access="hasRole('AUTOMATON')" requires-channel="https" />
 
 		<intercept-url pattern="/login*" access="isAnonymous()" requires-channel="https" />
 		<intercept-url pattern="/accessDenied" filters="none" />
@@ -21,6 +21,7 @@
 		<intercept-url pattern="/styles/**" filters="none" />
 		<intercept-url pattern="/resources/**" filters="none" />
 
+		<intercept-url pattern="/about" access="hasAnyRole('ROLE-MEMBER','ROLE_ADMIN')"  requires-channel="https" />
 		<intercept-url pattern="/**" access="isAuthenticated()"  requires-channel="https" />
 
 		<logout />

@@ -25,6 +25,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpHeaders;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.client.RestTemplate;
@@ -38,7 +39,7 @@ import com.redblackit.version.VersionInfoFromProperties;
  *         Integration test for AdminRestController using RestTemplate
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration
+@ContextConfiguration("classpath:/com/redblackit/war/RestControllerClientTest-context.xml")
 public class AdminRestControllerClientTest {
 
 	private Logger logger = Logger.getLogger("web.client");
@@ -66,9 +67,9 @@ public class AdminRestControllerClientTest {
 		final String url = baseHttpsUrl + "rest/version/summary";
 		String versionString = restTemplate.getForObject(url, String.class);
 		logger.debug("versionString=" + versionString);
-		Assert.assertTrue("versionString=" + versionString + ":versionProps="
-				+ versionProps,
-				versionString.endsWith("versionProperties=" + versionProps));
+		VersionInfo expectedVersionInfo = new VersionInfoFromProperties(versionProps);
+		Assert.assertEquals("versionInfo.getVersionString():",
+				expectedVersionInfo.getVersionString(), versionString);
 	}
 
 	/**
@@ -79,8 +80,23 @@ public class AdminRestControllerClientTest {
 	@Test
 	public void testGetVersion() {
 		final String url = baseHttpsUrl + "rest/version";
-		VersionInfo versionInfo = restTemplate.getForObject(url, VersionInfoFromProperties.class);
+		VersionInfo versionInfo = restTemplate.getForObject(url,
+				VersionInfoFromProperties.class);
 		logger.debug("versionInfo=" + versionInfo);
-		Assert.assertEquals("versionInfo.getVersionProperties():", versionProps, versionInfo.getVersionProperties());
+		VersionInfo expectedVersionInfo = new VersionInfoFromProperties(versionProps);
+		Assert.assertEquals("versionInfo.getVersionMap():",
+				expectedVersionInfo, versionInfo);
+	}
+
+	/**
+	 * Test method for
+	 * {@link com.redblackit.web.controller.AdminRestController#getVersionHead()}
+	 * with https.
+	 */
+	@Test
+	public void testGetVersionHead() {
+		final String url = baseHttpsUrl + "rest/version";
+		HttpHeaders headers = restTemplate.headForHeaders(url);
+		logger.debug("headers=" + headers);
 	}
 }

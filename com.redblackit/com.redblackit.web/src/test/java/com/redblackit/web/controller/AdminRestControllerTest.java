@@ -16,34 +16,17 @@
 
 package com.redblackit.web.controller;
 
-import java.util.Properties;
-
 import junit.framework.Assert;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import com.redblackit.version.VersionInfo;
-
 /**
  * @author djnorth
  * 
  */
-public class AdminRestControllerTest {
-	private static final String VERSION_STRING = "Version String";
-
-	private static final String CONFIGURATION_VERSION = "Configuration Version";
-
-	private static final String IMPLEMENTATION_VERSION = "Implementation Version";
-
-	private static final String IMPLEMENTATION_VENDOR = "Implementation Vendor";
-
-	private static final String IMPLEMENTATION_TITLE = "Implementation Title";
-
-	private Properties versionProperties;
-
-	private VersionInfo versionInfo;
-
+public class AdminRestControllerTest extends VersionControllerTestBase {
+	
 	private AdminRestController adminRestController;
 
 	/**
@@ -52,38 +35,7 @@ public class AdminRestControllerTest {
 	@Before
 	public void setUp() throws Exception {
 
-		versionProperties = new Properties();
-		versionProperties.put("implementationVersion", IMPLEMENTATION_VERSION);
-		versionProperties.put("implementationTitle", IMPLEMENTATION_TITLE);
-		versionProperties.put("implementationVendor", IMPLEMENTATION_VENDOR);
-		versionProperties.put("configurationVersion", CONFIGURATION_VERSION);
-
-		versionInfo = new VersionInfo() {
-
-			/*
-			 * (non-Javadoc)
-			 * 
-			 * @see
-			 * com.redblackit.version.VersionInfo#getImplementationVersion()
-			 */
-			@Override
-			public Properties getVersionProperties() {
-				return versionProperties;
-			}
-
-			/*
-			 * (non-Javadoc)
-			 * 
-			 * @see com.redblackit.version.VersionInfo#getVersionString()
-			 */
-			@Override
-			public String getVersionString() {
-				return VERSION_STRING;
-			}
-
-		};
-
-		adminRestController = new AdminRestController(versionInfo);
+		adminRestController = new AdminRestController(getVersionInfo());
 
 	}
 
@@ -95,6 +47,22 @@ public class AdminRestControllerTest {
 
 		String versionString = adminRestController.getVersionSummary();
 		Assert.assertEquals(VERSION_STRING, versionString);
+	}
+
+	/**
+	 * Test about 
+	 */
+	@Test
+	public void testGetVersion() {
+		Assert.assertEquals(getVersionInfo(), adminRestController.getVersion());
+	}
+
+	/**
+	 * Test about head
+	 */
+	@Test
+	public void testGetVersionHead() {
+		adminRestController.getVersionHead();
 	}
 
 }

@@ -42,10 +42,10 @@ import com.meterware.httpunit.WebResponse;
  *         optional client authentication ("want").
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("AppSecurityHttpTest-context.xml")
-public class AppSecurityBadCertHttpTest {
+@ContextConfiguration
+public class AppSecurityHttpTest {
 
-	private Logger logger = Logger.getLogger("security");
+	private Logger logger = Logger.getLogger("web.client");
 
 	/**
 	 * Commonly used attributes from testProperties and messages
@@ -78,7 +78,7 @@ public class AppSecurityBadCertHttpTest {
 	}
 
 	/**
-	 * @param url
+	 * @param inaccessibleUrl
 	 * @throws Exception
 	 */
 	private void testGetUrl(final String url, final String expectedTitle)

@@ -15,20 +15,28 @@
  */
 package com.redblackit.web.client;
 
+import java.io.IOException;
+import java.net.URI;
+
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.*;
+import org.apache.http.client.methods.HttpDelete;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpHead;
+import org.apache.http.client.methods.HttpOptions;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpPut;
+import org.apache.http.client.methods.HttpRequestBase;
+import org.apache.http.client.methods.HttpTrace;
 import org.apache.http.conn.ClientConnectionManager;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
 import org.apache.http.params.CoreConnectionPNames;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.client.ClientHttpRequest;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.util.Assert;
-
-import java.io.IOException;
-import java.net.URI;
 
 /**
  * {@link org.springframework.http.client.ClientHttpRequestFactory}
@@ -47,6 +55,8 @@ import java.net.URI;
 public class HttpComponents4ClientHttpRequestFactory implements
 		ClientHttpRequestFactory, DisposableBean {
 	private static final int DEFAULT_READ_TIMEOUT_MILLISECONDS = (60 * 1000);
+
+	private Logger logger = Logger.getLogger("web.client");
 
 	/**
 	 * HttpClient object we are using
@@ -117,7 +127,7 @@ public class HttpComponents4ClientHttpRequestFactory implements
 	 */
 	public ClientHttpRequest createRequest(URI uri, HttpMethod httpMethod)
 			throws IOException {
-		
+
 		HttpRequestBase commonsHttpMethod = createComponentsHttpMethod(
 				httpMethod, uri.toString());
 		postProcessComponentsHttpMethod(commonsHttpMethod);
@@ -128,7 +138,7 @@ public class HttpComponents4ClientHttpRequestFactory implements
 	/**
 	 * Create a Component HttpMethodBase object for the given HTTP method and
 	 * URI specification.
-	 *  
+	 * 
 	 * @param httpMethod
 	 *            the HTTP method
 	 * @param uri

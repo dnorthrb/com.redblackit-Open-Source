@@ -37,7 +37,7 @@ import org.junit.runners.Parameterized.Parameters;
  *         Test class for HostNetUtils
  */
 @RunWith(Parameterized.class)
-public class FreePortScannerTest {
+public class HostNetUtilsTest {
 
 	@Parameters
 	public static List<Object[]> testParameters() {
@@ -76,7 +76,7 @@ public class FreePortScannerTest {
 	 * @param suppliedMaxPort
 	 * @param suppliedStartPort
 	 */
-	public FreePortScannerTest(int suppliedMinPort, int suppliedMaxPort, int suppliedStartPort, int effectiveMinPort, int effectiveMaxPort) {
+	public HostNetUtilsTest(int suppliedMinPort, int suppliedMaxPort, int suppliedStartPort, int effectiveMinPort, int effectiveMaxPort) {
 		this.suppliedMinPort = suppliedMinPort;
 		this.suppliedMaxPort = suppliedMaxPort;
 		this.suppliedStartPort = suppliedStartPort;

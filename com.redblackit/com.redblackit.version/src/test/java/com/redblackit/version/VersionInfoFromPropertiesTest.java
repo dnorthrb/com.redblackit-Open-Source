@@ -16,9 +16,14 @@
 
 package com.redblackit.version;
 
+import java.io.File;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
+import java.util.TreeMap;
+
+import javax.xml.bind.JAXB;
 
 import junit.framework.Assert;
 
@@ -38,7 +43,12 @@ public class VersionInfoFromPropertiesTest {
 	/**
 	 * Expected versionMap
 	 */
-	private Properties expectedVersionProperties;
+	private Map<String, String> expectedVersionMap;
+	
+	/**
+	 * File for marshalling
+	 */
+	private File versionPropsXmlFile;
 
 	/**
 	 * Create test data
@@ -55,7 +65,7 @@ public class VersionInfoFromPropertiesTest {
 		vprops2.put("configurationVersion", "0.1.Beta");
 		vprops2.put("versionDate", "20110107");
 
-		Object[][] data = { { vprops1 }, { vprops2 }, };
+		Object[][] data = { { vprops1, "vfp1.xml" }, { vprops2, "vfp2.xml" } };
 
 		List<Object[]> dataList = Arrays.asList(data);
 
@@ -71,11 +81,18 @@ public class VersionInfoFromPropertiesTest {
 	 * @param expectedVendor
 	 * @param expectedVersionProperties
 	 */
-	public VersionInfoFromPropertiesTest(Properties expectedVersionProperties) {
+	public VersionInfoFromPropertiesTest(Properties expectedVersionProperties, String jaxbFilename ) {
 
 		this.versionInfoUnderTest = new VersionInfoFromProperties(
 				expectedVersionProperties);
-		this.expectedVersionProperties = expectedVersionProperties;
+
+		this.expectedVersionMap = new TreeMap<String, String>();
+		for (Object pname : expectedVersionProperties.keySet()) {
+			this.expectedVersionMap.put(pname.toString(),
+					expectedVersionProperties.getProperty(pname.toString()));
+		}
+		
+		this.versionPropsXmlFile = new File("target/versionInfoFromProperties-" + jaxbFilename);
 
 	}
 
@@ -84,9 +101,8 @@ public class VersionInfoFromPropertiesTest {
 	 */
 	@Test
 	public void getVersionProperties() {
-		Assert.assertEquals(versionInfoUnderTest.getClass()
-				+ ":version properties", expectedVersionProperties,
-				versionInfoUnderTest.getVersionProperties());
+		Assert.assertEquals(versionInfoUnderTest.getClass() + ":version maps",
+				expectedVersionMap, versionInfoUnderTest.getVersionMap());
 	}
 
 	/**
@@ -96,37 +112,54 @@ public class VersionInfoFromPropertiesTest {
 	public void getVersionString() {
 		final String versionString = versionInfoUnderTest.getVersionString();
 		Assert.assertTrue(versionInfoUnderTest.getClass() + ":version string="
-				+ versionString + ":expectedVersionProperties="
-				+ expectedVersionProperties,
-				versionString.endsWith("versionProperties=" + expectedVersionProperties));
+				+ versionString + ":expectedVersionMap=" + expectedVersionMap,
+				versionString.endsWith("versionMap=" + expectedVersionMap));
 	}
-	
+
 	/**
 	 * Test equals
 	 */
 	@Test
-	public void testEquals()
-	{
-		Assert.assertEquals("indentical objects", versionInfoUnderTest, versionInfoUnderTest);
-		
+	public void testEquals() {
+		Assert.assertEquals("indentical objects", versionInfoUnderTest,
+				versionInfoUnderTest);
+
 		Properties otherVersionProps = null;
-		VersionInfoFromProperties otherVersionInfo = new VersionInfoFromProperties(otherVersionProps);
-		
-		Assert.assertFalse("ne null", versionInfoUnderTest.equals(otherVersionInfo));
+		VersionInfoFromProperties otherVersionInfo = new VersionInfoFromProperties(
+				otherVersionProps);
+
+		Assert.assertFalse("ne null",
+				versionInfoUnderTest.equals(otherVersionInfo));
 
 		otherVersionInfo = new VersionInfoFromProperties(otherVersionProps);
-		Assert.assertFalse("ne versionInfo with null props", versionInfoUnderTest.equals(otherVersionInfo));
-		
+		Assert.assertFalse("ne versionInfo with null props",
+				versionInfoUnderTest.equals(otherVersionInfo));
+
 		otherVersionProps = new Properties();
 		otherVersionInfo.setVersionProperties(otherVersionProps);
-		Assert.assertFalse("ne versionInfo with empty props", versionInfoUnderTest.equals(otherVersionInfo));
+		Assert.assertFalse("ne versionInfo with empty props",
+				versionInfoUnderTest.equals(otherVersionInfo));
 
-		otherVersionProps.putAll(versionInfoUnderTest.getVersionProperties());
-		Assert.assertEquals("eq versionInfo with eq props", versionInfoUnderTest, otherVersionInfo);
+		otherVersionProps.putAll(versionInfoUnderTest.getVersionMap());
+		Assert.assertEquals("eq versionInfo with eq props",
+				versionInfoUnderTest, otherVersionInfo);
 
 		otherVersionProps.put("extraKey", "extraValue");
-		Assert.assertFalse("ne versionInfo with ne props", versionInfoUnderTest.equals(otherVersionInfo));
-		
+		Assert.assertFalse("ne versionInfo with ne props",
+				versionInfoUnderTest.equals(otherVersionInfo));
+
+	}
+	
+	/**
+	 * Test JAXB XML marshalling/unmarshalling for annotations in class
+	 * What goes in should come out!
+	 */
+	@Test
+	public void testJAXBMarshallUnmarshall()
+	{
+		JAXB.marshal(versionInfoUnderTest, versionPropsXmlFile);
+		VersionInfo unmarshalledVersionInfo = JAXB.unmarshal(versionPropsXmlFile, VersionInfoFromProperties.class);
+		Assert.assertEquals("original and unmarshalled versionInfo", versionInfoUnderTest, unmarshalledVersionInfo);
 	}
 
 }

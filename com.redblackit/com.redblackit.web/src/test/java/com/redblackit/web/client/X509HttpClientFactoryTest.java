@@ -89,9 +89,9 @@ public class X509HttpClientFactoryTest {
 		server.getServer().setHandler(context);
 		context.addServlet(new ServletHolder(new EchoServlet()), ECHO_PATH);
 		Assert.assertTrue("Server not started", server.startWait());
-		
+
 		String localhost = HostNetUtils.getLocalHostname();
-		
+
 		echoUrl = "https://" + localhost + ':' + httpsPort + ECHO_PATH;
 		logger.info("echoUrl=" + echoUrl);
 	}
@@ -135,7 +135,7 @@ public class X509HttpClientFactoryTest {
 
 		logger.info("httpClient=" + httpClient);
 		Assert.assertNotNull(httpClient);
-		
+
 		checkConnection(httpClient);
 	}
 
@@ -163,7 +163,7 @@ public class X509HttpClientFactoryTest {
 
 		logger.info("httpClient=" + httpClient);
 		Assert.assertNotNull(httpClient);
-		
+
 		checkConnection(httpClient);
 	}
 
@@ -191,7 +191,7 @@ public class X509HttpClientFactoryTest {
 
 		logger.info("httpClient=" + httpClient);
 		Assert.assertNotNull(httpClient);
-		
+
 		checkConnection(httpClient);
 	}
 
@@ -213,38 +213,45 @@ public class X509HttpClientFactoryTest {
 		HttpPost req = new HttpPost(echoUrl);
 		req.setEntity(new StringEntity("test"));
 		HttpResponse resp = httpClient.execute(req);
-		
+
 		StatusLine status = resp.getStatusLine();
 		logger.debug("status:" + status);
-        for (Header header : resp.getAllHeaders()) {
-            logger.debug(" [" + header.getName() + "]=" + header.getValue());
-        }
+		for (Header header : resp.getAllHeaders()) {
+			logger.debug(" [" + header.getName() + "]=" + header.getValue());
+		}
 		logger.debug("headers:" + resp.getAllHeaders());
-		Assert.assertEquals("status should be OK:"+ status, HttpStatus.SC_OK, status.getStatusCode());
-		
+		Assert.assertEquals("status should be OK:" + status, HttpStatus.SC_OK,
+				status.getStatusCode());
+
 		HttpEntity entity = resp.getEntity();
-		if (entity != null) {
-			
-			logger.debug("entity=" + entity);
-			
-			InputStream is = null;
-			try {
+		Assert.assertNotNull("response entity", entity);
+		logger.debug("entity=" + entity);
 
-				is = entity.getContent();
-				BufferedReader reader = new BufferedReader(
-						new InputStreamReader(is));
-				String inputLine = null;
-				int linei = 0;
-				while ((inputLine = reader.readLine()) != null) {
-					logger.debug("response line[" + linei + "]:" + inputLine);
-					++linei;
+		InputStream is = null;
+		StringBuffer respbody = new StringBuffer();
+		try {
+
+			is = entity.getContent();
+			BufferedReader reader = new BufferedReader(
+					new InputStreamReader(is));
+			String inputLine = null;
+			int linei = 0;
+			while ((inputLine = reader.readLine()) != null) {
+				logger.debug("response line[" + linei + "]:" + inputLine);
+				if (respbody.length() > 0)
+				{
+					respbody.append('\n');
 				}
-
-			} finally {
-
-				// Closing the input stream will trigger connection release
-				is.close();
+				respbody.append(inputLine);
+				++linei;
 			}
+			
+			Assert.assertEquals("request and response body", "test", respbody.toString());
+
+		} finally {
+
+			// Closing the input stream will trigger connection release
+			is.close();
 		}
 
 	}

@@ -17,6 +17,7 @@ package com.redblackit.web.client;
 
 import java.io.IOException;
 import java.net.URI;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -26,22 +27,30 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpEntityEnclosingRequestBase;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.entity.ByteArrayEntity;
+import org.apache.log4j.Logger;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.client.AbstractClientHttpRequest;
 import org.springframework.http.client.ClientHttpResponse;
 
 /**
- * {@link org.springframework.http.client.ClientHttpRequest} implementation that uses
- * Apache HttpComponent's HttpClient to execute requests.
- *
- * <p>Based on {@link org.springframework.http.client.CommonsClientHttpRequest}
- *
- * @see HttpComponents4ClientHttpRequestFactory#createRequest(java.net.URI, org.springframework.http.HttpMethod)
+ * {@link org.springframework.http.client.ClientHttpRequest} implementation that
+ * uses Apache HttpComponent's HttpClient to execute requests.
+ * 
+ * <p>
+ * Based on {@link org.springframework.http.client.CommonsClientHttpRequest}
+ * 
+ * @see HttpComponents4ClientHttpRequestFactory#createRequest(java.net.URI,
+ *      org.springframework.http.HttpMethod)
  * 
  * @author djnorth
  */
 public final class HttpComponents4HttpRequest extends AbstractClientHttpRequest {
+
+	/**
+	 * Logger
+	 */
+	private Logger logger = Logger.getLogger("web.client");
 
 	/**
 	 * Client we will use
@@ -54,8 +63,9 @@ public final class HttpComponents4HttpRequest extends AbstractClientHttpRequest 
 	private final HttpUriRequest httpRequest;
 
 	/**
-	 * Construct our wrapper from the supplied client and request.
-	 * Given the lack of any protected getter for accessing the request, we stick with the interface here.
+	 * Construct our wrapper from the supplied client and request. Given the
+	 * lack of any protected getter for accessing the request, we stick with the
+	 * interface here.
 	 * 
 	 * @param httpClient
 	 * @param httpRequest
@@ -73,39 +83,45 @@ public final class HttpComponents4HttpRequest extends AbstractClientHttpRequest 
 	public HttpMethod getMethod() {
 		return HttpMethod.valueOf(this.httpRequest.getMethod());
 	}
-	
-	
+
 	/**
 	 * Get URI from request
 	 * 
 	 * @return URI
 	 */
 	public URI getURI() {
-            return this.httpRequest.getURI();
+		return this.httpRequest.getURI();
 	}
 
-	
 	/**
-	 * Execute the request using our client, and create the response wrapper from the response
+	 * Execute the request using our client, and create the response wrapper
+	 * from the response
 	 * 
 	 * @return response wrapper object
 	 */
 	@Override
-	public ClientHttpResponse executeInternal(HttpHeaders headers, byte[] output) throws IOException {
+	protected ClientHttpResponse executeInternal(HttpHeaders headers,
+			byte[] output) throws IOException {
+		logger.debug("executeInternal:this.headers=" + getHeaders()
+				+ ":headers=" + headers + ":output=" + Arrays.toString(output));
 		for (Map.Entry<String, List<String>> entry : headers.entrySet()) {
 			String headerName = entry.getKey();
-			for (String headerValue : entry.getValue()) {
-				httpRequest.addHeader(headerName, headerValue);
+			if (headerName.equalsIgnoreCase("content-length")) {
+				logger.debug("dropping header " + headerName);
+			} else {
+				for (String headerValue : entry.getValue()) {
+					httpRequest.addHeader(headerName, headerValue);
+				}
 			}
 		}
-		
+
 		if (this.httpRequest instanceof HttpEntityEnclosingRequestBase) {
 			HttpEntityEnclosingRequestBase entityEnclosingMethod = (HttpEntityEnclosingRequestBase) this.httpRequest;
 			HttpEntity requestEntity = new ByteArrayEntity(output);
 			entityEnclosingMethod.setEntity(requestEntity);
 		}
- 		
-        HttpResponse httpResponse = this.httpClient.execute(this.httpRequest);
+
+		HttpResponse httpResponse = this.httpClient.execute(this.httpRequest);
 		return new HttpComponents4HttpResponse(httpResponse);
 	}
 

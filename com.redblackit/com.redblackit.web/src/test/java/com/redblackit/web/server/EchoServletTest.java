@@ -139,7 +139,7 @@ public class EchoServletTest {
 	 */
 	@Test
 	public void testEchoGet() throws Exception {
-		doTest("GET");
+		doTest("GET", false);
 	}
 
 	/**
@@ -147,7 +147,7 @@ public class EchoServletTest {
 	 */
 	@Test
 	public void testEchoPost() throws Exception {
-		doTest("POST");
+		doTest("POST", true);
 	}
 
 	/**
@@ -155,7 +155,23 @@ public class EchoServletTest {
 	 */
 	@Test
 	public void testEchoPut() throws Exception {
-		doTest("PUT");
+		doTest("PUT", true);
+	}
+
+	/**
+	 * test DELETE
+	 */
+	@Test
+	public void testEchoDelete() throws Exception {
+		doTest("DELETE", false);
+	}
+
+	/**
+	 * test HEAD
+	 */
+	@Test
+	public void testEchoHead() throws Exception {
+		doTest("HEAD", false);
 	}
 
 	/**
@@ -174,14 +190,16 @@ public class EchoServletTest {
 
 	/**
 	 * Do test
+	 * 
+	 * @param method
+	 * @param hasBody if content should be expected
 	 */
-	private void doTest(String method) throws Exception {
+	private void doTest(String method, boolean hasBody) throws Exception {
 		MockHttpServletRequest request = new MockHttpServletRequest();
 		request.setMethod(method);
-		final boolean isGet = (method.equals("GET"));
 		request.setRequestURI(this.requestURI);
 
-		final String msg = "doTest:" + method + ":";
+		final String msg = "doTest:" + method + ":hasBody=" + hasBody;
 		logger.debug(msg + ":this=" + this);
 
 		for (String headerName : headersMap.keySet()) {
@@ -201,7 +219,7 @@ public class EchoServletTest {
 		}
 
 		int expectedContentLength = 0;
-		if (!isGet && body != null && body.length() > 0) {
+		if (hasBody && body != null && body.length() > 0) {
 			request.setContent(body.getBytes());
 			expectedContentLength = request.getContentLength();
 		}
@@ -239,7 +257,15 @@ public class EchoServletTest {
 
 		Assert.assertEquals("headers (excluding Location)", headersMap,
 				responseHeadersMap);
-		Assert.assertEquals("body", (isGet || body == null ? "" : body), responseBody);
+		if (hasBody)
+		{
+			Assert.assertEquals("body", (body == null ? "" : body), responseBody);
+		}
+		else
+		{
+			Assert.assertEquals("body", "", responseBody);
+		}
+		
 		Assert.assertEquals("contentLength", expectedContentLength,
 				response.getContentLength());
 

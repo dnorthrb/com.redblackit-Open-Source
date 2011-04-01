@@ -88,6 +88,34 @@ public class EchoServlet extends HttpServlet {
 	}
 
 	/**
+	 * Use our common echo
+	 * 
+	 * @param req
+	 * @param resp
+	 * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.HttpServletRequest,
+	 *      javax.servlet.http.HttpServletResponse)
+	 */
+	@Override
+	protected void doDelete(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		doEcho(req, resp, "DELETE");
+	}
+
+	/**
+	 * Use our common echo
+	 * 
+	 * @param req
+	 * @param resp
+	 * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.HttpServletRequest,
+	 *      javax.servlet.http.HttpServletResponse)
+	 */
+	@Override
+	protected void doHead(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		doEcho(req, resp, "HEAD");
+	}
+
+	/**
 	 * doEcho
 	 * 
 	 * <ul>
@@ -132,7 +160,7 @@ public class EchoServlet extends HttpServlet {
 		resp.setHeader("Location", reqURI);
 		resp.setStatus(HttpServletResponse.SC_OK);
 
-		if (req.getContentLength() > 0) {
+		if (req.getContentLength() > 0 && !(method.equals("HEAD") || method.equals("DELETE"))) {
 			String body = FileCopyUtils.copyToString(req.getReader());
 			logger.debug(this.getClass().getName() + ":  body>>\n" + body
 					+ "\nbody<<");

@@ -19,12 +19,6 @@
 				<label for="j_password"><fmt:message key="login.password"/></label>
 				<input type='password' id='j_password' name='j_password'/>
 			</li>
-			<li class="confirm">
-				<label>
-					<input type="checkbox" name="_spring_security_remember_me"/>
-					<fmt:message key="login.remember"/>
-				</label>
-			</li>
 		</ol>
 		<button type="submit"><fmt:message key="login.submit"/></button>
 	</fieldset>

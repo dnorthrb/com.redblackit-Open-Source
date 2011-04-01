@@ -8,6 +8,6 @@
 		location="classpath:/com/redblackit/war/test.properties" />
 
 	<util:properties id="messages"
-		location="file:/Users/djnorth/Documents/RedBlackSoftware/gitrep/open-source/com.redblackit/com.redblackit.war/src/main/webapp/WEB-INF/messages/global.properties" />
+		location="file:src/main/webapp/WEB-INF/messages/global.properties" />
 
 </beans>

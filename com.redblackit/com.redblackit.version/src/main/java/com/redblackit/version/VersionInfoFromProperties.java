@@ -16,9 +16,11 @@
 
 package com.redblackit.version;
 
+import java.util.Map;
 import java.util.Properties;
+import java.util.TreeMap;
 
-import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -52,14 +54,23 @@ public class VersionInfoFromProperties implements VersionInfo {
 		this.versionProperties = versionProperties;
 	}
 
-	
 	/**
 	 * Set version properties
 	 * 
-	 * @param versionProperties the versionProperties to set
+	 * @param versionProperties
+	 *            the versionProperties to set
 	 */
 	public void setVersionProperties(Properties versionProperties) {
 		this.versionProperties = versionProperties;
+	}
+
+	/**
+	 * This is not in the VersionInfo interface, and is mainly for the benefit of JAXB2
+	 * 
+	 * @return the versionProperties
+	 */
+	public Properties getVersionProperties() {
+		return versionProperties;
 	}
 
 	/**
@@ -69,8 +80,18 @@ public class VersionInfoFromProperties implements VersionInfo {
 	 * @see com.redblackit.version.VersionInfo#getVersionMap()
 	 */
 	@Override
-	public Properties getVersionProperties() {
-		return versionProperties;
+	@XmlTransient
+	public Map<String, String> getVersionMap() {
+		Map<String, String> versionMap = null;
+		if (versionProperties != null) {
+			versionMap = new TreeMap<String, String>();
+			for (Object pname : versionProperties.keySet()) {
+				versionMap.put(pname.toString(),
+						versionProperties.getProperty(pname.toString()));
+			}
+		}
+
+		return versionMap;
 	}
 
 	/**
@@ -83,19 +104,21 @@ public class VersionInfoFromProperties implements VersionInfo {
 	public String getVersionString() {
 		StringBuffer vb = new StringBuffer(getClass().getName());
 
-		vb.append("\n versionProperties=").append(getVersionProperties());
+		vb.append("\n versionMap=").append(getVersionMap());
 
 		return vb.toString();
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("VersionInfoFromProperties [versionProperties=");
-		builder.append(getVersionProperties());
+		builder.append("VersionInfoFromProperties [versionMap=");
+		builder.append(getVersionMap());
 		builder.append("]");
 		return builder.toString();
 	}
@@ -108,9 +131,8 @@ public class VersionInfoFromProperties implements VersionInfo {
 	 */
 	@Override
 	public int hashCode() {
-		return getVersionProperties().hashCode();
+		return getVersionMap().hashCode();
 	}
-	
 
 	/**
 	 * equals from properties
@@ -129,10 +151,10 @@ public class VersionInfoFromProperties implements VersionInfo {
 			return false;
 		}
 		VersionInfoFromProperties other = (VersionInfoFromProperties) obj;
-		if (getVersionProperties() == null) {
-			return (other.getVersionProperties() != null);
+		if (getVersionMap() == null) {
+			return (other.getVersionMap() != null);
 		}
-		return getVersionProperties().equals(other.getVersionProperties());
+		return getVersionMap().equals(other.getVersionMap());
 	}
-	
+
 }

@@ -17,9 +17,11 @@ package com.redblackit.web.client;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
+import org.apache.http.entity.StringEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.client.ClientHttpResponse;
@@ -52,6 +54,17 @@ final class HttpComponents4HttpResponse implements ClientHttpResponse {
 	 */
 	HttpComponents4HttpResponse(HttpResponse httpResponse) {
 		this.httpResponse = httpResponse;
+		if (httpResponse.getEntity() == null)
+		{
+			try
+			{
+				httpResponse.setEntity(new StringEntity(""));
+			}
+			catch (UnsupportedEncodingException never)
+			{
+				throw new RuntimeException("setting empty entity", never);
+			}
+		}
 	}
 
 	/**

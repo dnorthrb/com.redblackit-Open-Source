@@ -16,7 +16,8 @@
 
 package com.redblackit.web.controller;
 
-import java.util.Properties;
+import java.util.Map;
+import java.util.TreeMap;
 
 import junit.framework.Assert;
 
@@ -25,27 +26,12 @@ import org.junit.Test;
 import org.springframework.ui.ExtendedModelMap;
 
 import com.redblackit.version.VersionInfo;
-import com.redblackit.web.controller.AdminController;
 
 /**
  * @author djnorth
  * 
  */
-public class AdminControllerTest {
-	private static final String VERSION_STRING = "Version String";
-
-	private static final String CONFIGURATION_VERSION = "Configuration Version";
-
-	private static final String IMPLEMENTATION_VERSION = "Implementation Version";
-
-	private static final String IMPLEMENTATION_VENDOR = "Implementation Vendor";
-
-	private static final String IMPLEMENTATION_TITLE = "Implementation Title";
-
-	private Properties versionProperties;
-
-	private VersionInfo versionInfo;
-
+public class AdminControllerTest extends VersionControllerTestBase {
 	private AdminController adminController;
 
 	/**
@@ -54,38 +40,7 @@ public class AdminControllerTest {
 	@Before
 	public void setUp() throws Exception {
 
-		versionProperties = new Properties();
-		versionProperties.put("implementationVersion", IMPLEMENTATION_VERSION);
-		versionProperties.put("implementationTitle", IMPLEMENTATION_TITLE);
-		versionProperties.put("implementationVendor", IMPLEMENTATION_VENDOR);
-		versionProperties.put("configurationVersion", CONFIGURATION_VERSION);
-
-		versionInfo = new VersionInfo() {
-
-			/*
-			 * (non-Javadoc)
-			 * 
-			 * @see
-			 * com.redblackit.version.VersionInfo#getImplementationVersion()
-			 */
-			@Override
-			public Properties getVersionProperties() {
-				return versionProperties;
-			}
-
-			/*
-			 * (non-Javadoc)
-			 * 
-			 * @see com.redblackit.version.VersionInfo#getVersionString()
-			 */
-			@Override
-			public String getVersionString() {
-				return VERSION_STRING;
-			}
-
-		};
-
-		adminController = new AdminController(versionInfo);
+		adminController = new AdminController(getVersionInfo());
 
 	}
 
@@ -105,8 +60,8 @@ public class AdminControllerTest {
 				versionInfoObj instanceof VersionInfo);
 		
 		VersionInfo returnedVersionInfo = (VersionInfo) versionInfoObj;
-		Assert.assertEquals(versionProperties,
-				returnedVersionInfo.getVersionProperties());
+		Assert.assertEquals(getVersionMap(),
+				returnedVersionInfo.getVersionMap());
 		Assert.assertEquals(VERSION_STRING,
 				returnedVersionInfo.getVersionString());
 	}

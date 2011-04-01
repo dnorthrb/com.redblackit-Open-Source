@@ -12,36 +12,7 @@
 	</appender>
 
 	<!-- Application loggers -->
-	<logger name="common">
-		<level value="debug" />
-	</logger>
-
-	<logger name="security">
-		<level value="info" />
-	</logger>
-
-	<logger name="web.server">
-		<level value="info" />
-	</logger>
-
 	<logger name="web.client">
-		<level value="debug" />
-	</logger>
-	
-	<!-- 3rdparty Loggers -->
-	<logger name="org.springframework.beans">
-		<level value="debug" />
-	</logger>
-
-	<logger name="org.springframework.security">
-		<level value="debug" />
-	</logger>
-
-	<logger name="org.springframework.binding">
-		<level value="debug" />
-	</logger>
-		
-	<logger name="org.springframework.web">
 		<level value="debug" />
 	</logger>
 	

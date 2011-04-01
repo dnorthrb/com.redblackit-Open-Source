@@ -43,17 +43,16 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * 
  *         Test using X509HttpClientFactory bean, and also plain
  *         DefaultHttpCLient for non-client auth.
- *         
- *         The system property
- *         clientAuthMandatory can be used to allow successful tests with
- *         servers such as GlassFish that do not allow optional client
- *         authentication ("want").
+ * 
+ *         The system property clientAuthMandatory can be used to allow
+ *         successful tests with servers such as GlassFish that do not allow
+ *         optional client authentication ("want").
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
 public class X509HttpClientTest {
 
-	private Logger logger = Logger.getLogger("security");
+	private Logger logger = Logger.getLogger("web.client");
 
 	/**
 	 * X509 Http Clients
@@ -81,7 +80,7 @@ public class X509HttpClientTest {
 	@Value("#{messages['welcome.title']}")
 	private String welcomeTitle;
 	@Value("#{systemProperties['clientAuthMandatory'] ?: false}")
-	private boolean clientAuthMandatory = false;
+	private boolean clientAuthMandatory;
 
 	/**
 	 * Make connection with good certificate client and verify response is home
@@ -94,8 +93,8 @@ public class X509HttpClientTest {
 	}
 
 	/**
-	 * Make connection with good certificate client which is not a user in Spring security and verify response is login
-	 * page
+	 * Make connection with good certificate client which is not a user in
+	 * Spring security and verify response is login page
 	 */
 	@Test
 	public void testX509ConnectHttpsGoodCertificateNotUser() throws Exception {
@@ -121,7 +120,7 @@ public class X509HttpClientTest {
 	 * Do request and validate response
 	 * 
 	 * @param httpClientToTest
-	 * @param url
+	 * @param inaccessibleUrl
 	 * @param expectedTitle
 	 */
 	private void validateResponseToRequest(HttpClient httpClientToTest,
@@ -159,7 +158,7 @@ public class X509HttpClientTest {
 	 * clientAuthMandatory e.g. GlassFish
 	 * 
 	 * @param httpClientToTest
-	 * @param url
+	 * @param inaccessibleUrl
 	 */
 	private void validateRequestFails(HttpClient httpClientToTest, String url)
 			throws Exception {

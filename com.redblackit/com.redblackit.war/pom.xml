@@ -90,6 +90,20 @@
 				<executions>
 					<execution>
 						<id>start-glassfish</id>
+						<phase>generate-test-resources</phase>
+						<configuration>
+							<target>
+								<exec executable="/Applications/glassfishv2/glassfish/bin/asadmin">
+									<arg value="start-domain" />
+								</exec>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>deploy-to-glassfish</id>
 						<phase>pre-integration-test</phase>
 						<configuration>
 							<target>
@@ -103,7 +117,8 @@
 									<arg value="--upload" />
 									<arg value="--contextroot" />
 									<arg value="com.redblackit.war" />
-									<arg value="${project.build.directory}/${project.build.finalName}.war" />
+									<arg
+										value="${project.build.directory}/${project.build.finalName}.war" />
 								</exec>
 							</target>
 						</configuration>
@@ -322,6 +337,12 @@
 			<artifactId>com.redblackit.web</artifactId>
 			<version>0.0.1</version>
 			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>com.redblackit</groupId>
+			<artifactId>com.redblackit.web.test</artifactId>
+			<version>0.0.1</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>

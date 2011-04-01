@@ -19,9 +19,11 @@ package com.redblackit.web.controller;
 import java.security.Principal;
 
 import org.apache.log4j.Logger;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
  * @author djnorth
@@ -64,6 +66,7 @@ public class SecurityController {
 	 * @param model
 	 */
 	@RequestMapping("/accessDenied")
+	@ResponseStatus(value=HttpStatus.FORBIDDEN)
 	public String accessDenied(Principal principal, Model model)
 	{
 		logger.error("access denied to " + principal.getName());

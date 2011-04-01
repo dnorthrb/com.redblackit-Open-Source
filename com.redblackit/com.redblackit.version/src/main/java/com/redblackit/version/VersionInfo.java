@@ -16,7 +16,8 @@
 
 package com.redblackit.version;
 
-import java.util.Properties;
+import java.util.Map;
+
 
 /**
  * @author djnorth
@@ -30,7 +31,7 @@ public interface VersionInfo
      * 
      * @return map of values describing version
      */
-    Properties getVersionProperties();
+    Map<String,String> getVersionMap();
 
     /**
      * Get version string
