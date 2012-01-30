@@ -9,7 +9,7 @@
 	<groupId>com.redblackit</groupId>
 	<artifactId>com.redblackit.web.test</artifactId>
 	<version>0.0.1</version>
-	<name>com.redblackit.web.test</name>
+	<name>${project.artifactId}</name>
 	<description>Web test helpers</description>
 	<organization>
 		<name>Red-Black IT Ltd</name>
@@ -40,6 +40,8 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
+			<version>${junitVersion}</version>
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
