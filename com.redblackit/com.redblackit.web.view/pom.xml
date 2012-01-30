@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>com.redblackit</artifactId>
+		<groupId>com.redblackit</groupId>
+		<version>0.0.1</version>
+	</parent>
+	<groupId>com.redblackit</groupId>
+	<artifactId>com.redblackit.web.view</artifactId>
+	<version>0.0.1</version>
+	<name>${project.artifactId}</name>
+	<description>Bundled Red-Black IT view resources</description>
+	<organization>
+		<name>Red-Black IT Ltd</name>
+		<url>http://www.redblack-it.com</url>
+	</organization>
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-jsp</artifactId>
+			<version>${tiles.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${spring.security.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>
