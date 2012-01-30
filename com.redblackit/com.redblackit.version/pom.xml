@@ -8,9 +8,14 @@
 	</parent>
 	<groupId>com.redblackit</groupId>
 	<artifactId>com.redblackit.version</artifactId>
-	<name>com.redblackit.version</name>
+	<name>${project.artifactId}</name>
 	<version>0.0.1</version>
 	<dependencies>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
