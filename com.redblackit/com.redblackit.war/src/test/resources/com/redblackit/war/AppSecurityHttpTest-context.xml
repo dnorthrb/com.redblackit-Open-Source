@@ -4,10 +4,12 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
 
+    <import resource="classpath:/com/redblackit/version/version-config.xml" />
+
 	<util:properties id="testProperties"
 		location="classpath:/com/redblackit/war/test.properties" />
 
 	<util:properties id="messages"
-		location="file:src/main/webapp/WEB-INF/messages/global.properties" />
+		location="classpath:/WEB-INF/messages/global.properties" />
 
 </beans>

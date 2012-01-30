@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+
+    <util:map id="versionStringMap0" key-type="java.lang.String" value-type="java.lang.String"
+              map-class="java.util.TreeMap">
+        <entry key="implementation0" value="i1.0"/>
+        <entry key="description0" value="level 0 version 0"/>
+        <entry key="configuration0" value="c1:0a"/>
+        <entry key="activeProfiles" value="#{environment.getActiveProfiles()}"/>
+    </util:map>
+
+    <util:map id="versionStringMap0-0" key-type="java.lang.String" value-type="java.lang.String"
+              map-class="java.util.TreeMap">
+        <entry key="implementation0-0" value="v2.0-1a"/>
+        <entry key="description0-0" value="level 1 version 0"/>
+    </util:map>
+
+    <util:map id="versionStringMap0-0-0" key-type="java.lang.String" value-type="java.lang.String"
+              map-class="java.util.TreeMap">
+        <entry key="implementation0-0-0" value="com.redblack-it:002"/>
+        <entry key="description0-0-0" value="level 2.0 version 0"/>
+    </util:map>
+
+    <util:map id="versionStringMap0-1-0" key-type="java.lang.String" value-type="java.lang.String"
+              map-class="java.util.TreeMap">
+        <entry key="implementation0-1-0" value="A345-78"/>
+        <entry key="description0-1-0" value="level 2.1 version 0"/>
+    </util:map>
+
+    <util:map id="versionStringMap0-1-1" key-type="java.lang.String" value-type="java.lang.String"
+              map-class="java.util.TreeMap">
+        <entry key="implementation0-1-1" value="Build00009876"/>
+        <entry key="description0-1-1" value="level 2.1 version 1"/>
+    </util:map>
+
+    <beans profile="initial-version">
+
+        <util:map id="versionInfoMap0" key-type="java.lang.String"
+                  value-type="com.redblackit.version.CompositeVersionInfo"
+                  map-class="java.util.TreeMap">
+
+            <entry key="cvi0-0key" value-ref="cvi0-0"/>
+
+        </util:map>
+
+        <bean id="cvi0" class="com.redblackit.version.CompositeVersionInfoMap" primary="true">
+            <property name="versionStringMap" ref="versionStringMap0"/>
+            <property name="versionInfoMap" ref="versionInfoMap0"/>
+        </bean>
+
+        <bean id="cvi0-0" class="com.redblackit.version.CompositeVersionInfoMap">
+            <property name="versionStringMap" ref="versionStringMap0-0"/>
+        </bean>
+
+    </beans>
+
+    <beans profile="complete-version">
+        <util:map id="versionInfoMap0" key-type="java.lang.String"
+                  value-type="com.redblackit.version.CompositeVersionInfo"
+                  map-class="java.util.TreeMap">
+
+            <entry key="cvi0-0key" value-ref="cvi0-0"/>
+            <entry key="cvi0-1key" value-ref="cvi0-1"/>
+
+        </util:map>
+
+        <util:map id="versionInfoMap0-0" key-type="java.lang.String"
+                  value-type="com.redblackit.version.CompositeVersionInfo"
+                  map-class="java.util.TreeMap">
+
+            <entry key="cvi0-0-0key" value-ref="cvi0-0-0"/>
+
+        </util:map>
+
+        <util:map id="versionInfoMap0-1" key-type="java.lang.String"
+                  value-type="com.redblackit.version.CompositeVersionInfo"
+                  map-class="java.util.TreeMap">
+
+            <entry key="cvi0-1-0key" value-ref="cvi0-1-0"/>
+            <entry key="cvi0-1-1key" value-ref="cvi0-1-1"/>
+
+        </util:map>
+
+        <bean id="cvi0" class="com.redblackit.version.CompositeVersionInfoMap" primary="true">
+            <property name="versionInfoMap" ref="versionInfoMap0"/>
+            <property name="versionStringMap" ref="versionStringMap0"/>
+        </bean>
+
+        <bean id="cvi0-0" class="com.redblackit.version.CompositeVersionInfoMap">
+            <property name="versionInfoMap" ref="versionInfoMap0-0"/>
+            <property name="versionStringMap" ref="versionStringMap0-0"/>
+        </bean>
+
+        <bean id="cvi0-1" class="com.redblackit.version.CompositeVersionInfoMap">
+
+            <property name="versionInfoMap" ref="versionInfoMap0-1"/>
+
+        </bean>
+
+        <bean id="cvi0-0-0" class="com.redblackit.version.CompositeVersionInfoMap">
+
+            <property name="versionStringMap" ref="versionStringMap0-0-0"/>
+
+        </bean>
+
+        <bean id="cvi0-1-0" class="com.redblackit.version.CompositeVersionInfoMap">
+
+            <property name="versionStringMap" ref="versionStringMap0-1-0"/>
+
+        </bean>
+
+        <bean id="cvi0-1-1" class="com.redblackit.version.CompositeVersionInfoMap">
+
+            <property name="versionStringMap" ref="versionStringMap0-1-1"/>
+
+        </bean>
+    </beans>
+
+</beans>

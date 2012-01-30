@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//LOGGER"
+        "/Users/djnorth/Documents/RedBlackSoftware/gitrep/open-source/com.redblackit/com.redblackit.war/src/main/resources/log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <!-- Appenders -->
+    <appender name="console" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p:%x %c - %m%n"/>
+        </layout>
+    </appender>
+
+    <!-- Use only to find mystery loggers! -->
+    <appender name="console-loc" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p:%l%x %c - %m%n" />
+        </layout>
+    </appender>
+
+    <appender name="loggingInterceptorAppender" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="loggingInterceptor.log"/>
+        <param name="Append" value="true"/>
+        <param name="MaxFileSize" value="100MB"/>
+        <param name="MaxBackupIndex" value="1"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p:%x %c - %m%n"/>
+        </layout>
+    </appender>
+
+    <!-- Application loggers -->
+    <logger name="web.server">
+        <level value="trace" />
+    </logger>
+
+    <!-- Application loggers -->
+    <logger name="loggingInterceptor">
+        <level value="debug"/>
+        <appender-ref ref="console"/>
+        <appender-ref ref="loggingInterceptorAppender"/>
+    </logger>
+
+    <!-- Application loggers -->
+    <logger name="common">
+        <level value="debug"/>
+    </logger>
+
+    <logger name="security">
+        <level value="debug"/>
+    </logger>
+
+    <!-- 3rdparty Loggers -->
+    <logger name="org.springframework.beans">
+        <level value="info"/>
+    </logger>
+
+    <logger name="org.springframework.binding">
+        <level value="debug"/>
+    </logger>
+
+    <logger name="org.springframework.web">
+        <level value="debug"/>
+    </logger>
+
+    <!-- Root Logger -->
+    <root>
+        <priority value="info"/>
+        <appender-ref ref="console"/>
+    </root>
+
+</log4j:configuration>

@@ -1,0 +1,465 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.redblackit:com.redblackit.war:war:0.0.1
+[WARNING] 'build.plugins.plugin.version' for org.mortbay.jetty:jetty-maven-plugin is missing. @ line 38, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ com.redblackit:com.redblackit:0.0.1, /Users/djnorth/Documents/RedBlackSoftware/gitrep/open-source/com.redblackit/pom.xml, line 105, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Red-Black IT Sample Deployment 0.0.1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.3:resources (default-resources) @ com.redblackit.war ---
+[WARNING] Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/djnorth/Documents/RedBlackSoftware/gitrep/open-source/com.redblackit/com.redblackit.war/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ com.redblackit.war ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.3:testResources (default-testResources) @ com.redblackit.war ---
+[WARNING] Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 6 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ com.redblackit.war ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.7.2:test (default-test) @ com.redblackit.war ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-war-plugin:2.1.1:war (default-war) @ com.redblackit.war ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [com.redblackit.war] in [/Users/djnorth/Documents/RedBlackSoftware/gitrep/open-source/com.redblackit/com.redblackit.war/target/com.redblackit.war-0.0.1]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/djnorth/Documents/RedBlackSoftware/gitrep/open-source/com.redblackit/com.redblackit.war/src/main/webapp]
+[INFO] Webapp assembled in [203 msecs]
+[INFO] Building war: /Users/djnorth/Documents/RedBlackSoftware/gitrep/open-source/com.redblackit/com.redblackit.war/target/com.redblackit.war-0.0.1.war
+[WARNING] Warning: selected war files include a META-INF/INDEX.LIST which will be replaced by a newly generated one.
+[INFO] WEB-INF/web.xml already added, skipping
+[INFO] META-INF/maven/com.redblackit/com.redblackit.war/pom.xml already added, skipping
+[INFO] META-INF/maven/com.redblackit/com.redblackit.war/pom.properties already added, skipping
+[INFO] 
+[INFO] >>> jetty-maven-plugin:8.0.0.M2:deploy-war (start-jetty) @ com.redblackit.war >>>
+[INFO] 
+[INFO] <<< jetty-maven-plugin:8.0.0.M2:deploy-war (start-jetty) @ com.redblackit.war <<<
+[INFO] 
+[INFO] --- jetty-maven-plugin:8.0.0.M2:deploy-war (start-jetty) @ com.redblackit.war ---
+[INFO] Configuring Jetty for project: Red-Black IT Sample Deployment
+[INFO] Context path = /com.redblackit.war
+[INFO] Tmp directory = /Users/djnorth/Documents/RedBlackSoftware/gitrep/open-source/com.redblackit/com.redblackit.war/target/tmp
+[INFO] Web defaults = org/eclipse/jetty/webapp/webdefault.xml
+[INFO] Web overrides =  none
+[INFO] Starting jetty 8.0.0.M2 ...
+2011-03-15 14:41:23.360:INFO::jetty-8.0.0.M2
+2011-03-15 14:41:23.400:INFO::Extract jar:file:/Users/djnorth/Documents/RedBlackSoftware/gitrep/open-source/com.redblackit/com.redblackit.war/target/com.redblackit.war-0.0.1.war!/ to /Users/djnorth/Documents/RedBlackSoftware/gitrep/open-source/com.redblackit/com.redblackit.war/target/com.redblackit.war-0.0.1
+2011-03-15 14:41:24.315:INFO::No Transaction manager found - if your webapp requires one, please configure one.
+2011-03-15 14:41:26.711:INFO:/com.redblackit.war:Initializing Spring root WebApplicationContext
+log4j:WARN No appenders could be found for logger (org.springframework.web.context.ContextLoader).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+2011-03-15 14:41:27.369:INFO:/com.redblackit.war:Initializing Spring FrameworkServlet 'admin'
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2011-03-15 14:41:28.151:INFO::Started SelectChannelConnector@0.0.0.0:9080
+2011-03-15 14:41:28.445:INFO::Started SslSelectChannelConnector@0.0.0.0:9443
+[INFO] Started Jetty Server
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.7.2:test (surefire-it) @ com.redblackit.war ---
+[INFO] Surefire report directory: /Users/djnorth/Documents/RedBlackSoftware/gitrep/open-source/com.redblackit/com.redblackit.war/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.redblackit.war.AdminRestControllerClientTestBase
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [com/redblackit/war/AdminRestControllerClientTest-context.xml]
+DEBUG: org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+DEBUG: org.springframework.beans.factory.xml.PluggableSchemaResolver - Loading schema mappings from [META-INF/spring.schemas]
+DEBUG: org.springframework.beans.factory.xml.PluggableSchemaResolver - Loaded schema mappings: {http://www.springframework.org/schema/security/spring-security-3.0.4.xsd=org/springframework/security/config/spring-security-3.0.4.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd=org/springframework/oxm/config/spring-oxm-3.0.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/security/spring-security-2.0.2.xsd=org/springframework/security/config/spring-security-2.0.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm.xsd=org/springframework/oxm/config/spring-oxm-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/security/spring-security-3.0.3.xsd=org/springframework/security/config/spring-security-3.0.3.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/security/spring-security-2.0.1.xsd=org/springframework/security/config/spring-security-2.0.1.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/security/spring-security-2.0.xsd=org/springframework/security/config/spring-security-2.0.xsd, http://www.springframework.org/schema/security/spring-security-3.0.xsd=org/springframework/security/config/spring-security-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/security/spring-security-2.0.4.xsd=org/springframework/security/config/spring-security-2.0.4.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/security/spring-security.xsd=org/springframework/security/config/spring-security-3.0.4.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd}
+DEBUG: org.springframework.beans.factory.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/beans/spring-beans.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.0.xsd
+DEBUG: org.springframework.beans.factory.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/context/spring-context-3.0.xsd] in classpath: org/springframework/context/config/spring-context-3.0.xsd
+DEBUG: org.springframework.beans.factory.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.0.xsd
+DEBUG: org.springframework.beans.factory.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/util/spring-util-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-util-3.0.xsd
+DEBUG: org.springframework.beans.factory.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd] in classpath: org/springframework/oxm/config/spring-oxm-3.0.xsd
+DEBUG: org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+DEBUG: org.springframework.beans.factory.xml.DefaultNamespaceHandlerResolver - Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler, http://www.springframework.org/schema/oxm=org.springframework.oxm.config.OxmNamespaceHandler, http://www.springframework.org/schema/security=org.springframework.security.config.SecurityNamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler}
+DEBUG: org.springframework.beans.factory.xml.BeanDefinitionParserDelegate - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.http.converter.StringHttpMessageConverter#6632060c]
+DEBUG: org.springframework.beans.factory.xml.BeanDefinitionParserDelegate - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.http.converter.xml.MarshallingHttpMessageConverter#5e2b323e]
+DEBUG: org.springframework.beans.factory.xml.BeanDefinitionParserDelegate - Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.http.converter.json.MappingJacksonHttpMessageConverter#65efb4be]
+DEBUG: org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 10 bean definitions from location pattern [classpath:/com/redblackit/war/AdminRestControllerClientTest-context.xml]
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6f9ec4ed: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,testProperties,versionProperties,httpClient,requestFactory,marshaller,restTemplate]; root of factory hierarchy
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'testProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'testProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'testProperties' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'testProperties'
+INFO : org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from class path resource [com/redblackit/war/test.properties]
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'testProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'versionProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'versionProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'versionProperties' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'versionProperties'
+INFO : org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from class path resource [com/redblackit/web/Version.properties]
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'versionProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'httpClient'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'httpClient'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'httpClient' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'httpClient'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'httpClient'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'requestFactory'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'requestFactory'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'requestFactory' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'httpClient'
+DEBUG: web.client - getObject:E:this=com.redblackit.web.client.X509HttpClientFactoryBean@6b754699:keyStore=/Users/djnorth/client-keystore.jks:keyStoreType=jks:keyStorePassword=clientpwd:trustStore=/System/Library/Java/Support/Deploy.bundle/Contents/Home/lib/security/cacerts:trustStoreType=jks:trustStorePassword=changeit:httpsPort=8443:httpParams=null
+DEBUG: web.client - getObject:R:httpClient=org.apache.http.impl.client.DefaultHttpClient@5dce1bea
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'requestFactory'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'marshaller'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'marshaller'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'marshaller' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'marshaller'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'marshaller'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'restTemplate'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'restTemplate'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'restTemplate' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'requestFactory'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.http.converter.StringHttpMessageConverter#6632060c'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.http.converter.StringHttpMessageConverter#6632060c'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.http.converter.xml.MarshallingHttpMessageConverter#5e2b323e'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'marshaller'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'marshaller'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.http.converter.xml.MarshallingHttpMessageConverter#5e2b323e'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.http.converter.json.MappingJacksonHttpMessageConverter#65efb4be'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.http.converter.json.MappingJacksonHttpMessageConverter#65efb4be'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'restTemplate'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Found injected element on class [com.redblackit.war.AdminRestControllerClientTestBase]: AutowiredFieldElement for private org.springframework.web.client.RestTemplate com.redblackit.war.AdminRestControllerClientTestBase.restTemplate
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Found injected element on class [com.redblackit.war.AdminRestControllerClientTestBase]: AutowiredFieldElement for private java.util.Properties com.redblackit.war.AdminRestControllerClientTestBase.versionProps
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Found injected element on class [com.redblackit.war.AdminRestControllerClientTestBase]: AutowiredFieldElement for private java.lang.String com.redblackit.war.AdminRestControllerClientTestBase.baseHttpsUrl
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.AdminRestControllerClientTestBase': AutowiredFieldElement for private org.springframework.web.client.RestTemplate com.redblackit.war.AdminRestControllerClientTestBase.restTemplate
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'restTemplate'
+DEBUG: org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'com.redblackit.war.AdminRestControllerClientTestBase' to bean named 'restTemplate'
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.AdminRestControllerClientTestBase': AutowiredFieldElement for private java.util.Properties com.redblackit.war.AdminRestControllerClientTestBase.versionProps
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'versionProperties'
+DEBUG: org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'com.redblackit.war.AdminRestControllerClientTestBase' to bean named 'versionProperties'
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.AdminRestControllerClientTestBase': AutowiredFieldElement for private java.lang.String com.redblackit.war.AdminRestControllerClientTestBase.baseHttpsUrl
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'testProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'systemProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'testProperties'
+DEBUG: org.springframework.web.client.RestTemplate - Created GET request for "https://redblack-it-mac.local:8543/com.redblackit.war/rest/version/summary"
+DEBUG: org.springframework.web.client.RestTemplate - Setting request Accept header to [text/plain, application/json, */*]
+DEBUG: org.springframework.web.client.RestTemplate - GET request for "https://redblack-it-mac.local:8543/com.redblackit.war/rest/version/summary" resulted in 200 (OK)
+DEBUG: org.springframework.web.client.RestTemplate - Reading [java.lang.String] as "text/plain;charset=UTF-8" using [org.springframework.http.converter.StringHttpMessageConverter@6839ea58]
+DEBUG: web.client - versionString=com.redblackit.version.VersionInfoFromProperties
+ versionProperties={Configuration-Version=0.0.1, Implementation-Vendor=Red-Black IT Ltd, Implementation-Version=0.0.1, Description=Demo Web Application}
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.AdminRestControllerClientTestBase': AutowiredFieldElement for private org.springframework.web.client.RestTemplate com.redblackit.war.AdminRestControllerClientTestBase.restTemplate
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'restTemplate'
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.AdminRestControllerClientTestBase': AutowiredFieldElement for private java.util.Properties com.redblackit.war.AdminRestControllerClientTestBase.versionProps
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'versionProperties'
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.AdminRestControllerClientTestBase': AutowiredFieldElement for private java.lang.String com.redblackit.war.AdminRestControllerClientTestBase.baseHttpsUrl
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'testProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'systemProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'testProperties'
+DEBUG: org.springframework.web.client.RestTemplate - Created GET request for "https://redblack-it-mac.local:8543/com.redblackit.war/rest/version"
+DEBUG: org.springframework.web.client.RestTemplate - Setting request Accept header to [application/xml, text/xml, application/*+xml, application/json]
+DEBUG: org.springframework.web.client.RestTemplate - GET request for "https://redblack-it-mac.local:8543/com.redblackit.war/rest/version" resulted in 200 (OK)
+DEBUG: org.springframework.web.client.RestTemplate - Reading [com.redblackit.version.VersionInfoFromProperties] as "application/xml;charset=UTF-8" using [org.springframework.http.converter.xml.MarshallingHttpMessageConverter@412beeec]
+DEBUG: web.client - versionInfo=VersionInfoFromProperties [versionProperties={Configuration-Version=0.0.1, Implementation-Vendor=Red-Black IT Ltd, Implementation-Version=0.0.1, Description=Demo Web Application}]
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.371 sec
+Running com.redblackit.war.AppSecurityBadCertHttpTest
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [com/redblackit/war/AppSecurityHttpTest-context.xml]
+DEBUG: org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+DEBUG: org.springframework.beans.factory.xml.PluggableSchemaResolver - Loading schema mappings from [META-INF/spring.schemas]
+DEBUG: org.springframework.beans.factory.xml.PluggableSchemaResolver - Loaded schema mappings: {http://www.springframework.org/schema/security/spring-security-3.0.4.xsd=org/springframework/security/config/spring-security-3.0.4.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd=org/springframework/oxm/config/spring-oxm-3.0.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/security/spring-security-2.0.2.xsd=org/springframework/security/config/spring-security-2.0.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm.xsd=org/springframework/oxm/config/spring-oxm-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/security/spring-security-3.0.3.xsd=org/springframework/security/config/spring-security-3.0.3.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/security/spring-security-2.0.1.xsd=org/springframework/security/config/spring-security-2.0.1.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/security/spring-security-2.0.xsd=org/springframework/security/config/spring-security-2.0.xsd, http://www.springframework.org/schema/security/spring-security-3.0.xsd=org/springframework/security/config/spring-security-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/security/spring-security-2.0.4.xsd=org/springframework/security/config/spring-security-2.0.4.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/security/spring-security.xsd=org/springframework/security/config/spring-security-3.0.4.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd}
+DEBUG: org.springframework.beans.factory.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/beans/spring-beans.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.0.xsd
+DEBUG: org.springframework.beans.factory.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/util/spring-util-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-util-3.0.xsd
+DEBUG: org.springframework.beans.factory.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.0.xsd
+DEBUG: org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+DEBUG: org.springframework.beans.factory.xml.DefaultNamespaceHandlerResolver - Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler, http://www.springframework.org/schema/oxm=org.springframework.oxm.config.OxmNamespaceHandler, http://www.springframework.org/schema/security=org.springframework.security.config.SecurityNamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler}
+DEBUG: org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 2 bean definitions from location pattern [classpath:/com/redblackit/war/AppSecurityHttpTest-context.xml]
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@17a697a1: defining beans [testProperties,messages,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor]; root of factory hierarchy
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'testProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'testProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'testProperties' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'testProperties'
+INFO : org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from class path resource [com/redblackit/war/test.properties]
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'testProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'messages'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'messages'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'messages' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'messages'
+INFO : org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from URL [file:/Users/djnorth/Documents/RedBlackSoftware/gitrep/open-source/com.redblackit/com.redblackit.war/src/main/webapp/WEB-INF/messages/global.properties]
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'messages'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Found injected element on class [com.redblackit.war.AppSecurityBadCertHttpTest]: AutowiredFieldElement for private java.lang.String com.redblackit.war.AppSecurityBadCertHttpTest.baseHttpsUrl
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Found injected element on class [com.redblackit.war.AppSecurityBadCertHttpTest]: AutowiredFieldElement for private java.lang.String com.redblackit.war.AppSecurityBadCertHttpTest.loginTitle
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Found injected element on class [com.redblackit.war.AppSecurityBadCertHttpTest]: AutowiredFieldElement for private boolean com.redblackit.war.AppSecurityBadCertHttpTest.clientAuthMandatory
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.AppSecurityBadCertHttpTest': AutowiredFieldElement for private java.lang.String com.redblackit.war.AppSecurityBadCertHttpTest.baseHttpsUrl
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'testProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'systemProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'testProperties'
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.AppSecurityBadCertHttpTest': AutowiredFieldElement for private java.lang.String com.redblackit.war.AppSecurityBadCertHttpTest.loginTitle
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'messages'
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.AppSecurityBadCertHttpTest': AutowiredFieldElement for private boolean com.redblackit.war.AppSecurityBadCertHttpTest.clientAuthMandatory
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'systemProperties'
+INFO : security - https://redblack-it-mac.local:8543/com.redblackit.war/  :expecting Sign In
+INFO : security -   [user.name]=djnorth
+INFO : security -   [javax.net.ssl.keyStore]=/Users/djnorth/untrusted-client-keystore.jks
+INFO : security -   [javax.net.ssl.keyStorePassword]=clientpwd
+INFO : security -   [javax.net.ssl.trustStore]=/System/Library/Java/Support/Deploy.bundle/Contents/Home/lib/security/cacerts
+INFO : security -   [javax.net.ssl.trustStorePassword]=changeit
+Rhino classes (js.jar) not found - Javascript disabled
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.108 sec <<< FAILURE!
+Running com.redblackit.war.X509HttpClientTest
+INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [com/redblackit/war/X509HttpClientTest-context.xml]
+DEBUG: org.springframework.beans.factory.xml.DefaultDocumentLoader - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+DEBUG: org.springframework.beans.factory.xml.PluggableSchemaResolver - Loading schema mappings from [META-INF/spring.schemas]
+DEBUG: org.springframework.beans.factory.xml.PluggableSchemaResolver - Loaded schema mappings: {http://www.springframework.org/schema/security/spring-security-3.0.4.xsd=org/springframework/security/config/spring-security-3.0.4.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd=org/springframework/oxm/config/spring-oxm-3.0.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/security/spring-security-2.0.2.xsd=org/springframework/security/config/spring-security-2.0.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm.xsd=org/springframework/oxm/config/spring-oxm-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/security/spring-security-3.0.3.xsd=org/springframework/security/config/spring-security-3.0.3.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/security/spring-security-2.0.1.xsd=org/springframework/security/config/spring-security-2.0.1.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/security/spring-security-2.0.xsd=org/springframework/security/config/spring-security-2.0.xsd, http://www.springframework.org/schema/security/spring-security-3.0.xsd=org/springframework/security/config/spring-security-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/security/spring-security-2.0.4.xsd=org/springframework/security/config/spring-security-2.0.4.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/security/spring-security.xsd=org/springframework/security/config/spring-security-3.0.4.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd}
+DEBUG: org.springframework.beans.factory.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/beans/spring-beans.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.0.xsd
+DEBUG: org.springframework.beans.factory.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/util/spring-util-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-util-3.0.xsd
+DEBUG: org.springframework.beans.factory.xml.PluggableSchemaResolver - Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.0.xsd
+DEBUG: org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader - Loading bean definitions
+DEBUG: org.springframework.beans.factory.xml.DefaultNamespaceHandlerResolver - Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler, http://www.springframework.org/schema/oxm=org.springframework.oxm.config.OxmNamespaceHandler, http://www.springframework.org/schema/security=org.springframework.security.config.SecurityNamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler}
+DEBUG: org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loaded 4 bean definitions from location pattern [classpath:/com/redblackit/war/X509HttpClientTest-context.xml]
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@14b87d31: defining beans [testProperties,messages,httpClientGoodCert,httpClientBadCert,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor]; root of factory hierarchy
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'testProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'testProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'testProperties' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'testProperties'
+INFO : org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from class path resource [com/redblackit/war/test.properties]
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'testProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'messages'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'messages'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'messages' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'messages'
+INFO : org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from URL [file:/Users/djnorth/Documents/RedBlackSoftware/gitrep/open-source/com.redblackit/com.redblackit.war/src/main/webapp/WEB-INF/messages/global.properties]
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'messages'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'httpClientGoodCert'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'httpClientGoodCert'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'httpClientGoodCert' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'httpClientGoodCert'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'httpClientGoodCert'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'httpClientBadCert'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'httpClientBadCert'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'httpClientBadCert' to allow for resolving potential circular references
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'httpClientBadCert'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'httpClientBadCert'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Found injected element on class [com.redblackit.war.X509HttpClientTest]: AutowiredFieldElement for private org.apache.http.client.HttpClient com.redblackit.war.X509HttpClientTest.httpClientGoodCert
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Found injected element on class [com.redblackit.war.X509HttpClientTest]: AutowiredFieldElement for private org.apache.http.client.HttpClient com.redblackit.war.X509HttpClientTest.httpClientBadCert
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Found injected element on class [com.redblackit.war.X509HttpClientTest]: AutowiredFieldElement for private java.lang.String com.redblackit.war.X509HttpClientTest.baseHttpsUrl
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Found injected element on class [com.redblackit.war.X509HttpClientTest]: AutowiredFieldElement for private java.lang.String com.redblackit.war.X509HttpClientTest.loginTitle
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Found injected element on class [com.redblackit.war.X509HttpClientTest]: AutowiredFieldElement for private java.lang.String com.redblackit.war.X509HttpClientTest.welcomeTitle
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Found injected element on class [com.redblackit.war.X509HttpClientTest]: AutowiredFieldElement for private boolean com.redblackit.war.X509HttpClientTest.clientAuthMandatory
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.X509HttpClientTest': AutowiredFieldElement for private org.apache.http.client.HttpClient com.redblackit.war.X509HttpClientTest.httpClientGoodCert
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'httpClientGoodCert'
+DEBUG: web.client - getObject:E:this=com.redblackit.web.client.X509HttpClientFactoryBean@6c98a8b8:keyStore=/Users/djnorth/client-keystore.jks:keyStoreType=jks:keyStorePassword=clientpwd:trustStore=/System/Library/Java/Support/Deploy.bundle/Contents/Home/lib/security/cacerts:trustStoreType=jks:trustStorePassword=changeit:httpsPort=8443:httpParams=null
+DEBUG: web.client - getObject:R:httpClient=org.apache.http.impl.client.DefaultHttpClient@c58f769
+DEBUG: org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'com.redblackit.war.X509HttpClientTest' to bean named 'httpClientGoodCert'
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.X509HttpClientTest': AutowiredFieldElement for private org.apache.http.client.HttpClient com.redblackit.war.X509HttpClientTest.httpClientBadCert
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'httpClientBadCert'
+DEBUG: web.client - getObject:E:this=com.redblackit.web.client.X509HttpClientFactoryBean@24db14d4:keyStore=/Users/djnorth/untrusted-client-keystore.jks:keyStoreType=jks:keyStorePassword=clientpwd:trustStore=/System/Library/Java/Support/Deploy.bundle/Contents/Home/lib/security/cacerts:trustStoreType=jks:trustStorePassword=changeit:httpsPort=8443:httpParams=null
+DEBUG: web.client - getObject:R:httpClient=org.apache.http.impl.client.DefaultHttpClient@335ad36d
+DEBUG: org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'com.redblackit.war.X509HttpClientTest' to bean named 'httpClientBadCert'
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.X509HttpClientTest': AutowiredFieldElement for private java.lang.String com.redblackit.war.X509HttpClientTest.baseHttpsUrl
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'testProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'systemProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'testProperties'
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.X509HttpClientTest': AutowiredFieldElement for private java.lang.String com.redblackit.war.X509HttpClientTest.loginTitle
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'messages'
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.X509HttpClientTest': AutowiredFieldElement for private java.lang.String com.redblackit.war.X509HttpClientTest.welcomeTitle
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'messages'
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.X509HttpClientTest': AutowiredFieldElement for private boolean com.redblackit.war.X509HttpClientTest.clientAuthMandatory
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'systemProperties'
+INFO : security - request:org.apache.http.client.methods.HttpGet@67a5fb5a
+INFO : security - HTTP/1.1 200 OK
+DEBUG: security - responseBody*>>
+DEBUG: security - <?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css" media="screen">
+	    @import url("/com.redblackit.war/styles/css-framework/css/tools.css;jsessionid=9f6f054dbf99d8fc4ba67b3dee45");
+	    @import url("/com.redblackit.war/styles/css-framework/css/typo.css;jsessionid=9f6f054dbf99d8fc4ba67b3dee45");
+	    @import url("/com.redblackit.war/styles/css-framework/css/layout-navleft-1col.css;jsessionid=9f6f054dbf99d8fc4ba67b3dee45");
+	    @import url("/com.redblackit.war/styles/css-framework/css/layout.css;jsessionid=9f6f054dbf99d8fc4ba67b3dee45");
+	    @import url("/com.redblackit.war/styles/css-framework/css/nav-vertical.css;jsessionid=9f6f054dbf99d8fc4ba67b3dee45");
+	    @import url("/com.redblackit.war/styles/redblack.css;jsessionid=9f6f054dbf99d8fc4ba67b3dee45");
+	</style>
+	<title>Red-Black Web Components - Sample Application</title>
+</head>
+<body>
+	<div id="page">
+		<div id="header" class="clearfix">
+			<div id="branding">
+				<img src="/com.redblackit.war/images/logo_redblack_780x89_purered.gif;jsessionid=9f6f054dbf99d8fc4ba67b3dee45" />
+			</div>
+		</div>
+		<div id="content" class="clearfix">
+			<div id="main">
+				
+
+<h1>
+	Red-Black Web Components - Sample Application
+</h1>
+<h2>
+	Please try to contain your excitement 
+</h2>
+			</div>
+			<div id="nav">
+				
+				<ul class="clearfix">
+					
+						<li>
+							
+								<strong>
+									<a href="/com.redblackit.war/;jsessionid=9f6f054dbf99d8fc4ba67b3dee45">
+										Home
+									</a>
+								</strong>
+							
+							
+						</li>
+						<li>
+							
+							
+								<a href="/com.redblackit.war/about;jsessionid=9f6f054dbf99d8fc4ba67b3dee45">
+									About this application
+								</a>
+							
+						</li>
+			        
+			        
+						<li>
+							<a href="/com.redblackit.war/j_spring_security_logout;jsessionid=9f6f054dbf99d8fc4ba67b3dee45">Logout djnorth</a>
+						</li>
+			        
+				</ul>
+			</div>
+		</div>
+		<div id="footer" class="clearfix">
+			<ul><li class="first"><a href="http://www.redblack-it.com">http://www.redblack-it.com</a></li><li class="last">Red-Black Web Components - Sample Application - Copyleft 2011 Red-Black IT Ltd</li></ul>
+		</div>
+	</div>
+</body>
+</html>
+DEBUG: security - responseBody*<<
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.X509HttpClientTest': AutowiredFieldElement for private org.apache.http.client.HttpClient com.redblackit.war.X509HttpClientTest.httpClientGoodCert
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'httpClientGoodCert'
+DEBUG: web.client - getObject:E:this=com.redblackit.web.client.X509HttpClientFactoryBean@6c98a8b8:keyStore=/Users/djnorth/client-keystore.jks:keyStoreType=jks:keyStorePassword=clientpwd:trustStore=/System/Library/Java/Support/Deploy.bundle/Contents/Home/lib/security/cacerts:trustStoreType=jks:trustStorePassword=changeit:httpsPort=8443:httpParams=org.apache.http.params.BasicHttpParams@134683c0
+DEBUG: web.client - getObject:R:httpClient=org.apache.http.impl.client.DefaultHttpClient@741b3967
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.X509HttpClientTest': AutowiredFieldElement for private org.apache.http.client.HttpClient com.redblackit.war.X509HttpClientTest.httpClientBadCert
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'httpClientBadCert'
+DEBUG: web.client - getObject:E:this=com.redblackit.web.client.X509HttpClientFactoryBean@24db14d4:keyStore=/Users/djnorth/untrusted-client-keystore.jks:keyStoreType=jks:keyStorePassword=clientpwd:trustStore=/System/Library/Java/Support/Deploy.bundle/Contents/Home/lib/security/cacerts:trustStoreType=jks:trustStorePassword=changeit:httpsPort=8443:httpParams=org.apache.http.params.BasicHttpParams@2755d4be
+DEBUG: web.client - getObject:R:httpClient=org.apache.http.impl.client.DefaultHttpClient@743bce70
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.X509HttpClientTest': AutowiredFieldElement for private java.lang.String com.redblackit.war.X509HttpClientTest.baseHttpsUrl
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'testProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'systemProperties'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'testProperties'
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.X509HttpClientTest': AutowiredFieldElement for private java.lang.String com.redblackit.war.X509HttpClientTest.loginTitle
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'messages'
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.X509HttpClientTest': AutowiredFieldElement for private java.lang.String com.redblackit.war.X509HttpClientTest.welcomeTitle
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'messages'
+DEBUG: org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'com.redblackit.war.X509HttpClientTest': AutowiredFieldElement for private boolean com.redblackit.war.X509HttpClientTest.clientAuthMandatory
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'systemProperties'
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.151 sec <<< FAILURE!
+
+Results :
+
+Tests in error: 
+  testGetHomePageHttpsBadClientCert(com.redblackit.war.AppSecurityBadCertHttpTest): Connection reset
+  testX509ConnectHttpsBadCertificate(com.redblackit.war.X509HttpClientTest): peer not authenticated
+
+Tests run: 5, Failures: 0, Errors: 2, Skipped: 0
+
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@17a697a1: defining beans [testProperties,messages,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor]; root of factory hierarchy
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6f9ec4ed: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,testProperties,versionProperties,httpClient,requestFactory,marshaller,restTemplate]; root of factory hierarchy
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'restTemplate': [com.redblackit.war.AdminRestControllerClientTestBase]
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'org.springframework.http.converter.StringHttpMessageConverter#6632060c': [restTemplate]
+DEBUG: org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name 'requestFactory'
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@14b87d31: defining beans [testProperties,messages,httpClientGoodCert,httpClientBadCert,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor]; root of factory hierarchy
+DEBUG: org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'httpClientBadCert': [com.redblackit.war.X509HttpClientTest]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 12.089s
+[INFO] Finished at: Tue Mar 15 14:41:31 GMT 2011
+[INFO] Final Memory: 12M/554M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.7.2:test (surefire-it) on project com.redblackit.war: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/djnorth/Documents/RedBlackSoftware/gitrep/open-source/com.redblackit/com.redblackit.war/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2011-03-15 14:41:32.550:INFO:/com.redblackit.war:Destroying Spring FrameworkServlet 'admin'
+2011-03-15 14:41:32.555:INFO:/com.redblackit.war:Closing Spring root WebApplicationContext

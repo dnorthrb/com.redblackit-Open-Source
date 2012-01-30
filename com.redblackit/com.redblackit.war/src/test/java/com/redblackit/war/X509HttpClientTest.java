@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2011 the original author or authors, or Red-Black IT Ltd, as appropriate.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -104,7 +104,7 @@ public class X509HttpClientTest {
 
 	/**
 	 * Make connection with bad certificate client and verify response is login
-	 * page
+	 * page, or failure, depending on the web server
 	 */
 	@Test
 	public void testX509ConnectHttpsBadCertificate() throws Exception {
@@ -120,7 +120,7 @@ public class X509HttpClientTest {
 	 * Do request and validate response
 	 * 
 	 * @param httpClientToTest
-	 * @param inaccessibleUrl
+	 * @param url
 	 * @param expectedTitle
 	 */
 	private void validateResponseToRequest(HttpClient httpClientToTest,
@@ -158,7 +158,7 @@ public class X509HttpClientTest {
 	 * clientAuthMandatory e.g. GlassFish
 	 * 
 	 * @param httpClientToTest
-	 * @param inaccessibleUrl
+	 * @param url
 	 */
 	private void validateRequestFails(HttpClient httpClientToTest, String url)
 			throws Exception {
