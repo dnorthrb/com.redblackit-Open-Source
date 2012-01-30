@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2011 the original author or authors, or Red-Black IT Ltd, as appropriate.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,10 +45,10 @@ public class SecurityController {
 	 * 
 	 * For now we log, then fire up the login page with an appropriate message parameter
 	 * 
-	 * @param principal
 	 * @param model
 	 */
 	@RequestMapping("/loginError")
+	@ResponseStatus(value=HttpStatus.UNAUTHORIZED)
 	public String loginError(Model model)
 	{
 		logger.warn("login error");

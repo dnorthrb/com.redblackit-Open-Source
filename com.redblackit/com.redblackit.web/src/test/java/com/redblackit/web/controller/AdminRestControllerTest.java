@@ -23,46 +23,64 @@ import org.junit.Test;
 
 /**
  * @author djnorth
- * 
  */
 public class AdminRestControllerTest extends VersionControllerTestBase {
-	
-	private AdminRestController adminRestController;
 
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@Before
-	public void setUp() throws Exception {
+    private AdminRestController adminRestController;
 
-		adminRestController = new AdminRestController(getVersionInfo());
 
-	}
+    /**
+     * @throws java.lang.Exception
+     */
+    @Before
+    public void setUp() throws Exception {
+        createExpectedAndActualCVI0();
+        adminRestController = new AdminRestController(getActualCompositeVersionInfo());
+    }
 
-	/**
-	 * Test about
-	 */
-	@Test
-	public void testGetVersionSummary() {
+    /**
+     * Test about
+     */
+    @Test
+    public void testGetVersionSummary() {
+        String versionString = adminRestController.getVersionSummary();
+    }
 
-		String versionString = adminRestController.getVersionSummary();
-		Assert.assertEquals(VERSION_STRING, versionString);
-	}
+    /**
+     * Test get version for initial level0 object
+     */
+    @Test
+    public void testGetVersion0() {
+        Assert.assertEquals("versionInfo", getExpectedCompositeVersionInfo(), adminRestController.getVersion());
+    }
 
-	/**
-	 * Test about 
-	 */
-	@Test
-	public void testGetVersion() {
-		Assert.assertEquals(getVersionInfo(), adminRestController.getVersion());
-	}
+    /**
+     * Test get version for level1 objects
+     */
+    @Test
+    public void testGetVersion1() {
+        setupActualCVI1();
+        setupExpectedCVI1();
+        Assert.assertEquals("versionInfo", getExpectedCompositeVersionInfo(), adminRestController.getVersion());
+    }
 
-	/**
-	 * Test about head
-	 */
-	@Test
-	public void testGetVersionHead() {
-		adminRestController.getVersionHead();
-	}
+    /**
+     * Test get version for level2 objects
+     */
+    @Test
+    public void testGetVersion2() {
+        setupActualCVI1_2All();
+        setupExpectedCVI1_2All();
+
+        Assert.assertEquals("versionInfo", getExpectedCompositeVersionInfo(), adminRestController.getVersion());
+    }
+
+    /**
+     * Test about head
+     */
+    @Test
+    public void testGetVersionHead() {
+        adminRestController.getVersionHead();
+    }
 
 }

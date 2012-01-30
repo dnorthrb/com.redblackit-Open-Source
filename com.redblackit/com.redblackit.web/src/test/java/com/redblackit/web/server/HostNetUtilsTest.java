@@ -108,7 +108,7 @@ public class HostNetUtilsTest {
 
 
 	/**
-	 * Test that call with only port works with everything defaulted
+	 * Test that call with everything defaulted
 	 */
 	@Test
 	public void testGetFreePortAllDefaults() throws IOException {

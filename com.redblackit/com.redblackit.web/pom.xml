@@ -9,8 +9,8 @@
 	<groupId>com.redblackit</groupId>
 	<artifactId>com.redblackit.web</artifactId>
 	<version>0.0.1</version>
-	<name>Red-Black IT Web Components</name>
-	<description>JAR for useful MVC controllers etc.</description>
+	<name>${project.artifactId}</name>
+	<description>Red-Black IT Web Components: useful MVC controllers etc.</description>
 	<organization>
 		<name>Red-Black IT Ltd</name>
 		<url>http://www.redblack-it.com</url>
@@ -37,22 +37,39 @@
 			<artifactId>spring-web</artifactId>
 			<version>${spring.framework.version}</version>
 		</dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.framework.version}</version>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${spring.framework.version}</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.easymock</groupId>
+			<artifactId>easymock</artifactId>
+			<version>${easymock.version}</version>
+			<scope>test</scope>
+		</dependency>
 
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-servlet-api</artifactId>
+            <version>7.0.8</version>
+            <scope>provided</scope>
+        </dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			<version>4.0-beta2</version>
+			<version>${apache.httpclient.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpcore</artifactId>
-			<version>4.0-beta2</version>
+			<version>${apache.httpclient.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>

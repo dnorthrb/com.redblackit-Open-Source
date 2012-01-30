@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2011 the original author or authors, or Red-Black IT Ltd, as appropriate.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 
 package com.redblackit.web.controller;
 
+import com.redblackit.version.CompositeVersionInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,7 +35,7 @@ public class AdminController {
 	/**
 	 * Version object
 	 */
-	private VersionInfo versionInfo;
+	private CompositeVersionInfo versionInfo;
 	
 	/**
 	 * Constructor taking version info
@@ -42,7 +43,7 @@ public class AdminController {
 	 * @param versionInfo
 	 */
 	@Autowired
-	public AdminController(VersionInfo versionInfo) {
+	public AdminController(CompositeVersionInfo versionInfo) {
 		this.versionInfo = versionInfo;
 	}
 	

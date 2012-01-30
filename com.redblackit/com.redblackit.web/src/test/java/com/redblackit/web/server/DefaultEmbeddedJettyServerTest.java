@@ -16,13 +16,7 @@
 
 package com.redblackit.web.server;
 
-import java.io.BufferedWriter;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.ProtocolException;
 import java.net.URL;
@@ -80,22 +74,22 @@ public class DefaultEmbeddedJettyServerTest {
 		}
 
 		Object[][] parameters = {
-				{ 8180, 0, null, null, null, null, null, null, null, null },
-				{ 0, 8643, KeyAndTrustStoreInfo.SERVER0_KS,
+				{ 18280, 0, null, null, null, null, null, null, null, null },
+				{ 0, 8643, KeyAndTrustStoreInfo.getServer0Ks(),
 						KeyAndTrustStoreInfo.SERVER0_KS_PWD,
-						KeyAndTrustStoreInfo.SERVER0_TS,
+                        KeyAndTrustStoreInfo.getServer0Ts(),
 						KeyAndTrustStoreInfo.SERVER0_TS_PWD,
-						KeyAndTrustStoreInfo.CLIENT0_KS,
+                        KeyAndTrustStoreInfo.getClient0Ks(),
 						KeyAndTrustStoreInfo.CLIENT0_KS_PWD,
-						KeyAndTrustStoreInfo.CLIENT0_TS,
+                        KeyAndTrustStoreInfo.getClient0Ts(),
 						KeyAndTrustStoreInfo.CLIENT0_TS_PWD },
-				{ 8280, 8743, KeyAndTrustStoreInfo.SERVER1_KS,
+				{ 18380, 8743, KeyAndTrustStoreInfo.getServer1Ks(),
 						KeyAndTrustStoreInfo.SERVER1_KS_PWD,
-						KeyAndTrustStoreInfo.SERVER1_TS,
+                        KeyAndTrustStoreInfo.getServer1Ts(),
 						KeyAndTrustStoreInfo.SERVER1_TS_PWD,
-						KeyAndTrustStoreInfo.CLIENT1_KS,
+                        KeyAndTrustStoreInfo.getClient1Ks(),
 						KeyAndTrustStoreInfo.CLIENT1_KS_PWD,
-						KeyAndTrustStoreInfo.CLIENT1_TS,
+                        KeyAndTrustStoreInfo.getClient1Ts(),
 						KeyAndTrustStoreInfo.CLIENT1_TS_PWD } };
 
 		return Arrays.asList(parameters);
@@ -363,7 +357,6 @@ public class DefaultEmbeddedJettyServerTest {
 	 * @param useHttpsPort
 	 * @param useKeyStore
 	 * @param useKeyStorePassword
-	 * @param useKeyPassword
 	 * @param useTrustStore
 	 * @param useTrustStorePassword
 	 */
@@ -396,10 +389,8 @@ public class DefaultEmbeddedJettyServerTest {
 					sslConnector);
 			Assert.assertEquals("httpsPort" + msg, useHttpsPort,
 					sslConnector.getPort());
-			Assert.assertEquals("keyStore" + msg, useKeyStore,
-					sslConnector.getKeystore());
-			Assert.assertEquals("trustStore" + msg, useTrustStore,
-					sslConnector.getTruststore());
+            verifyStoreFile("keyStore", msg, useKeyStore, sslConnector.getKeystore());
+            verifyStoreFile("trustStore", msg, useTrustStore, sslConnector.getTruststore());
 		} else {
 			Assert.assertNull("should not have httpsConnector" + msg,
 					sslConnector);
@@ -473,7 +464,22 @@ public class DefaultEmbeddedJettyServerTest {
 		}
 	}
 
-	/**
+    /**
+     * Helper comparing store files, allowing for path expansion
+     * 
+     * @param storeName
+     * @param msg
+     * @param expectedStoreFileName
+     * @param actualStoreFileName
+     */
+    private void verifyStoreFile(String storeName, String msg, String expectedStoreFileName, String actualStoreFileName) {
+        final File expectedStoreFile = new File(expectedStoreFileName).getAbsoluteFile();
+        final File actualStoreFile = new File(actualStoreFileName).getAbsoluteFile();
+
+        Assert.assertEquals(storeName + ':' + msg, expectedStoreFile, actualStoreFile);
+    }
+
+    /**
 	 * Call this to run common test using socket that's been set up
 	 * appropriately
 	 * 

@@ -81,7 +81,7 @@ public class X509HttpClientFactoryTest {
 	public static void setUpServer() {
 		final int httpsPort = HostNetUtils.getFreePort(8443);
 		server = new DefaultEmbeddedJettyServer(0, httpsPort,
-				KeyAndTrustStoreInfo.SERVER1_KS,
+                KeyAndTrustStoreInfo.getServer1Ks(),
 				KeyAndTrustStoreInfo.SERVER1_KS_PWD);
 		ServletContextHandler context = new ServletContextHandler(
 				ServletContextHandler.SESSIONS);
@@ -119,16 +119,20 @@ public class X509HttpClientFactoryTest {
 	@Test
 	public void testGetObjectWithDefaults() throws Exception {
 		System.setProperty("javax.net.ssl.keyStore",
-				KeyAndTrustStoreInfo.CLIENT0_KS);
+                KeyAndTrustStoreInfo.getClient0Ks());
 		System.setProperty("javax.net.ssl.keyStorePassword",
 				KeyAndTrustStoreInfo.CLIENT0_KS_PWD);
+		System.setProperty("javax.net.ssl.trustStore",
+                KeyAndTrustStoreInfo.getClient0Ts());
+		System.setProperty("javax.net.ssl.trustStorePassword",
+				KeyAndTrustStoreInfo.CLIENT0_TS_PWD);
 		x509HttpClientFactory = new X509HttpClientFactoryBean();
 		logger.info("x509HttpClientFactory=" + x509HttpClientFactory);
 		x509HttpClientFactory.afterPropertiesSet();
 
 		Assert.assertEquals("getObjectType", HttpClient.class,
 				x509HttpClientFactory.getObjectType());
-		Assert.assertEquals("isSingleton", false,
+		Assert.assertEquals("isSingleton", true,
 				x509HttpClientFactory.isSingleton());
 
 		HttpClient httpClient = x509HttpClientFactory.getObject();
@@ -145,10 +149,10 @@ public class X509HttpClientFactoryTest {
 	@Test
 	public void testGetObjectWithFilesAndPasswords0() throws Exception {
 		x509HttpClientFactory = new X509HttpClientFactoryBean();
-		x509HttpClientFactory.setKeyStore(KeyAndTrustStoreInfo.CLIENT0_KS);
+		x509HttpClientFactory.setKeyStore(KeyAndTrustStoreInfo.getClient0Ks());
 		x509HttpClientFactory
 				.setKeyStorePassword(KeyAndTrustStoreInfo.CLIENT0_KS_PWD);
-		x509HttpClientFactory.setTrustStore(KeyAndTrustStoreInfo.CLIENT0_TS);
+		x509HttpClientFactory.setTrustStore(KeyAndTrustStoreInfo.getClient0Ts());
 		x509HttpClientFactory
 				.setTrustStorePassword(KeyAndTrustStoreInfo.CLIENT0_TS_PWD);
 		logger.info("x509HttpClientFactory=" + x509HttpClientFactory);
@@ -156,7 +160,7 @@ public class X509HttpClientFactoryTest {
 
 		Assert.assertEquals("getObjectType", HttpClient.class,
 				x509HttpClientFactory.getObjectType());
-		Assert.assertEquals("isSingleton", false,
+		Assert.assertEquals("isSingleton", true,
 				x509HttpClientFactory.isSingleton());
 
 		HttpClient httpClient = x509HttpClientFactory.getObject();
@@ -173,10 +177,10 @@ public class X509HttpClientFactoryTest {
 	@Test
 	public void testGetObjectWithFilesAndPasswords1() throws Exception {
 		x509HttpClientFactory = new X509HttpClientFactoryBean();
-		x509HttpClientFactory.setKeyStore(KeyAndTrustStoreInfo.CLIENT1_KS);
+		x509HttpClientFactory.setKeyStore(KeyAndTrustStoreInfo.getClient1Ks());
 		x509HttpClientFactory
 				.setKeyStorePassword(KeyAndTrustStoreInfo.CLIENT1_KS_PWD);
-		x509HttpClientFactory.setTrustStore(KeyAndTrustStoreInfo.CLIENT1_TS);
+		x509HttpClientFactory.setTrustStore(KeyAndTrustStoreInfo.getClient1Ts());
 		x509HttpClientFactory
 				.setTrustStorePassword(KeyAndTrustStoreInfo.CLIENT1_TS_PWD);
 		logger.info("x509HttpClientFactory=" + x509HttpClientFactory);
@@ -184,7 +188,7 @@ public class X509HttpClientFactoryTest {
 
 		Assert.assertEquals("getObjectType", HttpClient.class,
 				x509HttpClientFactory.getObjectType());
-		Assert.assertEquals("isSingleton", false,
+		Assert.assertEquals("isSingleton", true,
 				x509HttpClientFactory.isSingleton());
 
 		HttpClient httpClient = x509HttpClientFactory.getObject();

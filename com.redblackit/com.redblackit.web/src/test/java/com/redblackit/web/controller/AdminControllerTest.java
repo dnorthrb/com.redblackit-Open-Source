@@ -16,16 +16,13 @@
 
 package com.redblackit.web.controller;
 
-import java.util.Map;
-import java.util.TreeMap;
 
+import com.redblackit.version.CompositeVersionInfo;
 import junit.framework.Assert;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.ui.ExtendedModelMap;
-
-import com.redblackit.version.VersionInfo;
 
 /**
  * @author djnorth
@@ -39,31 +36,56 @@ public class AdminControllerTest extends VersionControllerTestBase {
 	 */
 	@Before
 	public void setUp() throws Exception {
-
-		adminController = new AdminController(getVersionInfo());
-
+        createExpectedAndActualCVI0();
+		adminController = new AdminController(getActualCompositeVersionInfo());
 	}
 
 	/**
-	 * Test about
+	 * Test about level 0 only
 	 */
 	@Test
-	public void testAbout() {
-		ExtendedModelMap model = new ExtendedModelMap();
-		
-		adminController.about(model);
-		
-		Object versionInfoObj = model.get("versionInfo");
-		Assert.assertNotNull("versionInfo model attribute", versionInfoObj);
-		Assert.assertTrue("versionInfo is of type VersionInfo:"
-				+ versionInfoObj.getClass(),
-				versionInfoObj instanceof VersionInfo);
-		
-		VersionInfo returnedVersionInfo = (VersionInfo) versionInfoObj;
-		Assert.assertEquals(getVersionMap(),
-				returnedVersionInfo.getVersionMap());
-		Assert.assertEquals(VERSION_STRING,
-				returnedVersionInfo.getVersionString());
+	public void testAbout0() {
+        doTestAbout();
 	}
+
+    /**
+     * Test about level 1 only
+     */
+    @Test
+    public void testAbout1() {
+        setupActualCVI1();
+        setupExpectedCVI1();
+
+        doTestAbout();
+    }
+
+    /**
+     * Test about level 2
+     */
+    @Test
+    public void testAbout2() {
+        setupActualCVI1_2All();
+        setupExpectedCVI1_2All();
+
+        doTestAbout();
+    }
+
+    /**
+     * Helper method to run tests using about
+     */
+    private void doTestAbout() {
+        ExtendedModelMap model = new ExtendedModelMap();
+
+        adminController.about(model);
+
+        Object versionInfoObj = model.get("versionInfo");
+        Assert.assertNotNull("versionInfo model attribute", versionInfoObj);
+        Assert.assertTrue("versionInfo is of type CompositeVersionInfo:"
+                + versionInfoObj.getClass(),
+                versionInfoObj instanceof CompositeVersionInfo);
+
+        CompositeVersionInfo returnedVersionInfo = (CompositeVersionInfo) versionInfoObj;
+        Assert.assertEquals("returned versionInfo", getExpectedCompositeVersionInfo(), returnedVersionInfo);
+    }
 
 }

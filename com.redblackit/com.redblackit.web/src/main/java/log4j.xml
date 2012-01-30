@@ -11,13 +11,20 @@
 		</layout>
 	</appender>
 
+    <appender name="console-loc" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p:%l %c - %m%n" />
+        </layout>
+    </appender>
+
 	<!-- Application loggers -->
 	<logger name="common">
 		<level value="debug" />
 	</logger>
 	
 	<logger name="web.server">
-		<level value="debug" />
+		<level value="trace" />
 	</logger>
 	
 	<logger name="web.client">

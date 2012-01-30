@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2011 the original author or authors.
+ * Copyright 2002-2011 the original author or authors, or Red-Black IT Ltd, as appropriate.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.redblackit.web.client;
 
 import java.io.FileInputStream;
@@ -26,18 +27,26 @@ import org.apache.http.conn.ssl.SSLSocketFactory;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
 import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.CoreConnectionPNames;
 import org.apache.http.params.HttpParams;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.util.ResourceUtils;
 
 /**
- * @author djnorth
+ * Factory creating an HttpClient for use with x.509, using configured key and
+ * trust store information.
  * 
- *         Factory creating an HttpClient that is configured for x.509.
+ * @author djnorth
  */
 public class X509HttpClientFactoryBean implements FactoryBean<HttpClient>,
 		InitializingBean {
+
+	/**
+	 * Default read timeout, used if no HttpParams are provided.
+	 */
+	private static final int DEFAULT_READ_TIMEOUT_MILLISECONDS = (60 * 1000);
 
 	/**
 	 * Logger
@@ -87,10 +96,9 @@ public class X509HttpClientFactoryBean implements FactoryBean<HttpClient>,
 	private HttpParams httpParams = null;
 
 	/**
-	 * Constructor taking mandatory fields
+	 * HttpClient object
 	 */
-	public X509HttpClientFactoryBean() {
-	}
+	private HttpClient httpClient = null;
 
 	/**
 	 * Set keyStore filename (default system property javax.net.ssl.keyStore)
@@ -128,8 +136,8 @@ public class X509HttpClientFactoryBean implements FactoryBean<HttpClient>,
 
 	/**
 	 * Set keyStorePassword (default system property
-	 * javax.net.ssl.keyStorePassword, or changeit)
-	 * N.B. This must equal the (private) key password
+	 * javax.net.ssl.keyStorePassword, or changeit) N.B. This must equal the
+	 * (private) key password
 	 * 
 	 * @param keyStorePassword
 	 *            the keyStorePassword to set
@@ -216,6 +224,9 @@ public class X509HttpClientFactoryBean implements FactoryBean<HttpClient>,
 	}
 
 	/**
+	 * Set HttpParams to use. Default is a BasicHttpParams instance with a read
+	 * timeout value set to DEFAULT_READ_TIMEOUT_MILLISECONDS.
+	 * 
 	 * @param httpParams
 	 *            the httpParams to set
 	 */
@@ -249,53 +260,54 @@ public class X509HttpClientFactoryBean implements FactoryBean<HttpClient>,
 			throw new IllegalArgumentException("Missing key/trust store info:"
 					+ this);
 		}
-	}
-
-	/**
-	 * Create the httpClient from the properties set
-	 * 
-	 * @see org.springframework.beans.factory.FactoryBean#getObject()
-	 */
-	@Override
-	public HttpClient getObject() {
 
 		if (logger.isDebugEnabled()) {
-			logger.debug("getObject:E:this=" + this);
+			logger.debug("afterPropertiesSet:E:this=" + this);
 		}
 
 		try {
 
 			final KeyStore keystore = KeyStore.getInstance(getKeyStoreType());
-			InputStream keystoreInput = new FileInputStream(getKeyStore());
+			InputStream keystoreInput = new FileInputStream(ResourceUtils.getFile(getKeyStore()));
 			keystore.load(keystoreInput, getKeyStorePassword().toCharArray());
 
 			KeyStore truststore = KeyStore.getInstance(getTrustStoreType());
-			InputStream truststoreInput = new FileInputStream(getTrustStore());
+			InputStream truststoreInput = new FileInputStream(ResourceUtils.getFile(getTrustStore()));
 			truststore.load(truststoreInput, getTrustStorePassword()
 					.toCharArray());
 
 			final SchemeRegistry schemeRegistry = new SchemeRegistry();
-			schemeRegistry.register(new Scheme("https", new SSLSocketFactory(
-					keystore, getKeyStorePassword(), truststore),
-					getHttpsPort()));
+			schemeRegistry.register(new Scheme("https", getHttpsPort(),
+					new SSLSocketFactory(keystore, getKeyStorePassword(),
+							truststore)));
 
 			if (httpParams == null) {
 				httpParams = new BasicHttpParams();
+				httpParams.setIntParameter(CoreConnectionPNames.SO_TIMEOUT,
+						DEFAULT_READ_TIMEOUT_MILLISECONDS);
 			}
 
-			HttpClient httpClient = new DefaultHttpClient(
-					new ThreadSafeClientConnManager(httpParams, schemeRegistry),
-					httpParams);
+			httpClient = new DefaultHttpClient(new ThreadSafeClientConnManager(
+					schemeRegistry), httpParams);
 
 			if (logger.isDebugEnabled()) {
-				logger.debug("getObject:R:httpClient=" + httpClient);
+				logger.debug("afterPropertiesSet:R:this=" + this);
 			}
-
-			return httpClient;
 
 		} catch (Throwable t) {
 			throw new RuntimeException(this.toString(), t);
 		}
+
+	}
+
+	/**
+	 * Return the httpClient created from the properties set
+	 * 
+	 * @see org.springframework.beans.factory.FactoryBean#getObject()
+	 */
+	@Override
+	public HttpClient getObject() {
+		return httpClient;
 	}
 
 	/**
@@ -310,13 +322,13 @@ public class X509HttpClientFactoryBean implements FactoryBean<HttpClient>,
 	}
 
 	/**
-	 * We don't cache our client
+	 * We do cache our client
 	 * 
 	 * @see org.springframework.beans.factory.FactoryBean#isSingleton()
 	 */
 	@Override
 	public boolean isSingleton() {
-		return false;
+		return true;
 	}
 
 	/**
@@ -324,14 +336,14 @@ public class X509HttpClientFactoryBean implements FactoryBean<HttpClient>,
 	 */
 	public String toString() {
 		StringBuffer tos = new StringBuffer(super.toString());
-		tos.append(":keyStore=").append(keyStore == null ? null : keyStore);
+		tos.append(":keyStore=").append(keyStore);
 		tos.append(":keyStoreType=").append(keyStoreType);
 		tos.append(":keyStorePassword=").append(keyStorePassword);
-		tos.append(":trustStore=").append(
-				trustStore == null ? null : trustStore);
+		tos.append(":trustStore=").append(trustStore);
 		tos.append(":trustStoreType=").append(trustStoreType);
 		tos.append(":trustStorePassword=").append(trustStorePassword);
 		tos.append(":httpsPort=").append(httpsPort);
+		tos.append(":httpClient=").append(httpClient);
 		tos.append(":httpParams=").append(httpParams);
 
 		return tos.toString();
