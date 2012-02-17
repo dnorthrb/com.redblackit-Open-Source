@@ -79,11 +79,11 @@ public class UrlChildLocation {
     /**
      * Method to return a location URL for child by appending the childId to the parent URl,
      * relying on the childId toString() method. If the supplied childId is
-     * null, it leaves the parent URL as-is.
+     * null, it returns the parent URL as-is.
      *
      * @return location URL
      */
-    public String createLocationUrl() {
+    public String getLocationUrl() {
         final String locationUrl;
         if (childId == null) {
             locationUrl = requestUrl;
@@ -98,7 +98,7 @@ public class UrlChildLocation {
     }
 
     /**
-     * Get URL string value
+     * Get base URL string value
      *
      * @return string
      */

@@ -11,7 +11,6 @@
 		<module>com.redblackit.web</module>
 		<module>com.redblackit.war</module>
 		<module>com.redblackit.web.test</module>
-		<module>com.redblackit.util</module>
 		<module>com.redblackit.web.view</module>
 	</modules>
 	<repositories>

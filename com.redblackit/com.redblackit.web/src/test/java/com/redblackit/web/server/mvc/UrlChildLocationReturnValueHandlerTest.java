@@ -1,8 +1,6 @@
 package com.redblackit.web.server.mvc;
 
 import org.easymock.EasyMock;
-import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -166,7 +164,7 @@ public class UrlChildLocationReturnValueHandlerTest {
 
         if (testParameters.isReturnTypeSupported() && testParameters.getReturnObject() != null) {
             EasyMock.expect(nativeWebRequest.getNativeResponse(HttpServletResponse.class)).andReturn(httpServletResponse);
-            final String expectedLocation = testParameters.getReturnUrlChildLocation().createLocationUrl();
+            final String expectedLocation = testParameters.getReturnUrlChildLocation().getLocationUrl();
             httpServletResponse.setHeader("LOCATION", expectedLocation);
         }
 

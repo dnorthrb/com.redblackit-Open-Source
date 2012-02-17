@@ -134,13 +134,13 @@ public abstract class UrlChildLocationTestBase {
      * Ensure childUrl created correctly with no childId
      * <p/>
      * Test method for
-     * {@link UrlChildLocation#createLocationUrl()}
+     * {@link UrlChildLocation#getLocationUrl()}
      * .
      */
     @Test
     public void testCreateChildUrlWithoutSetChildId() {
          String actualChildUrl = getUrlChildLocationUnderTest()
-                .createLocationUrl();
+                .getLocationUrl();
         Assert.assertEquals(assertMsg("no childUrl"),
                 testParameters.getRequestUrl(), actualChildUrl);
     }
@@ -149,7 +149,7 @@ public abstract class UrlChildLocationTestBase {
      * Ensure childUrl created correctly with supplied childId
      * <p/>
      * Test method for
-     * {@link UrlChildLocation#createLocationUrl()}
+     * {@link UrlChildLocation#getLocationUrl()}
      * .
      */
     @Test
@@ -157,7 +157,7 @@ public abstract class UrlChildLocationTestBase {
         Object childId = testParameters.getChildId();
         getUrlChildLocationUnderTest().setChildId(childId);
         String actualChildUrl = getUrlChildLocationUnderTest()
-                .createLocationUrl();
+                .getLocationUrl();
         Assert.assertEquals(assertMsg("childUrl"),
                 testParameters.getExpectedChildUrl(), actualChildUrl);
     }

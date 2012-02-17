@@ -48,7 +48,7 @@ public class UrlChildLocationReturnValueHandler implements HandlerMethodReturnVa
         if (supportsReturnType(returnTypeMethodParameter) && returnValue != null) {
             UrlChildLocation urlChildLocation = (UrlChildLocation) returnValue;
             HttpServletResponse response = nativeWebRequest.getNativeResponse(HttpServletResponse.class);
-            response.setHeader("LOCATION", urlChildLocation.createLocationUrl());
+            response.setHeader("LOCATION", urlChildLocation.getLocationUrl());
             modelAndViewContainer.setRequestHandled(true);
         }
     }
