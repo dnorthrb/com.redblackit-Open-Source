@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>com.redblackit</artifactId>
+		<groupId>com.redblackit</groupId>
+		<version>0.0.1</version>
+	</parent>
+	<groupId>com.redblackit.util</groupId>
+	<artifactId>com.redblackit.util</artifactId>
+	<version>0.0.1</version>
+	<name>${project.artifactId}</name>
+	<description>Useful bits and pieces for Spring and other things</description>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>
