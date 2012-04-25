@@ -3687,3 +3687,1499 @@ DEBUG: loggingInterceptor - admin afterCompletion response to request: GET https
   CACHE-CONTROL=[no-cache, no-store]
   CONTENT-LANGUAGE=[en-US]
   CONTENT-TYPE=[text/html;charset=UTF-8]
+DEBUG: loggingInterceptor - admin-complete-version preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version/summary
+ handler=public java.lang.String com.redblackit.web.controller.AdminRestController.getVersionSummary()
+ contextPath=/com.redblackit.war
+ servletPath=/complete-version
+ handlerPath=/rest/version/summary
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/plain, application/json, */*]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin-complete-version postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version/summary
+ handler=public java.lang.String com.redblackit.web.controller.AdminRestController.getVersionSummary()
+ httpStatus=200 OK
+ response headers:
+  SET-COOKIE=[JSESSIONID=7lprpjvb5h2a1khhdjddt6xbs;Path=/com.redblackit.war;Secure]
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-TYPE=[text/plain]
+  CONTENT-LENGTH=[600]
+ modelAndView=null
+DEBUG: loggingInterceptor - admin-complete-version afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version/summary
+ handler=public java.lang.String com.redblackit.web.controller.AdminRestController.getVersionSummary()
+ httpStatus=200 OK
+ response headers:
+  SET-COOKIE=[JSESSIONID=7lprpjvb5h2a1khhdjddt6xbs;Path=/com.redblackit.war;Secure]
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-TYPE=[text/plain]
+  CONTENT-LENGTH=[600]
+DEBUG: loggingInterceptor - admin-complete-version preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version
+ handler=public com.redblackit.version.CompositeVersionInfo com.redblackit.web.controller.AdminRestController.getVersion()
+ contextPath=/com.redblackit.war
+ servletPath=/complete-version
+ handlerPath=/rest/version
+ request headers:
+  COOKIE=[JSESSIONID=7lprpjvb5h2a1khhdjddt6xbs]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[application/json]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin-complete-version postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version
+ handler=public com.redblackit.version.CompositeVersionInfo com.redblackit.web.controller.AdminRestController.getVersion()
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-TYPE=[application/json]
+ modelAndView=null
+DEBUG: loggingInterceptor - admin-complete-version afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version
+ handler=public com.redblackit.version.CompositeVersionInfo com.redblackit.web.controller.AdminRestController.getVersion()
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-TYPE=[application/json]
+DEBUG: loggingInterceptor - admin-complete-version preHandle request: HEAD https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version
+ handler=public void com.redblackit.web.controller.AdminRestController.getVersionHead()
+ contextPath=/com.redblackit.war
+ servletPath=/complete-version
+ handlerPath=/rest/version
+ request headers:
+  COOKIE=[JSESSIONID=7lprpjvb5h2a1khhdjddt6xbs]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin-complete-version postHandle response to request: HEAD https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version
+ handler=public void com.redblackit.web.controller.AdminRestController.getVersionHead()
+ httpStatus=204 No Content
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=null
+DEBUG: loggingInterceptor - admin-complete-version afterCompletion response to request: HEAD https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version
+ handler=public void com.redblackit.web.controller.AdminRestController.getVersionHead()
+ httpStatus=204 No Content
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war//rest/version/summary
+ handler=public java.lang.String com.redblackit.web.controller.AdminRestController.getVersionSummary()
+ contextPath=/com.redblackit.war
+ servletPath=//rest/version/summary
+ handlerPath=null
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/plain, application/json, */*]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war//rest/version/summary
+ handler=public java.lang.String com.redblackit.web.controller.AdminRestController.getVersionSummary()
+ httpStatus=200 OK
+ response headers:
+  SET-COOKIE=[JSESSIONID=371mkequ8nk11czqiiby8euj0;Path=/com.redblackit.war;Secure]
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-TYPE=[text/plain]
+  CONTENT-LENGTH=[248]
+ modelAndView=null
+DEBUG: loggingInterceptor - admin afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war//rest/version/summary
+ handler=public java.lang.String com.redblackit.web.controller.AdminRestController.getVersionSummary()
+ httpStatus=200 OK
+ response headers:
+  SET-COOKIE=[JSESSIONID=371mkequ8nk11czqiiby8euj0;Path=/com.redblackit.war;Secure]
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-TYPE=[text/plain]
+  CONTENT-LENGTH=[248]
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war//rest/version
+ handler=public com.redblackit.version.CompositeVersionInfo com.redblackit.web.controller.AdminRestController.getVersion()
+ contextPath=/com.redblackit.war
+ servletPath=//rest/version
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=371mkequ8nk11czqiiby8euj0]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[application/json]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war//rest/version
+ handler=public com.redblackit.version.CompositeVersionInfo com.redblackit.web.controller.AdminRestController.getVersion()
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-TYPE=[application/json]
+ modelAndView=null
+DEBUG: loggingInterceptor - admin afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war//rest/version
+ handler=public com.redblackit.version.CompositeVersionInfo com.redblackit.web.controller.AdminRestController.getVersion()
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-TYPE=[application/json]
+DEBUG: loggingInterceptor - admin preHandle request: HEAD https://redblack-it-mac.local:9443/com.redblackit.war//rest/version
+ handler=public void com.redblackit.web.controller.AdminRestController.getVersionHead()
+ contextPath=/com.redblackit.war
+ servletPath=//rest/version
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=371mkequ8nk11czqiiby8euj0]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: HEAD https://redblack-it-mac.local:9443/com.redblackit.war//rest/version
+ handler=public void com.redblackit.web.controller.AdminRestController.getVersionHead()
+ httpStatus=204 No Content
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=null
+DEBUG: loggingInterceptor - admin afterCompletion response to request: HEAD https://redblack-it-mac.local:9443/com.redblackit.war//rest/version
+ handler=public void com.redblackit.web.controller.AdminRestController.getVersionHead()
+ httpStatus=204 No Content
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=smfine2l78fi1ohuuhurqw569
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@748a4240
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=smfine2l78fi1ohuuhurqw569]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2]
+  PRAGMA=[no-cache]
+  CONNECTION=[keep-alive]
+  USER-AGENT=[httpunit/1.5]
+  CACHE-CONTROL=[no-cache]
+  ACCEPT-ENCODING=[gzip]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=smfine2l78fi1ohuuhurqw569
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@748a4240
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=ModelAndView: reference to view with name 'login'; model is null
+DEBUG: loggingInterceptor - admin afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=smfine2l78fi1ohuuhurqw569
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@748a4240
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LANGUAGE=[en-US]
+  CONTENT-TYPE=[text/html;charset=UTF-8]
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=1kssrra9zkj3xde5njza3dgo6
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@748a4240
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=1kssrra9zkj3xde5njza3dgo6]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2]
+  PRAGMA=[no-cache]
+  CONNECTION=[keep-alive]
+  USER-AGENT=[httpunit/1.5]
+  CACHE-CONTROL=[no-cache]
+  ACCEPT-ENCODING=[gzip]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=1kssrra9zkj3xde5njza3dgo6
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@748a4240
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=ModelAndView: reference to view with name 'login'; model is null
+DEBUG: loggingInterceptor - admin afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=1kssrra9zkj3xde5njza3dgo6
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@748a4240
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LANGUAGE=[en-US]
+  CONTENT-TYPE=[text/html;charset=UTF-8]
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[application/json]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ httpStatus=403 Forbidden
+ response headers:
+  SET-COOKIE=[JSESSIONID=8pk64pzwokmnj04djw7o2klx;Path=/com.redblackit.war;Secure]
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=ModelAndView: reference to view with name 'login'; model is {login_error=login.access.denied}
+DEBUG: loggingInterceptor - admin afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ httpStatus=403 Forbidden
+ response headers:
+  SET-COOKIE=[JSESSIONID=8pk64pzwokmnj04djw7o2klx;Path=/com.redblackit.war;Secure]
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LANGUAGE=[en-US]
+  CONTENT-TYPE=[text/html;charset=ISO-8859-1]
+DEBUG: loggingInterceptor - admin preHandle request: PUT https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=8pk64pzwokmnj04djw7o2klx]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT-CHARSET=[big5, big5-hkscs, euc-jp, euc-kr, gb18030, gb2312, gbk, ibm-thai, ibm00858, ibm01140, ibm01141, ibm01142, ibm01143, ibm01144, ibm01145, ibm01146, ibm01147, ibm01148, ibm01149, ibm037, ibm1026, ibm1047, ibm273, ibm277, ibm278, ibm280, ibm284, ibm285, ibm297, ibm420, ibm424, ibm437, ibm500, ibm775, ibm850, ibm852, ibm855, ibm857, ibm860, ibm861, ibm862, ibm863, ibm864, ibm865, ibm866, ibm868, ibm869, ibm870, ibm871, ibm918, iso-2022-cn, iso-2022-jp, iso-2022-jp-2, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, jis_x0201, jis_x0212-1990, koi8-r, koi8-u, macroman, shift_jis, tis-620, us-ascii, utf-16, utf-16be, utf-16le, utf-32, utf-32be, utf-32le, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-31j, x-big5-hkscs-2001, x-big5-solaris, x-euc-jp-linux, x-euc-tw, x-eucjp-open, x-ibm1006, x-ibm1025, x-ibm1046, x-ibm1097, x-ibm1098, x-ibm1112, x-ibm1122, x-ibm1123, x-ibm1124, x-ibm1381, x-ibm1383, x-ibm33722, x-ibm737, x-ibm833, x-ibm834, x-ibm856, x-ibm874, x-ibm875, x-ibm921, x-ibm922, x-ibm930, x-ibm933, x-ibm935, x-ibm937, x-ibm939, x-ibm942, x-ibm942c, x-ibm943, x-ibm943c, x-ibm948, x-ibm949, x-ibm949c, x-ibm950, x-ibm964, x-ibm970, x-iscii91, x-iso-2022-cn-cns, x-iso-2022-cn-gb, x-iso-8859-11, x-jis0208, x-jisautodetect, x-johab, x-macarabic, x-maccentraleurope, x-maccroatian, x-maccyrillic, x-macdingbat, x-macgreek, x-machebrew, x-maciceland, x-macromania, x-macsymbol, x-macthai, x-macturkish, x-macukraine, x-ms932_0213, x-ms950-hkscs, x-ms950-hkscs-xp, x-mswin-936, x-pck, x-sjis_0213, x-utf-16le-bom, x-utf-32be-bom, x-utf-32le-bom, x-windows-50220, x-windows-50221, x-windows-874, x-windows-949, x-windows-950, x-windows-iso2022jp]
+  COOKIE2=[$Version=1]
+  CONTENT-LENGTH=[5]
+  CONTENT-TYPE=[text/plain;charset=ISO-8859-1]
+  CONNECTION=[keep-alive]
+ body (5 chars)
+==>
+About
+<==
+DEBUG: loggingInterceptor - admin postHandle response to request: PUT https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ httpStatus=403 Forbidden
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=ModelAndView: reference to view with name 'login'; model is {login_error=login.access.denied}
+DEBUG: loggingInterceptor - admin afterCompletion response to request: PUT https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ httpStatus=403 Forbidden
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LANGUAGE=[en-US]
+  CONTENT-TYPE=[text/html;charset=ISO-8859-1]
+DEBUG: loggingInterceptor - admin preHandle request: POST https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=8pk64pzwokmnj04djw7o2klx]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT-CHARSET=[big5, big5-hkscs, euc-jp, euc-kr, gb18030, gb2312, gbk, ibm-thai, ibm00858, ibm01140, ibm01141, ibm01142, ibm01143, ibm01144, ibm01145, ibm01146, ibm01147, ibm01148, ibm01149, ibm037, ibm1026, ibm1047, ibm273, ibm277, ibm278, ibm280, ibm284, ibm285, ibm297, ibm420, ibm424, ibm437, ibm500, ibm775, ibm850, ibm852, ibm855, ibm857, ibm860, ibm861, ibm862, ibm863, ibm864, ibm865, ibm866, ibm868, ibm869, ibm870, ibm871, ibm918, iso-2022-cn, iso-2022-jp, iso-2022-jp-2, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, jis_x0201, jis_x0212-1990, koi8-r, koi8-u, macroman, shift_jis, tis-620, us-ascii, utf-16, utf-16be, utf-16le, utf-32, utf-32be, utf-32le, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-31j, x-big5-hkscs-2001, x-big5-solaris, x-euc-jp-linux, x-euc-tw, x-eucjp-open, x-ibm1006, x-ibm1025, x-ibm1046, x-ibm1097, x-ibm1098, x-ibm1112, x-ibm1122, x-ibm1123, x-ibm1124, x-ibm1381, x-ibm1383, x-ibm33722, x-ibm737, x-ibm833, x-ibm834, x-ibm856, x-ibm874, x-ibm875, x-ibm921, x-ibm922, x-ibm930, x-ibm933, x-ibm935, x-ibm937, x-ibm939, x-ibm942, x-ibm942c, x-ibm943, x-ibm943c, x-ibm948, x-ibm949, x-ibm949c, x-ibm950, x-ibm964, x-ibm970, x-iscii91, x-iso-2022-cn-cns, x-iso-2022-cn-gb, x-iso-8859-11, x-jis0208, x-jisautodetect, x-johab, x-macarabic, x-maccentraleurope, x-maccroatian, x-maccyrillic, x-macdingbat, x-macgreek, x-machebrew, x-maciceland, x-macromania, x-macsymbol, x-macthai, x-macturkish, x-macukraine, x-ms932_0213, x-ms950-hkscs, x-ms950-hkscs-xp, x-mswin-936, x-pck, x-sjis_0213, x-utf-16le-bom, x-utf-32be-bom, x-utf-32le-bom, x-windows-50220, x-windows-50221, x-windows-874, x-windows-949, x-windows-950, x-windows-iso2022jp]
+  COOKIE2=[$Version=1]
+  CONTENT-LENGTH=[5]
+  CONTENT-TYPE=[text/plain;charset=ISO-8859-1]
+  CONNECTION=[keep-alive]
+ body (5 chars)
+==>
+About
+<==
+DEBUG: loggingInterceptor - admin postHandle response to request: POST https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ httpStatus=403 Forbidden
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=ModelAndView: reference to view with name 'login'; model is {login_error=login.access.denied}
+DEBUG: loggingInterceptor - admin afterCompletion response to request: POST https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ httpStatus=403 Forbidden
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LANGUAGE=[en-US]
+  CONTENT-TYPE=[text/html;charset=ISO-8859-1]
+DEBUG: loggingInterceptor - admin preHandle request: DELETE https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=8pk64pzwokmnj04djw7o2klx]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: DELETE https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ httpStatus=403 Forbidden
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=ModelAndView: reference to view with name 'login'; model is {login_error=login.access.denied}
+DEBUG: loggingInterceptor - admin afterCompletion response to request: DELETE https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ httpStatus=403 Forbidden
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LANGUAGE=[en-US]
+  CONTENT-TYPE=[text/html;charset=ISO-8859-1]
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@47dbc53d
+ contextPath=/com.redblackit.war
+ servletPath=/
+ handlerPath=null
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@47dbc53d
+ httpStatus=200 OK
+ response headers:
+  SET-COOKIE=[JSESSIONID=1dmpmn1chjwm9oxgrb1r0rnio;Path=/com.redblackit.war;Secure]
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=ModelAndView: reference to view with name 'welcome'; model is null
+DEBUG: loggingInterceptor - admin afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@47dbc53d
+ httpStatus=200 OK
+ response headers:
+  SET-COOKIE=[JSESSIONID=1dmpmn1chjwm9oxgrb1r0rnio;Path=/com.redblackit.war;Secure]
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LANGUAGE=[en-US]
+  CONTENT-TYPE=[text/html;charset=UTF-8]
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=5kblmll4w635qzosvtqcm6up
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@748a4240
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=5kblmll4w635qzosvtqcm6up]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=5kblmll4w635qzosvtqcm6up
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@748a4240
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=ModelAndView: reference to view with name 'login'; model is null
+DEBUG: loggingInterceptor - admin afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=5kblmll4w635qzosvtqcm6up
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@748a4240
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LANGUAGE=[en-US]
+  CONTENT-TYPE=[text/html;charset=UTF-8]
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=1iuu34wynqck510xi05l6hdtof
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@748a4240
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=1iuu34wynqck510xi05l6hdtof]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=1iuu34wynqck510xi05l6hdtof
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@748a4240
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=ModelAndView: reference to view with name 'login'; model is null
+DEBUG: loggingInterceptor - admin afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=1iuu34wynqck510xi05l6hdtof
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@748a4240
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LANGUAGE=[en-US]
+  CONTENT-TYPE=[text/html;charset=UTF-8]
+DEBUG: loggingInterceptor - admin-complete-version preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version/summary
+ handler=public java.lang.String com.redblackit.web.controller.AdminRestController.getVersionSummary()
+ contextPath=/com.redblackit.war
+ servletPath=/complete-version
+ handlerPath=/rest/version/summary
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/plain, application/json, */*]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin-complete-version preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version
+ handler=public com.redblackit.version.CompositeVersionInfo com.redblackit.web.controller.AdminRestController.getVersion()
+ contextPath=/com.redblackit.war
+ servletPath=/complete-version
+ handlerPath=/rest/version
+ request headers:
+  COOKIE=[JSESSIONID=9cap9abskg6pb632u9txx57l]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[application/json]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin-complete-version preHandle request: HEAD https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version
+ handler=public void com.redblackit.web.controller.AdminRestController.getVersionHead()
+ contextPath=/com.redblackit.war
+ servletPath=/complete-version
+ handlerPath=/rest/version
+ request headers:
+  COOKIE=[JSESSIONID=9cap9abskg6pb632u9txx57l]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war//rest/version/summary
+ handler=public java.lang.String com.redblackit.web.controller.AdminRestController.getVersionSummary()
+ contextPath=/com.redblackit.war
+ servletPath=//rest/version/summary
+ handlerPath=null
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/plain, application/json, */*]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war//rest/version
+ handler=public com.redblackit.version.CompositeVersionInfo com.redblackit.web.controller.AdminRestController.getVersion()
+ contextPath=/com.redblackit.war
+ servletPath=//rest/version
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=1j7jt08hkejt519fhc3lme9mq]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[application/json]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: HEAD https://redblack-it-mac.local:9443/com.redblackit.war//rest/version
+ handler=public void com.redblackit.web.controller.AdminRestController.getVersionHead()
+ contextPath=/com.redblackit.war
+ servletPath=//rest/version
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=1j7jt08hkejt519fhc3lme9mq]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=13yews1vg5dyefa87ly6bwxqq
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@5d325877
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=13yews1vg5dyefa87ly6bwxqq]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2]
+  PRAGMA=[no-cache]
+  CONNECTION=[keep-alive]
+  USER-AGENT=[httpunit/1.5]
+  CACHE-CONTROL=[no-cache]
+  ACCEPT-ENCODING=[gzip]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=5iguysjxiexh1jqkq6idz8uec
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@5d325877
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=5iguysjxiexh1jqkq6idz8uec]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2]
+  PRAGMA=[no-cache]
+  CONNECTION=[keep-alive]
+  USER-AGENT=[httpunit/1.5]
+  CACHE-CONTROL=[no-cache]
+  ACCEPT-ENCODING=[gzip]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[application/json]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: PUT https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=1nazvo9zp6t9z15rucqyali1u0]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT-CHARSET=[big5, big5-hkscs, euc-jp, euc-kr, gb18030, gb2312, gbk, ibm-thai, ibm00858, ibm01140, ibm01141, ibm01142, ibm01143, ibm01144, ibm01145, ibm01146, ibm01147, ibm01148, ibm01149, ibm037, ibm1026, ibm1047, ibm273, ibm277, ibm278, ibm280, ibm284, ibm285, ibm297, ibm420, ibm424, ibm437, ibm500, ibm775, ibm850, ibm852, ibm855, ibm857, ibm860, ibm861, ibm862, ibm863, ibm864, ibm865, ibm866, ibm868, ibm869, ibm870, ibm871, ibm918, iso-2022-cn, iso-2022-jp, iso-2022-jp-2, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, jis_x0201, jis_x0212-1990, koi8-r, koi8-u, macroman, shift_jis, tis-620, us-ascii, utf-16, utf-16be, utf-16le, utf-32, utf-32be, utf-32le, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-31j, x-big5-hkscs-2001, x-big5-solaris, x-euc-jp-linux, x-euc-tw, x-eucjp-open, x-ibm1006, x-ibm1025, x-ibm1046, x-ibm1097, x-ibm1098, x-ibm1112, x-ibm1122, x-ibm1123, x-ibm1124, x-ibm1381, x-ibm1383, x-ibm33722, x-ibm737, x-ibm833, x-ibm834, x-ibm856, x-ibm874, x-ibm875, x-ibm921, x-ibm922, x-ibm930, x-ibm933, x-ibm935, x-ibm937, x-ibm939, x-ibm942, x-ibm942c, x-ibm943, x-ibm943c, x-ibm948, x-ibm949, x-ibm949c, x-ibm950, x-ibm964, x-ibm970, x-iscii91, x-iso-2022-cn-cns, x-iso-2022-cn-gb, x-iso-8859-11, x-jis0208, x-jisautodetect, x-johab, x-macarabic, x-maccentraleurope, x-maccroatian, x-maccyrillic, x-macdingbat, x-macgreek, x-machebrew, x-maciceland, x-macromania, x-macsymbol, x-macthai, x-macturkish, x-macukraine, x-ms932_0213, x-ms950-hkscs, x-ms950-hkscs-xp, x-mswin-936, x-pck, x-sjis_0213, x-utf-16le-bom, x-utf-32be-bom, x-utf-32le-bom, x-windows-50220, x-windows-50221, x-windows-874, x-windows-949, x-windows-950, x-windows-iso2022jp]
+  COOKIE2=[$Version=1]
+  CONTENT-LENGTH=[5]
+  CONTENT-TYPE=[text/plain;charset=ISO-8859-1]
+  CONNECTION=[keep-alive]
+ body (5 chars)
+==>
+About
+<==
+DEBUG: loggingInterceptor - admin preHandle request: POST https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=1nazvo9zp6t9z15rucqyali1u0]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT-CHARSET=[big5, big5-hkscs, euc-jp, euc-kr, gb18030, gb2312, gbk, ibm-thai, ibm00858, ibm01140, ibm01141, ibm01142, ibm01143, ibm01144, ibm01145, ibm01146, ibm01147, ibm01148, ibm01149, ibm037, ibm1026, ibm1047, ibm273, ibm277, ibm278, ibm280, ibm284, ibm285, ibm297, ibm420, ibm424, ibm437, ibm500, ibm775, ibm850, ibm852, ibm855, ibm857, ibm860, ibm861, ibm862, ibm863, ibm864, ibm865, ibm866, ibm868, ibm869, ibm870, ibm871, ibm918, iso-2022-cn, iso-2022-jp, iso-2022-jp-2, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, jis_x0201, jis_x0212-1990, koi8-r, koi8-u, macroman, shift_jis, tis-620, us-ascii, utf-16, utf-16be, utf-16le, utf-32, utf-32be, utf-32le, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-31j, x-big5-hkscs-2001, x-big5-solaris, x-euc-jp-linux, x-euc-tw, x-eucjp-open, x-ibm1006, x-ibm1025, x-ibm1046, x-ibm1097, x-ibm1098, x-ibm1112, x-ibm1122, x-ibm1123, x-ibm1124, x-ibm1381, x-ibm1383, x-ibm33722, x-ibm737, x-ibm833, x-ibm834, x-ibm856, x-ibm874, x-ibm875, x-ibm921, x-ibm922, x-ibm930, x-ibm933, x-ibm935, x-ibm937, x-ibm939, x-ibm942, x-ibm942c, x-ibm943, x-ibm943c, x-ibm948, x-ibm949, x-ibm949c, x-ibm950, x-ibm964, x-ibm970, x-iscii91, x-iso-2022-cn-cns, x-iso-2022-cn-gb, x-iso-8859-11, x-jis0208, x-jisautodetect, x-johab, x-macarabic, x-maccentraleurope, x-maccroatian, x-maccyrillic, x-macdingbat, x-macgreek, x-machebrew, x-maciceland, x-macromania, x-macsymbol, x-macthai, x-macturkish, x-macukraine, x-ms932_0213, x-ms950-hkscs, x-ms950-hkscs-xp, x-mswin-936, x-pck, x-sjis_0213, x-utf-16le-bom, x-utf-32be-bom, x-utf-32le-bom, x-windows-50220, x-windows-50221, x-windows-874, x-windows-949, x-windows-950, x-windows-iso2022jp]
+  COOKIE2=[$Version=1]
+  CONTENT-LENGTH=[5]
+  CONTENT-TYPE=[text/plain;charset=ISO-8859-1]
+  CONNECTION=[keep-alive]
+ body (5 chars)
+==>
+About
+<==
+DEBUG: loggingInterceptor - admin preHandle request: DELETE https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=1nazvo9zp6t9z15rucqyali1u0]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@69b42301
+ contextPath=/com.redblackit.war
+ servletPath=/
+ handlerPath=null
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=rpdu5yxrjlqv10fnty0jtzytj
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@5d325877
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=rpdu5yxrjlqv10fnty0jtzytj]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=17qtnbm8x6lzw149kdw5a4ewif
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@5d325877
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=17qtnbm8x6lzw149kdw5a4ewif]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin-complete-version preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version/summary
+ handler=public java.lang.String com.redblackit.web.controller.AdminRestController.getVersionSummary()
+ contextPath=/com.redblackit.war
+ servletPath=/complete-version
+ handlerPath=/rest/version/summary
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/plain, application/json, */*]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin-complete-version preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version
+ handler=public com.redblackit.version.CompositeVersionInfo com.redblackit.web.controller.AdminRestController.getVersion()
+ contextPath=/com.redblackit.war
+ servletPath=/complete-version
+ handlerPath=/rest/version
+ request headers:
+  COOKIE=[JSESSIONID=5zlal4s77cas15jq3dpja1d4]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[application/json]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin-complete-version preHandle request: HEAD https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version
+ handler=public void com.redblackit.web.controller.AdminRestController.getVersionHead()
+ contextPath=/com.redblackit.war
+ servletPath=/complete-version
+ handlerPath=/rest/version
+ request headers:
+  COOKIE=[JSESSIONID=5zlal4s77cas15jq3dpja1d4]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war//rest/version/summary
+ handler=public java.lang.String com.redblackit.web.controller.AdminRestController.getVersionSummary()
+ contextPath=/com.redblackit.war
+ servletPath=//rest/version/summary
+ handlerPath=null
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/plain, application/json, */*]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war//rest/version
+ handler=public com.redblackit.version.CompositeVersionInfo com.redblackit.web.controller.AdminRestController.getVersion()
+ contextPath=/com.redblackit.war
+ servletPath=//rest/version
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=82v63w7hrnz01o4y8efxaas6o]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[application/json]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: HEAD https://redblack-it-mac.local:9443/com.redblackit.war//rest/version
+ handler=public void com.redblackit.web.controller.AdminRestController.getVersionHead()
+ contextPath=/com.redblackit.war
+ servletPath=//rest/version
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=82v63w7hrnz01o4y8efxaas6o]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=qgd23yhc4pdl19oi4h7skblaj
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@43c5cdac
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=qgd23yhc4pdl19oi4h7skblaj]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2]
+  PRAGMA=[no-cache]
+  CONNECTION=[keep-alive]
+  USER-AGENT=[httpunit/1.5]
+  CACHE-CONTROL=[no-cache]
+  ACCEPT-ENCODING=[gzip]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=avfe612790s2x7ht2kmujr5f
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@43c5cdac
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=avfe612790s2x7ht2kmujr5f]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2]
+  PRAGMA=[no-cache]
+  CONNECTION=[keep-alive]
+  USER-AGENT=[httpunit/1.5]
+  CACHE-CONTROL=[no-cache]
+  ACCEPT-ENCODING=[gzip]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[application/json]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: PUT https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=lgpo249pxhot1p90rvvf55dys]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT-CHARSET=[big5, big5-hkscs, euc-jp, euc-kr, gb18030, gb2312, gbk, ibm-thai, ibm00858, ibm01140, ibm01141, ibm01142, ibm01143, ibm01144, ibm01145, ibm01146, ibm01147, ibm01148, ibm01149, ibm037, ibm1026, ibm1047, ibm273, ibm277, ibm278, ibm280, ibm284, ibm285, ibm297, ibm420, ibm424, ibm437, ibm500, ibm775, ibm850, ibm852, ibm855, ibm857, ibm860, ibm861, ibm862, ibm863, ibm864, ibm865, ibm866, ibm868, ibm869, ibm870, ibm871, ibm918, iso-2022-cn, iso-2022-jp, iso-2022-jp-2, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, jis_x0201, jis_x0212-1990, koi8-r, koi8-u, macroman, shift_jis, tis-620, us-ascii, utf-16, utf-16be, utf-16le, utf-32, utf-32be, utf-32le, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-31j, x-big5-hkscs-2001, x-big5-solaris, x-euc-jp-linux, x-euc-tw, x-eucjp-open, x-ibm1006, x-ibm1025, x-ibm1046, x-ibm1097, x-ibm1098, x-ibm1112, x-ibm1122, x-ibm1123, x-ibm1124, x-ibm1381, x-ibm1383, x-ibm33722, x-ibm737, x-ibm833, x-ibm834, x-ibm856, x-ibm874, x-ibm875, x-ibm921, x-ibm922, x-ibm930, x-ibm933, x-ibm935, x-ibm937, x-ibm939, x-ibm942, x-ibm942c, x-ibm943, x-ibm943c, x-ibm948, x-ibm949, x-ibm949c, x-ibm950, x-ibm964, x-ibm970, x-iscii91, x-iso-2022-cn-cns, x-iso-2022-cn-gb, x-iso-8859-11, x-jis0208, x-jisautodetect, x-johab, x-macarabic, x-maccentraleurope, x-maccroatian, x-maccyrillic, x-macdingbat, x-macgreek, x-machebrew, x-maciceland, x-macromania, x-macsymbol, x-macthai, x-macturkish, x-macukraine, x-ms932_0213, x-ms950-hkscs, x-ms950-hkscs-xp, x-mswin-936, x-pck, x-sjis_0213, x-utf-16le-bom, x-utf-32be-bom, x-utf-32le-bom, x-windows-50220, x-windows-50221, x-windows-874, x-windows-949, x-windows-950, x-windows-iso2022jp]
+  COOKIE2=[$Version=1]
+  CONTENT-LENGTH=[5]
+  CONTENT-TYPE=[text/plain;charset=ISO-8859-1]
+  CONNECTION=[keep-alive]
+ body (5 chars)
+==>
+About
+<==
+DEBUG: loggingInterceptor - admin preHandle request: POST https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=lgpo249pxhot1p90rvvf55dys]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT-CHARSET=[big5, big5-hkscs, euc-jp, euc-kr, gb18030, gb2312, gbk, ibm-thai, ibm00858, ibm01140, ibm01141, ibm01142, ibm01143, ibm01144, ibm01145, ibm01146, ibm01147, ibm01148, ibm01149, ibm037, ibm1026, ibm1047, ibm273, ibm277, ibm278, ibm280, ibm284, ibm285, ibm297, ibm420, ibm424, ibm437, ibm500, ibm775, ibm850, ibm852, ibm855, ibm857, ibm860, ibm861, ibm862, ibm863, ibm864, ibm865, ibm866, ibm868, ibm869, ibm870, ibm871, ibm918, iso-2022-cn, iso-2022-jp, iso-2022-jp-2, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, jis_x0201, jis_x0212-1990, koi8-r, koi8-u, macroman, shift_jis, tis-620, us-ascii, utf-16, utf-16be, utf-16le, utf-32, utf-32be, utf-32le, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-31j, x-big5-hkscs-2001, x-big5-solaris, x-euc-jp-linux, x-euc-tw, x-eucjp-open, x-ibm1006, x-ibm1025, x-ibm1046, x-ibm1097, x-ibm1098, x-ibm1112, x-ibm1122, x-ibm1123, x-ibm1124, x-ibm1381, x-ibm1383, x-ibm33722, x-ibm737, x-ibm833, x-ibm834, x-ibm856, x-ibm874, x-ibm875, x-ibm921, x-ibm922, x-ibm930, x-ibm933, x-ibm935, x-ibm937, x-ibm939, x-ibm942, x-ibm942c, x-ibm943, x-ibm943c, x-ibm948, x-ibm949, x-ibm949c, x-ibm950, x-ibm964, x-ibm970, x-iscii91, x-iso-2022-cn-cns, x-iso-2022-cn-gb, x-iso-8859-11, x-jis0208, x-jisautodetect, x-johab, x-macarabic, x-maccentraleurope, x-maccroatian, x-maccyrillic, x-macdingbat, x-macgreek, x-machebrew, x-maciceland, x-macromania, x-macsymbol, x-macthai, x-macturkish, x-macukraine, x-ms932_0213, x-ms950-hkscs, x-ms950-hkscs-xp, x-mswin-936, x-pck, x-sjis_0213, x-utf-16le-bom, x-utf-32be-bom, x-utf-32le-bom, x-windows-50220, x-windows-50221, x-windows-874, x-windows-949, x-windows-950, x-windows-iso2022jp]
+  COOKIE2=[$Version=1]
+  CONTENT-LENGTH=[5]
+  CONTENT-TYPE=[text/plain;charset=ISO-8859-1]
+  CONNECTION=[keep-alive]
+ body (5 chars)
+==>
+About
+<==
+DEBUG: loggingInterceptor - admin preHandle request: DELETE https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=lgpo249pxhot1p90rvvf55dys]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@3b59d796
+ contextPath=/com.redblackit.war
+ servletPath=/
+ handlerPath=null
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=tpfijo06jzslexifbmc3a2wz
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@43c5cdac
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=tpfijo06jzslexifbmc3a2wz]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=18ocop993eoqq1uv2u56wche55
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@43c5cdac
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=18ocop993eoqq1uv2u56wche55]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin-complete-version preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version/summary
+ handler=public java.lang.String com.redblackit.web.controller.AdminRestController.getVersionSummary()
+ contextPath=/com.redblackit.war
+ servletPath=/complete-version
+ handlerPath=/rest/version/summary
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/plain, application/json, */*]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin-complete-version preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version
+ handler=public com.redblackit.version.CompositeVersionInfo com.redblackit.web.controller.AdminRestController.getVersion()
+ contextPath=/com.redblackit.war
+ servletPath=/complete-version
+ handlerPath=/rest/version
+ request headers:
+  COOKIE=[JSESSIONID=ew2bm9ed4jxkz76hhfxdkhvj]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[application/json]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin-complete-version preHandle request: HEAD https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version
+ handler=public void com.redblackit.web.controller.AdminRestController.getVersionHead()
+ contextPath=/com.redblackit.war
+ servletPath=/complete-version
+ handlerPath=/rest/version
+ request headers:
+  COOKIE=[JSESSIONID=ew2bm9ed4jxkz76hhfxdkhvj]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war//rest/version/summary
+ handler=public java.lang.String com.redblackit.web.controller.AdminRestController.getVersionSummary()
+ contextPath=/com.redblackit.war
+ servletPath=//rest/version/summary
+ handlerPath=null
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/plain, application/json, */*]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war//rest/version
+ handler=public com.redblackit.version.CompositeVersionInfo com.redblackit.web.controller.AdminRestController.getVersion()
+ contextPath=/com.redblackit.war
+ servletPath=//rest/version
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=uehxbwfcox8e10jqie3txsmjm]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[application/json]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: HEAD https://redblack-it-mac.local:9443/com.redblackit.war//rest/version
+ handler=public void com.redblackit.web.controller.AdminRestController.getVersionHead()
+ contextPath=/com.redblackit.war
+ servletPath=//rest/version
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=uehxbwfcox8e10jqie3txsmjm]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=6mj4kanu1pwr1o1mo97rbdtn
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@7aec8a9
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=6mj4kanu1pwr1o1mo97rbdtn]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2]
+  PRAGMA=[no-cache]
+  CONNECTION=[keep-alive]
+  USER-AGENT=[httpunit/1.5]
+  CACHE-CONTROL=[no-cache]
+  ACCEPT-ENCODING=[gzip]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=91qhjb4a5fxb17w4n1kwnunpb
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@7aec8a9
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=91qhjb4a5fxb17w4n1kwnunpb]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2]
+  PRAGMA=[no-cache]
+  CONNECTION=[keep-alive]
+  USER-AGENT=[httpunit/1.5]
+  CACHE-CONTROL=[no-cache]
+  ACCEPT-ENCODING=[gzip]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[application/json]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: PUT https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=10cyy1ksfcz2wceqcigtijpss]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT-CHARSET=[big5, big5-hkscs, euc-jp, euc-kr, gb18030, gb2312, gbk, ibm-thai, ibm00858, ibm01140, ibm01141, ibm01142, ibm01143, ibm01144, ibm01145, ibm01146, ibm01147, ibm01148, ibm01149, ibm037, ibm1026, ibm1047, ibm273, ibm277, ibm278, ibm280, ibm284, ibm285, ibm297, ibm420, ibm424, ibm437, ibm500, ibm775, ibm850, ibm852, ibm855, ibm857, ibm860, ibm861, ibm862, ibm863, ibm864, ibm865, ibm866, ibm868, ibm869, ibm870, ibm871, ibm918, iso-2022-cn, iso-2022-jp, iso-2022-jp-2, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, jis_x0201, jis_x0212-1990, koi8-r, koi8-u, macroman, shift_jis, tis-620, us-ascii, utf-16, utf-16be, utf-16le, utf-32, utf-32be, utf-32le, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-31j, x-big5-hkscs-2001, x-big5-solaris, x-euc-jp-linux, x-euc-tw, x-eucjp-open, x-ibm1006, x-ibm1025, x-ibm1046, x-ibm1097, x-ibm1098, x-ibm1112, x-ibm1122, x-ibm1123, x-ibm1124, x-ibm1381, x-ibm1383, x-ibm33722, x-ibm737, x-ibm833, x-ibm834, x-ibm856, x-ibm874, x-ibm875, x-ibm921, x-ibm922, x-ibm930, x-ibm933, x-ibm935, x-ibm937, x-ibm939, x-ibm942, x-ibm942c, x-ibm943, x-ibm943c, x-ibm948, x-ibm949, x-ibm949c, x-ibm950, x-ibm964, x-ibm970, x-iscii91, x-iso-2022-cn-cns, x-iso-2022-cn-gb, x-iso-8859-11, x-jis0208, x-jisautodetect, x-johab, x-macarabic, x-maccentraleurope, x-maccroatian, x-maccyrillic, x-macdingbat, x-macgreek, x-machebrew, x-maciceland, x-macromania, x-macsymbol, x-macthai, x-macturkish, x-macukraine, x-ms932_0213, x-ms950-hkscs, x-ms950-hkscs-xp, x-mswin-936, x-pck, x-sjis_0213, x-utf-16le-bom, x-utf-32be-bom, x-utf-32le-bom, x-windows-50220, x-windows-50221, x-windows-874, x-windows-949, x-windows-950, x-windows-iso2022jp]
+  COOKIE2=[$Version=1]
+  CONTENT-LENGTH=[5]
+  CONTENT-TYPE=[text/plain;charset=ISO-8859-1]
+  CONNECTION=[keep-alive]
+ body (5 chars)
+==>
+About
+<==
+DEBUG: loggingInterceptor - admin preHandle request: POST https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=10cyy1ksfcz2wceqcigtijpss]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT-CHARSET=[big5, big5-hkscs, euc-jp, euc-kr, gb18030, gb2312, gbk, ibm-thai, ibm00858, ibm01140, ibm01141, ibm01142, ibm01143, ibm01144, ibm01145, ibm01146, ibm01147, ibm01148, ibm01149, ibm037, ibm1026, ibm1047, ibm273, ibm277, ibm278, ibm280, ibm284, ibm285, ibm297, ibm420, ibm424, ibm437, ibm500, ibm775, ibm850, ibm852, ibm855, ibm857, ibm860, ibm861, ibm862, ibm863, ibm864, ibm865, ibm866, ibm868, ibm869, ibm870, ibm871, ibm918, iso-2022-cn, iso-2022-jp, iso-2022-jp-2, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, jis_x0201, jis_x0212-1990, koi8-r, koi8-u, macroman, shift_jis, tis-620, us-ascii, utf-16, utf-16be, utf-16le, utf-32, utf-32be, utf-32le, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-31j, x-big5-hkscs-2001, x-big5-solaris, x-euc-jp-linux, x-euc-tw, x-eucjp-open, x-ibm1006, x-ibm1025, x-ibm1046, x-ibm1097, x-ibm1098, x-ibm1112, x-ibm1122, x-ibm1123, x-ibm1124, x-ibm1381, x-ibm1383, x-ibm33722, x-ibm737, x-ibm833, x-ibm834, x-ibm856, x-ibm874, x-ibm875, x-ibm921, x-ibm922, x-ibm930, x-ibm933, x-ibm935, x-ibm937, x-ibm939, x-ibm942, x-ibm942c, x-ibm943, x-ibm943c, x-ibm948, x-ibm949, x-ibm949c, x-ibm950, x-ibm964, x-ibm970, x-iscii91, x-iso-2022-cn-cns, x-iso-2022-cn-gb, x-iso-8859-11, x-jis0208, x-jisautodetect, x-johab, x-macarabic, x-maccentraleurope, x-maccroatian, x-maccyrillic, x-macdingbat, x-macgreek, x-machebrew, x-maciceland, x-macromania, x-macsymbol, x-macthai, x-macturkish, x-macukraine, x-ms932_0213, x-ms950-hkscs, x-ms950-hkscs-xp, x-mswin-936, x-pck, x-sjis_0213, x-utf-16le-bom, x-utf-32be-bom, x-utf-32le-bom, x-windows-50220, x-windows-50221, x-windows-874, x-windows-949, x-windows-950, x-windows-iso2022jp]
+  COOKIE2=[$Version=1]
+  CONTENT-LENGTH=[5]
+  CONTENT-TYPE=[text/plain;charset=ISO-8859-1]
+  CONNECTION=[keep-alive]
+ body (5 chars)
+==>
+About
+<==
+DEBUG: loggingInterceptor - admin preHandle request: DELETE https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=10cyy1ksfcz2wceqcigtijpss]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@af5b2da
+ contextPath=/com.redblackit.war
+ servletPath=/
+ handlerPath=null
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=164fzfbr1b5npu6gsh9xig5oq
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@7aec8a9
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=164fzfbr1b5npu6gsh9xig5oq]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=10jhkn3vkc5tn1178svkhhyo6g
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@7aec8a9
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=10jhkn3vkc5tn1178svkhhyo6g]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin-complete-version preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version/summary
+ handler=public java.lang.String com.redblackit.web.controller.AdminRestController.getVersionSummary()
+ contextPath=/com.redblackit.war
+ servletPath=/complete-version
+ handlerPath=/rest/version/summary
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/plain, application/json, */*]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin-complete-version postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version/summary
+ handler=public java.lang.String com.redblackit.web.controller.AdminRestController.getVersionSummary()
+ httpStatus=200 OK
+ response headers:
+  SET-COOKIE=[JSESSIONID=1brt37ikpugzbuawayy3wbghq;Path=/com.redblackit.war;Secure]
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LENGTH=[600]
+  CONTENT-TYPE=[text/plain;charset=UTF-8]
+ modelAndView=null
+DEBUG: loggingInterceptor - admin-complete-version afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version/summary
+ handler=public java.lang.String com.redblackit.web.controller.AdminRestController.getVersionSummary()
+ httpStatus=200 OK
+ response headers:
+  SET-COOKIE=[JSESSIONID=1brt37ikpugzbuawayy3wbghq;Path=/com.redblackit.war;Secure]
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LENGTH=[600]
+  CONTENT-TYPE=[text/plain;charset=UTF-8]
+DEBUG: loggingInterceptor - admin-complete-version preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version
+ handler=public com.redblackit.version.CompositeVersionInfo com.redblackit.web.controller.AdminRestController.getVersion()
+ contextPath=/com.redblackit.war
+ servletPath=/complete-version
+ handlerPath=/rest/version
+ request headers:
+  COOKIE=[JSESSIONID=1brt37ikpugzbuawayy3wbghq]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[application/json]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin-complete-version postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version
+ handler=public com.redblackit.version.CompositeVersionInfo com.redblackit.web.controller.AdminRestController.getVersion()
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-TYPE=[application/json;charset=UTF-8]
+ modelAndView=null
+DEBUG: loggingInterceptor - admin-complete-version afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version
+ handler=public com.redblackit.version.CompositeVersionInfo com.redblackit.web.controller.AdminRestController.getVersion()
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-TYPE=[application/json;charset=UTF-8]
+DEBUG: loggingInterceptor - admin-complete-version preHandle request: HEAD https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version
+ handler=public void com.redblackit.web.controller.AdminRestController.getVersionHead()
+ contextPath=/com.redblackit.war
+ servletPath=/complete-version
+ handlerPath=/rest/version
+ request headers:
+  COOKIE=[JSESSIONID=1brt37ikpugzbuawayy3wbghq]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin-complete-version postHandle response to request: HEAD https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version
+ handler=public void com.redblackit.web.controller.AdminRestController.getVersionHead()
+ httpStatus=204 No Content
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=null
+DEBUG: loggingInterceptor - admin-complete-version afterCompletion response to request: HEAD https://redblack-it-mac.local:9443/com.redblackit.war/complete-version/rest/version
+ handler=public void com.redblackit.web.controller.AdminRestController.getVersionHead()
+ httpStatus=204 No Content
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war//rest/version/summary
+ handler=public java.lang.String com.redblackit.web.controller.AdminRestController.getVersionSummary()
+ contextPath=/com.redblackit.war
+ servletPath=//rest/version/summary
+ handlerPath=null
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/plain, application/json, */*]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war//rest/version/summary
+ handler=public java.lang.String com.redblackit.web.controller.AdminRestController.getVersionSummary()
+ httpStatus=200 OK
+ response headers:
+  SET-COOKIE=[JSESSIONID=8sl7fr7pj26r1tdtvrt1mdcb3;Path=/com.redblackit.war;Secure]
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LENGTH=[248]
+  CONTENT-TYPE=[text/plain;charset=UTF-8]
+ modelAndView=null
+DEBUG: loggingInterceptor - admin afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war//rest/version/summary
+ handler=public java.lang.String com.redblackit.web.controller.AdminRestController.getVersionSummary()
+ httpStatus=200 OK
+ response headers:
+  SET-COOKIE=[JSESSIONID=8sl7fr7pj26r1tdtvrt1mdcb3;Path=/com.redblackit.war;Secure]
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LENGTH=[248]
+  CONTENT-TYPE=[text/plain;charset=UTF-8]
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war//rest/version
+ handler=public com.redblackit.version.CompositeVersionInfo com.redblackit.web.controller.AdminRestController.getVersion()
+ contextPath=/com.redblackit.war
+ servletPath=//rest/version
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=8sl7fr7pj26r1tdtvrt1mdcb3]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[application/json]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war//rest/version
+ handler=public com.redblackit.version.CompositeVersionInfo com.redblackit.web.controller.AdminRestController.getVersion()
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-TYPE=[application/json;charset=UTF-8]
+ modelAndView=null
+DEBUG: loggingInterceptor - admin afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war//rest/version
+ handler=public com.redblackit.version.CompositeVersionInfo com.redblackit.web.controller.AdminRestController.getVersion()
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-TYPE=[application/json;charset=UTF-8]
+DEBUG: loggingInterceptor - admin preHandle request: HEAD https://redblack-it-mac.local:9443/com.redblackit.war//rest/version
+ handler=public void com.redblackit.web.controller.AdminRestController.getVersionHead()
+ contextPath=/com.redblackit.war
+ servletPath=//rest/version
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=8sl7fr7pj26r1tdtvrt1mdcb3]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: HEAD https://redblack-it-mac.local:9443/com.redblackit.war//rest/version
+ handler=public void com.redblackit.web.controller.AdminRestController.getVersionHead()
+ httpStatus=204 No Content
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=null
+DEBUG: loggingInterceptor - admin afterCompletion response to request: HEAD https://redblack-it-mac.local:9443/com.redblackit.war//rest/version
+ handler=public void com.redblackit.web.controller.AdminRestController.getVersionHead()
+ httpStatus=204 No Content
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=1o62sji9us1a3135k9wsu3rima
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@390f8c82
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=1o62sji9us1a3135k9wsu3rima]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2]
+  PRAGMA=[no-cache]
+  CONNECTION=[keep-alive]
+  USER-AGENT=[httpunit/1.5]
+  CACHE-CONTROL=[no-cache]
+  ACCEPT-ENCODING=[gzip]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=1o62sji9us1a3135k9wsu3rima
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@390f8c82
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=ModelAndView: reference to view with name 'login'; model is null
+DEBUG: loggingInterceptor - admin afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=1o62sji9us1a3135k9wsu3rima
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@390f8c82
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LANGUAGE=[en-US]
+  CONTENT-TYPE=[text/html;charset=UTF-8]
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=18tc8xuw3dekpceowuwmldexy
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@390f8c82
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=18tc8xuw3dekpceowuwmldexy]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2]
+  PRAGMA=[no-cache]
+  CONNECTION=[keep-alive]
+  USER-AGENT=[httpunit/1.5]
+  CACHE-CONTROL=[no-cache]
+  ACCEPT-ENCODING=[gzip]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=18tc8xuw3dekpceowuwmldexy
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@390f8c82
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=ModelAndView: reference to view with name 'login'; model is null
+DEBUG: loggingInterceptor - admin afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=18tc8xuw3dekpceowuwmldexy
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@390f8c82
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LANGUAGE=[en-US]
+  CONTENT-TYPE=[text/html;charset=UTF-8]
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT=[application/json]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ httpStatus=403 Forbidden
+ response headers:
+  SET-COOKIE=[JSESSIONID=1ivfy0ssxzkpnvqucl7drfmz6;Path=/com.redblackit.war;Secure]
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=ModelAndView: reference to view with name 'login'; model is {login_error=login.access.denied}
+DEBUG: loggingInterceptor - admin afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ httpStatus=403 Forbidden
+ response headers:
+  SET-COOKIE=[JSESSIONID=1ivfy0ssxzkpnvqucl7drfmz6;Path=/com.redblackit.war;Secure]
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LANGUAGE=[en-US]
+  CONTENT-TYPE=[text/html;charset=ISO-8859-1]
+DEBUG: loggingInterceptor - admin preHandle request: PUT https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=1ivfy0ssxzkpnvqucl7drfmz6]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT-CHARSET=[big5, big5-hkscs, euc-jp, euc-kr, gb18030, gb2312, gbk, ibm-thai, ibm00858, ibm01140, ibm01141, ibm01142, ibm01143, ibm01144, ibm01145, ibm01146, ibm01147, ibm01148, ibm01149, ibm037, ibm1026, ibm1047, ibm273, ibm277, ibm278, ibm280, ibm284, ibm285, ibm297, ibm420, ibm424, ibm437, ibm500, ibm775, ibm850, ibm852, ibm855, ibm857, ibm860, ibm861, ibm862, ibm863, ibm864, ibm865, ibm866, ibm868, ibm869, ibm870, ibm871, ibm918, iso-2022-cn, iso-2022-jp, iso-2022-jp-2, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, jis_x0201, jis_x0212-1990, koi8-r, koi8-u, macroman, shift_jis, tis-620, us-ascii, utf-16, utf-16be, utf-16le, utf-32, utf-32be, utf-32le, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-31j, x-big5-hkscs-2001, x-big5-solaris, x-euc-jp-linux, x-euc-tw, x-eucjp-open, x-ibm1006, x-ibm1025, x-ibm1046, x-ibm1097, x-ibm1098, x-ibm1112, x-ibm1122, x-ibm1123, x-ibm1124, x-ibm1381, x-ibm1383, x-ibm33722, x-ibm737, x-ibm833, x-ibm834, x-ibm856, x-ibm874, x-ibm875, x-ibm921, x-ibm922, x-ibm930, x-ibm933, x-ibm935, x-ibm937, x-ibm939, x-ibm942, x-ibm942c, x-ibm943, x-ibm943c, x-ibm948, x-ibm949, x-ibm949c, x-ibm950, x-ibm964, x-ibm970, x-iscii91, x-iso-2022-cn-cns, x-iso-2022-cn-gb, x-iso-8859-11, x-jis0208, x-jisautodetect, x-johab, x-macarabic, x-maccentraleurope, x-maccroatian, x-maccyrillic, x-macdingbat, x-macgreek, x-machebrew, x-maciceland, x-macromania, x-macsymbol, x-macthai, x-macturkish, x-macukraine, x-ms932_0213, x-ms950-hkscs, x-ms950-hkscs-xp, x-mswin-936, x-pck, x-sjis_0213, x-utf-16le-bom, x-utf-32be-bom, x-utf-32le-bom, x-windows-50220, x-windows-50221, x-windows-874, x-windows-949, x-windows-950, x-windows-iso2022jp]
+  COOKIE2=[$Version=1]
+  CONTENT-LENGTH=[5]
+  CONTENT-TYPE=[text/plain;charset=ISO-8859-1]
+  CONNECTION=[keep-alive]
+ body (5 chars)
+==>
+About
+<==
+DEBUG: loggingInterceptor - admin postHandle response to request: PUT https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ httpStatus=403 Forbidden
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=ModelAndView: reference to view with name 'login'; model is {login_error=login.access.denied}
+DEBUG: loggingInterceptor - admin afterCompletion response to request: PUT https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ httpStatus=403 Forbidden
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LANGUAGE=[en-US]
+  CONTENT-TYPE=[text/html;charset=ISO-8859-1]
+DEBUG: loggingInterceptor - admin preHandle request: POST https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=1ivfy0ssxzkpnvqucl7drfmz6]
+  HOST=[redblack-it-mac.local:9443]
+  ACCEPT-CHARSET=[big5, big5-hkscs, euc-jp, euc-kr, gb18030, gb2312, gbk, ibm-thai, ibm00858, ibm01140, ibm01141, ibm01142, ibm01143, ibm01144, ibm01145, ibm01146, ibm01147, ibm01148, ibm01149, ibm037, ibm1026, ibm1047, ibm273, ibm277, ibm278, ibm280, ibm284, ibm285, ibm297, ibm420, ibm424, ibm437, ibm500, ibm775, ibm850, ibm852, ibm855, ibm857, ibm860, ibm861, ibm862, ibm863, ibm864, ibm865, ibm866, ibm868, ibm869, ibm870, ibm871, ibm918, iso-2022-cn, iso-2022-jp, iso-2022-jp-2, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, jis_x0201, jis_x0212-1990, koi8-r, koi8-u, macroman, shift_jis, tis-620, us-ascii, utf-16, utf-16be, utf-16le, utf-32, utf-32be, utf-32le, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-31j, x-big5-hkscs-2001, x-big5-solaris, x-euc-jp-linux, x-euc-tw, x-eucjp-open, x-ibm1006, x-ibm1025, x-ibm1046, x-ibm1097, x-ibm1098, x-ibm1112, x-ibm1122, x-ibm1123, x-ibm1124, x-ibm1381, x-ibm1383, x-ibm33722, x-ibm737, x-ibm833, x-ibm834, x-ibm856, x-ibm874, x-ibm875, x-ibm921, x-ibm922, x-ibm930, x-ibm933, x-ibm935, x-ibm937, x-ibm939, x-ibm942, x-ibm942c, x-ibm943, x-ibm943c, x-ibm948, x-ibm949, x-ibm949c, x-ibm950, x-ibm964, x-ibm970, x-iscii91, x-iso-2022-cn-cns, x-iso-2022-cn-gb, x-iso-8859-11, x-jis0208, x-jisautodetect, x-johab, x-macarabic, x-maccentraleurope, x-maccroatian, x-maccyrillic, x-macdingbat, x-macgreek, x-machebrew, x-maciceland, x-macromania, x-macsymbol, x-macthai, x-macturkish, x-macukraine, x-ms932_0213, x-ms950-hkscs, x-ms950-hkscs-xp, x-mswin-936, x-pck, x-sjis_0213, x-utf-16le-bom, x-utf-32be-bom, x-utf-32le-bom, x-windows-50220, x-windows-50221, x-windows-874, x-windows-949, x-windows-950, x-windows-iso2022jp]
+  COOKIE2=[$Version=1]
+  CONTENT-LENGTH=[5]
+  CONTENT-TYPE=[text/plain;charset=ISO-8859-1]
+  CONNECTION=[keep-alive]
+ body (5 chars)
+==>
+About
+<==
+DEBUG: loggingInterceptor - admin postHandle response to request: POST https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ httpStatus=403 Forbidden
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=ModelAndView: reference to view with name 'login'; model is {login_error=login.access.denied}
+DEBUG: loggingInterceptor - admin afterCompletion response to request: POST https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ httpStatus=403 Forbidden
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LANGUAGE=[en-US]
+  CONTENT-TYPE=[text/html;charset=ISO-8859-1]
+DEBUG: loggingInterceptor - admin preHandle request: DELETE https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ contextPath=/com.redblackit.war
+ servletPath=/accessDenied
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=1ivfy0ssxzkpnvqucl7drfmz6]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: DELETE https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ httpStatus=403 Forbidden
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=ModelAndView: reference to view with name 'login'; model is {login_error=login.access.denied}
+DEBUG: loggingInterceptor - admin afterCompletion response to request: DELETE https://redblack-it-mac.local:9443/com.redblackit.war/accessDenied
+ handler=public java.lang.String com.redblackit.web.controller.SecurityController.accessDenied(java.security.Principal,org.springframework.ui.Model)
+ httpStatus=403 Forbidden
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LANGUAGE=[en-US]
+  CONTENT-TYPE=[text/html;charset=ISO-8859-1]
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@6e58f809
+ contextPath=/com.redblackit.war
+ servletPath=/
+ handlerPath=null
+ request headers:
+  HOST=[redblack-it-mac.local:9443]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@6e58f809
+ httpStatus=200 OK
+ response headers:
+  SET-COOKIE=[JSESSIONID=l5s4bq1unhoz1pi3ys1yu3hnp;Path=/com.redblackit.war;Secure]
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=ModelAndView: reference to view with name 'welcome'; model is null
+DEBUG: loggingInterceptor - admin afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@6e58f809
+ httpStatus=200 OK
+ response headers:
+  SET-COOKIE=[JSESSIONID=l5s4bq1unhoz1pi3ys1yu3hnp;Path=/com.redblackit.war;Secure]
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LANGUAGE=[en-US]
+  CONTENT-TYPE=[text/html;charset=UTF-8]
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=gzcq07egj11nbow03p277jzf
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@390f8c82
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=gzcq07egj11nbow03p277jzf]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=gzcq07egj11nbow03p277jzf
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@390f8c82
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=ModelAndView: reference to view with name 'login'; model is null
+DEBUG: loggingInterceptor - admin afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=gzcq07egj11nbow03p277jzf
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@390f8c82
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LANGUAGE=[en-US]
+  CONTENT-TYPE=[text/html;charset=UTF-8]
+DEBUG: loggingInterceptor - admin preHandle request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=1tdnfvt53ckjk18gsu427y8763
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@390f8c82
+ contextPath=/com.redblackit.war
+ servletPath=/login
+ handlerPath=null
+ request headers:
+  COOKIE=[JSESSIONID=1tdnfvt53ckjk18gsu427y8763]
+  HOST=[redblack-it-mac.local:9443]
+  COOKIE2=[$Version=1]
+  CONNECTION=[keep-alive]
+ body (-1 chars, omitted)
+DEBUG: loggingInterceptor - admin postHandle response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=1tdnfvt53ckjk18gsu427y8763
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@390f8c82
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+ modelAndView=ModelAndView: reference to view with name 'login'; model is null
+DEBUG: loggingInterceptor - admin afterCompletion response to request: GET https://redblack-it-mac.local:9443/com.redblackit.war/login;jsessionid=1tdnfvt53ckjk18gsu427y8763
+ handler=org.springframework.web.servlet.mvc.ParameterizableViewController@390f8c82
+ httpStatus=200 OK
+ response headers:
+  PRAGMA=[no-cache]
+  EXPIRES=[Thu, 01 Jan 1970 00:00:00 GMT]
+  CACHE-CONTROL=[no-cache, no-store]
+  CACHE-CONTROL=[no-cache, no-store]
+  CONTENT-LANGUAGE=[en-US]
+  CONTENT-TYPE=[text/html;charset=UTF-8]

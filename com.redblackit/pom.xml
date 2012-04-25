@@ -56,10 +56,10 @@
 	<properties>
 		<log4jVersion>1.2.16</log4jVersion>
 		<junitVersion>4.8.1</junitVersion>
-		<spring.framework.version>3.1.0.RELEASE</spring.framework.version>
-		<spring.security.version>3.0.5.RELEASE</spring.security.version>
+		<spring.framework.version>3.1.1.RELEASE</spring.framework.version>
+		<spring.security.version>3.1.0.RELEASE</spring.security.version>
 		<tiles.version>2.1.4</tiles.version>
-		<jetty.version>7.3.1.v20110307</jetty.version>
+		<jetty.version>8.1.1.v20120215</jetty.version>
 		<jackson.version>1.4.2</jackson.version>
 		<easymock.version>2.5.2</easymock.version>
 		<apache.httpclient.version>4.1.1</apache.httpclient.version>

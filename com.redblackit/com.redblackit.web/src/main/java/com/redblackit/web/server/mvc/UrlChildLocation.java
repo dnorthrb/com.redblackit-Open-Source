@@ -123,45 +123,31 @@ public class UrlChildLocation {
     }
 
     /**
-     * @return hashcode based on our URL
-     * @see java.lang.Object#hashCode()
+     * equals based on all fields
+     *
+     * @param o
+     * @return
      */
     @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result
-                + ((requestUrl == null) ? 0 : requestUrl.hashCode());
-        return result;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof UrlChildLocation)) return false;
+
+        UrlChildLocation that = (UrlChildLocation) o;
+
+        if (childId != null ? !childId.equals(that.childId) : that.childId != null) return false;
+        if (requestUrl != null ? !requestUrl.equals(that.requestUrl) : that.requestUrl != null) return false;
+
+        return true;
     }
 
     /**
-     * equals based on our URL
-     *
-     * @param otherObj to compare
-     * @return true or false
-     * @see java.lang.Object#equals(java.lang.Object)
+     * hashCode based on URL alone
+     * @return
      */
     @Override
-    public boolean equals(Object otherObj) {
-        if (this == otherObj) {
-            return true;
-        }
-        if (otherObj == null) {
-            return false;
-        }
-        if (getClass() != otherObj.getClass()) {
-            return false;
-        }
-        UrlChildLocation other = (UrlChildLocation) otherObj;
-        if (requestUrl == null) {
-            if (other.requestUrl != null) {
-                return false;
-            }
-        } else if (!requestUrl.equals(other.requestUrl)) {
-            return false;
-        }
-        return true;
+    public int hashCode() {
+        return requestUrl != null ? requestUrl.hashCode() : 0;
     }
 
     /**

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/com.redblackit.iml" filepath="$PROJECT_DIR$/com.redblackit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.redblackit.version/com.redblackit.version.iml" filepath="$PROJECT_DIR$/com.redblackit.version/com.redblackit.version.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.redblackit.war/com.redblackit.war.iml" filepath="$PROJECT_DIR$/com.redblackit.war/com.redblackit.war.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.redblackit.web/com.redblackit.web.iml" filepath="$PROJECT_DIR$/com.redblackit.web/com.redblackit.web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.redblackit.web.test/com.redblackit.web.test.iml" filepath="$PROJECT_DIR$/com.redblackit.web.test/com.redblackit.web.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.redblackit.web.view/com.redblackit.web.view.iml" filepath="$PROJECT_DIR$/com.redblackit.web.view/com.redblackit.web.view.iml" />
+    </modules>
+  </component>
+</project>
+

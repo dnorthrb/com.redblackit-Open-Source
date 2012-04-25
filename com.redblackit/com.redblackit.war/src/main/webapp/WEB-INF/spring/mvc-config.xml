@@ -32,6 +32,8 @@
         </bean>
     </mvc:interceptors>
 
+    <mvc:resources mapping="/**" location="classpath:/" />
+
     <!-- Define controllers which only render pages (i.e. nothing added to the
          model) -->
     <mvc:view-controller path="/" view-name="welcome"/>

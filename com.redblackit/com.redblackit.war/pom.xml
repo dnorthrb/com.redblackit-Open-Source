@@ -63,6 +63,7 @@
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jetty.version}</version>
                 <configuration>
                     <connectors>
                         <connector
@@ -107,6 +108,7 @@
                     </execution>
                 </executions>
             </plugin>
+<!--
             <plugin>
                 <artifactId>maven-antrun-plugin</artifactId>
                 <version>1.6</version>
@@ -135,8 +137,8 @@
                                 </exec>
                                 <exec executable="/Applications/glassfishv3/glassfish/bin/asadmin">
                                     <arg value="deploy"/>
-                                    <arg value="--upload"/>
-                                    <arg value="--contextroot"/>
+                                    <arg value="- -upload"/>
+                                    <arg value="- -contextroot"/>
                                     <arg value="com.redblackit.war"/>
                                     <arg
                                             value="${project.build.directory}/${project.build.finalName}.war"/>
@@ -149,6 +151,7 @@
                     </execution>
                 </executions>
             </plugin>
+-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -174,6 +177,7 @@
                             </systemPropertyVariables>
                         </configuration>
                     </execution>
+<!--
                     <execution>
                         <id>surefire-it-glassfish</id>
                         <phase>integration-test</phase>
@@ -188,10 +192,11 @@
                                 <clientAuthMandatory>true</clientAuthMandatory>
                                 <javax.net.ssl.trustStore>${test.client.keyStore}</javax.net.ssl.trustStore>
                                 <javax.net.ssl.trustStorePassword>${test.client.keyStorePassword}</javax.net.ssl.trustStorePassword>
-                                <!-- 								<javax.net.debug>ssl</javax.net.debug> -->
+                                &lt;!&ndash; 								<javax.net.debug>ssl</javax.net.debug> &ndash;&gt;
                             </systemPropertyVariables>
                         </configuration>
                     </execution>
+-->
                 </executions>
             </plugin>
         </plugins>
